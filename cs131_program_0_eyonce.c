@@ -2,6 +2,6 @@
 
 int main(int argc, char* argv[])
 {
-  printf("Hello, World!\n");
-  return 0;
+  printf("Hello , world. My name is Emily Yonce, and I am in CS131.\n");
+  
 }
