@@ -2,7 +2,6 @@
 
 int main (void)
 {
-  char* text = "there";
-  printf("Hello %s, World!\n", text);
+  printf("Hello %s, World!\n", "there");
   return 0;
 } //main
