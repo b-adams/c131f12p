@@ -53,7 +53,8 @@
 * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 *
 */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+
+int nextFibonacci(int previous, int preprevious);
 
 
 /**
@@ -98,7 +99,12 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+/**
+* @author Jessica Corter
+* @brief squares two things 
+* @param thingToSquare the thing you want to square
+* @return the thingToSquare multiplied by itself
+*/
 int squareOf(int thingToSquare);
 
 /**
