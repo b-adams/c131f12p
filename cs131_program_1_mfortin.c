@@ -127,7 +127,12 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
+
+    averageOfThree(1,2,3);
+    averageOfThree(10, 10, 10);
+    averageOfThree(11, 10, 10);
+    averageOfThree(10, 12, 10);
+    averageOfThree(10,10,13);
     printf("\n\n");
    
     printf("Squares...\n");
