@@ -99,7 +99,12 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+/**
+ *@author Stacey Mucha
+ *@brief Find the square of an integer
+ *@param thingToSquare Integer being squared.
+ *@return The square of some integer
+ */
 int squareOf(int thingToSquare);
 
 /**
