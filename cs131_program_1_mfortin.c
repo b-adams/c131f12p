@@ -86,8 +86,14 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+/**
+* @brief Function takes and integer and squares it
+* @param thingToSquare integer being squared
+* @sideeffect Squares integers and prints thingToSquare and thingToSquare*thingToSquare
+* @return thingToSquare*thingToSquare
+*/
 int squareOf(int thingToSquare);
+
 
 /**
 * @brief Where your program starts running.
