@@ -195,7 +195,11 @@ printf("\tThe Ulam number after %d is %d\n",
 return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
+int nextInteger(int previous)
+{
+printf("The integer after %d is %d\n", previous, previous+previous);
+return previous+previous;
+}
 
 int averageOfThree(int first, int second, int third)
 {
