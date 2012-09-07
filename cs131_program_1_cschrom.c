@@ -96,7 +96,12 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-
+/**
+ *@brief Finds square of a number.
+ *@param Number you want to square
+ *@sideeffect Prints out the square of a number
+ *@return This returns the square of a number
+ */
 int squareOf(int thingToSquare);
 
 /**
