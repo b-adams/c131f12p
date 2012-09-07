@@ -3,6 +3,7 @@
  * @author CSchrom
  * @author Prof. Adams
  * @date 9/6/2012
+ * @status Working!
  */
 
 #include <stdio.h>
@@ -101,13 +102,13 @@ int main(int argc, char* argv[])
     nextInteger(5);
     nextInteger(6);
     printf("\n\n");
-   
+
     printf("Averages...\n");
-        int averageOfThree(1,2,3)
-        int averageOfThree(10,10,10)
-        int averageOfThree(11,10,10)
-        int averageOfThree(10,12,10)
-        int averageOfThree(10,10,13)
+        averageOfThree(1,2,3);
+        averageOfThree(10,10,10);
+        averageOfThree(11,10,10);
+        averageOfThree(10,12,10);
+        averageOfThree(10,10,13);
     printf("\n\n");
    
     printf("Squares...\n");
@@ -161,15 +162,15 @@ int nextUlam(int previous)
 	return (previous%2)?(previous/2):(3*previous+1);
 }
 
-int nextInteger(int previous);
+int nextInteger(int previous)
 {
-    printf(The integer after %d is%d\n, previous, previous+1);
+    printf("The integer after %d is%d\n", previous, previous+1);
     return previous+1;
 }
 
 int averageOfThree(int first, int second, int third)
 {
-	printf("\tThe average of %d, %d, %d is %d\n",
+	printf("The average of %d, %d, %d is %d\n",
            first, second, third, (first+second+third)/3);
 	return (first+second+third)/3;
 }
