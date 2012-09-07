@@ -53,7 +53,18 @@
  * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
  *
  */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+
+#include <stdio.h>
+
+/**
+ *@brief Figure out numbers in the nextFibonacci sequence
+ *@Param previous One of the two previous numbers in the sequence
+ *@param preprevious The other of the two previous numbers in the sequence
+ *@sideeffect Prints "The nextFibonacci number after X and Y is Z" on screen, where X and Y are previous and preprevious, and Z is the same as what'll be returned.
+ *@return The next number in the nextFibonacci sequence
+ *
+ *The forumla for the next number N in the nextFibonacci sequence, based on the two previous numbers A,B, is N=A+B.
+*/
 
 
 /**
