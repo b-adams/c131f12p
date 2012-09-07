@@ -140,7 +140,11 @@ int scratchpad2;
    
     printf("Averages...\n");
     averageOfThree(1, 2, 3);
-    return 1+2+3/3;
+    averageOfThree(10, 10, 10);
+    averageOfThree(11, 10, 10);
+    averageOfThree(10, 12, 10);
+    averageOfThree(10, 10, 13);
+    
 
     printf("\n\n");
    
