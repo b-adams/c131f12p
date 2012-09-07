@@ -98,7 +98,12 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+/**
+ * @brief multiplies a number by itself
+ * @param the number being squared
+ * @sideeffect it prints the square of a number
+ * @return the square of a number
+ * /
 int squareOf(int thingToSquare);
 
 /**
