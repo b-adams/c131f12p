@@ -141,7 +141,11 @@ int main(int argc, char* argv[])
     printf("\n\n");
    
     printf("Averages...\n");
-	//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
+int averageOfThree(1,2,3);
+int averageOfThree(10,10,10);
+int averageOfThree(11,10,10);
+int averageOfThree(10,12,10);
+int averageOfThree(10,10,13);
     printf("\n\n");
    
     printf("Squares...\n");
@@ -195,7 +199,11 @@ int nextUlam(int previous)
 	return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
+int nextInteger(int previous)
+{
+ prinf("The integer after %d is %d.\n", previous , previous+1) ;
+ return previous+1
+}
 
 int averageOfThree(int first, int second, int third)
 {
