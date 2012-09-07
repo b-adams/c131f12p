@@ -139,7 +139,7 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-int averageOfThree (int first, int second, int third)
+int averageOfThree (int first, int second, int third);
 
     printf("\n\n");
    
@@ -196,8 +196,8 @@ return (previous%2)?(previous/2):(3*previous+1);
 
 int nextInteger (int previous)
 {
-    printf("\tThe integer after %d is %d\n", previous, previous + 1)
-    return (previous + 1) 
+    printf("\tThe integer after %d is %d\n", previous, previous + 1);
+    return (previous + 1);
 }
 
 int averageOfThree(int first, int second, int third)
