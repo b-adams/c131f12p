@@ -136,7 +136,11 @@ int main(int argc, char* argv[])
     printf("\n\n");
    
     printf("Averages...\n");
-	//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
+        int averageOf(1,2,3)
+        int averageOfThree(10,10,10)
+        int averageOfThree(11,10,10)
+        int averageOfThree(10,12,10)
+        int averageOfThree(10,10,13)
     printf("\n\n");
    
     printf("Squares...\n");
