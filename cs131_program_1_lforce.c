@@ -98,11 +98,15 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
 /**
- * @brief finds the square root of numbers
+ * @brief finds the square of numbers
  * @param the number you want to square
+ * @sideeffect This function will print the message, "The square of X is Y"
+ * @return returns the square of a number
+ *
+ * takes the input and multiplies it by itself to give it's square.
  * 
+ */
 int squareOf(int thingToSquare);
 
 /**
