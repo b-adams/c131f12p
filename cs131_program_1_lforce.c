@@ -1,4 +1,5 @@
 /**
+ * @status working
  * @file cs131_program_1_FLAST.c
  * @author Larry Force
  * @author Prof. Adams
