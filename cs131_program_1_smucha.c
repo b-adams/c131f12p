@@ -139,8 +139,8 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-    averageOfThree(2, 6, 8);
-    return 4;
+    averageOfThree(1, 2, 3);
+    return 1+2+3/3;
 
     printf("\n\n");
    
