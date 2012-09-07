@@ -99,7 +99,7 @@ int averageOfThree(int first, int second, int third);
 
 
 /**
- *@brief finds square root of number
+ *@brief finds square of number
  *@param number you want to square
  *@sideeffect prints "The square of the number is the square"
  *@return thingToSquare*thingToSquare
