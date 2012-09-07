@@ -107,11 +107,11 @@ int main(int argc, char* argv[])
     printf("\n\n");
    
     printf("Averages...\n");
-int averageOfThree(1,2,3);
-int averageOfThree(10,10,10);
-int averageOfThree(11,10,10);
-int averageOfThree(10,12,10);
-int averageOfThree(10,10,13);
+averageOfThree(1,2,3);
+averageOfThree(10,10,10);
+averageOfThree(11,10,10);
+averageOfThree(10,12,10);
+averageOfThree(10,10,13);
     printf("\n\n");
    
     printf("Squares...\n");
@@ -167,8 +167,8 @@ int nextUlam(int previous)
 
 int nextInteger(int previous)
 {
- prinf("The integer after %d is %d.\n", previous , previous+1) ;
- return previous+1
+ printf("The integer after %d is %d.\n", previous , previous+1) ;
+ return previous+1 ;
 }
 
 int averageOfThree(int first, int second, int third)
