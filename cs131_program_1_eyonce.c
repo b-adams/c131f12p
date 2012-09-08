@@ -210,8 +210,12 @@ int nextUlam(int previous)
 	return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
 
+/**
+
+Calculates the average of three integers.
+
+*/
 int averageOfThree(int first, int second, int third)
 {
 	printf("\tThe average of %d, %d, %d is %d\n",
