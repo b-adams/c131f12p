@@ -2,23 +2,12 @@
 * @file cs131_program_1_mpierce.c
 * @author Michael Pierce
 * @author Prof. Adams
-* @date September 7, 2012 
+* @date September 7, 2012
+* @status Working!
 */
 
-// INSTRUCTIONS:
-// TASK 0/5: LOG IN TO ECLIPSE AND TYPE THE FOLLOWING IN PuTTY:
-// cd ~/cs131
-// touch cs131_program_1_FLAST.c
-// git add cs131_program_1_FLAST.c
-// git commit -m "Initial creation of Program 1 source code file"
-//
-// TASK 1/5: ADD INITIAL CONTENT:
-// Open cs131_program_1_FLAST.c for editing (in Komodo or Pico)
-// Paste the contents of this file into cs131_program_1_FLAST.c
-// Modify the documentation at the very top to fix the FLAST, YOUR NAME HERE, and THE CURRENT DATE
-// Save a snapshot with commit message "Starting content added to file"
-// (Save your changes, 'git add' again, and 'git commit' with the requested message)
-//
+
+
 // There are four more tasks.
 // Each task has a line that starts with "// TASK"
 // You may do the rest of the tasks in any order
@@ -33,12 +22,8 @@
 // Make one more snapshot with a message like "Done final cleanup"
 // Tag your snapshot FLAST.prog.1
 // Turn in your work in Moodle
-//
-// FYI, the task lines will ask you to:
-// Write a documentation block for squareOf
-// Write a declaration for the nextFibonacci function
-// Write the function calls that find the averages of (1,2,3), (10, 10, 10), (11, 10, 10), (10, 12, 10), and (10,10,13)
-// Write a definition for the nextInteger function
+
+
 
 #include <stdio.h>
 
@@ -53,7 +38,7 @@
 * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 *
 */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+int nextFibonacci(int previous, int preprevious);
 
 
 /**
@@ -98,7 +83,11 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+/**
+ * @brief squares the given number
+ * @param thingToSquare What number is to be squared
+ * @return The given number squared
+*/
 int squareOf(int thingToSquare);
 
 /**
@@ -118,6 +107,7 @@ int squareOf(int thingToSquare);
 *
 * In the fourth and last stage, it finds the averages of a few trios of numbers.
 */
+
 int main(int argc, char* argv[])
 {
 int shaggy_dog;
@@ -133,12 +123,17 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
+    
+    averageOfThree( 1 , 2 , 3 );
+    averageOfThree( 10 , 10 , 10);
+    averageOfThree( 10 , 12 , 10);
+    averageOfThree( 10, 10, 13);
+
     printf("\n\n");
    
     printf("Squares...\n");
     shaggy_dog=0;
-    squareOf( shaggy_dog=nextInteger(shaggy_dog) );
+    squareOf(shaggy_dog=nextInteger(shaggy_dog));
     squareOf(shaggy_dog=nextInteger(shaggy_dog));
     squareOf(shaggy_dog=nextInteger(shaggy_dog));
     squareOf(shaggy_dog=nextInteger(shaggy_dog));
@@ -183,11 +178,16 @@ return previous+preprevious;
 int nextUlam(int previous)
 {
 printf("\tThe Ulam number after %d is %d\n",
-           previous, (previous%2)?(previous/2):(3*previous+1));
+        previous, (previous%2)?(previous/2):(3*previous+1));
 return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
+int nextInteger(int previous)
+{
+printf("\tThe next integer is %d/n",
+       previous);
+return previous+1;
+}
 
 int averageOfThree(int first, int second, int third)
 {
