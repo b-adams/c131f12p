@@ -109,8 +109,12 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
 int squareOf(int thingToSquare);
+int main ()
+{
+    squareOf(int thingToSquare)
+    return 0;
+}
 
 /**
  * @brief Where your program starts running.
