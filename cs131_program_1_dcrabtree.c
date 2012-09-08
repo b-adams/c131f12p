@@ -53,7 +53,8 @@
 * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 *
 */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+
+int nextFibonacci (int previous, int preprevious);
 
 
 /**
@@ -98,7 +99,14 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+
+/**
+*@author Prof. Adams/ Danielle Crabtree
+*@brief Finds the square root of  a number
+*@param thingToSquare The number being squared
+*@sideeffect Prints "The square of X is Y" on screen, where X is the input and Y is the square of X
+*@return The square of the number
+*/
 int squareOf(int thingToSquare);
 
 /**
@@ -133,7 +141,11 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
+    averageOfThree(1,2,3);
+    averageOfThree(10,10,10);
+    averageOfThree(11,10,10);
+    averageOfThree(10,12,10);
+    averageOfThree(10,10,13);
     printf("\n\n");
    
     printf("Squares...\n");
@@ -187,7 +199,12 @@ printf("\tThe Ulam number after %d is %d\n",
 return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
+int nextInteger(int previous)
+{
+printf("\tThe Integer after %d is %d\n",
+           previous, (previous + 1));
+return (previous +1);
+}
 
 int averageOfThree(int first, int second, int third)
 {
@@ -200,4 +217,4 @@ int squareOf(int thingToSquare)
 {
 printf("\tThe square of %d is %d\n", thingToSquare, thingToSquare*thingToSquare);
 return thingToSquare*thingToSquare;
-}
+}    
