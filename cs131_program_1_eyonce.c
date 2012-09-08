@@ -148,8 +148,16 @@ int main(int argc, char* argv[])
     printf("\n\n");
    
     printf("Averages...\n");
-	//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
-    printf("\n\n");
+	
+        {
+        printf ("nextInteger,1")
+        printf ("nextInteger,2");
+        printf ("nextInteger,3");
+        printf ("nextInteger,4");
+        printf ("nextInteger,5");
+        printf ("nextInteger,6");
+        return 0;
+        }
    
     printf("Squares...\n");
     shaggy_dog=0;
