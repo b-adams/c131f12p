@@ -3,42 +3,9 @@
  * @author Emily Yonce
  * @author Prof. Adams
  * @date 9/7/12
+ * @status Working!
  */
 
-// INSTRUCTIONS:
-// TASK 0/5: LOG IN TO ECLIPSE AND TYPE THE FOLLOWING IN PuTTY:
-//   cd ~/cs131
-//   touch cs131_program_1_FLAST.c
-//   git add cs131_program_1_FLAST.c
-//   git commit -m "Initial creation of Program 1 source code file"
-//
-// TASK 1/5: ADD INITIAL CONTENT:
-//   Open cs131_program_1_FLAST.c for editing (in Komodo or Pico)
-//   Paste the contents of this file into cs131_program_1_FLAST.c
-//   Modify the documentation at the very top to fix the FLAST, YOUR NAME HERE, and THE CURRENT DATE
-//   Save a snapshot with commit message "Starting content added to file"
-//     (Save your changes, 'git add' again, and 'git commit' with the requested message)
-//
-// There are four more tasks.
-//   Each task has a line that starts with "// TASK"
-//   You may do the rest of the tasks in any order
-//   Once you have followed the instructions for a task:
-//     Delete the "// TASK..." comment
-//     Save a snapshot with a message describing the task you completed
-//   Once you have done all the tasks, and your program compiles and runs:
-//     Add a line to the documentation at the top that says:
-//        * @status Working!
-//     Delete this big block of comments
-//     Double check there are no other // comments in your file
-//     Make one more snapshot with a message like "Done final cleanup"
-//     Tag your snapshot FLAST.prog.1
-//     Turn in your work in Moodle
-//
-// FYI, the task lines will ask you to:
-//   Write a documentation block for squareOf
-//   Write a declaration for the nextFibonacci function
-//   Write the function calls that find the averages of (1,2,3), (10, 10, 10), (11, 10, 10), (10, 12, 10), and (10,10,13)
-//   Write a definition for the nextInteger function
 
 #include <stdio.h>
 
@@ -110,11 +77,8 @@ int averageOfThree(int first, int second, int third);
 
 
 int squareOf(int thingToSquare);
-int main ()
-{
-    squareOf(int thingToSquare)
-    return 0;
-}
+
+
 
 /**
  * @brief Where your program starts running.
@@ -133,7 +97,7 @@ int main ()
  *
  * In the fourth and last stage, it finds the averages of a few trios of numbers.
  */
-int main(int argc, char* argv[])
+int main (int argc, char* argv[])
 {
 	int shaggy_dog;
 	int scratchpad2;
@@ -150,7 +114,7 @@ int main(int argc, char* argv[])
     printf("Averages...\n");
 	
         {
-        printf ("nextInteger,1")
+        printf ("nextInteger,1");
         printf ("nextInteger,2");
         printf ("nextInteger,3");
         printf ("nextInteger,4");
