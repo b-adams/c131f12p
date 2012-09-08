@@ -53,7 +53,8 @@
 * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 *
 */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+//TASK 2: int nextnumberinsequence (int a, int b);
+
 
 
 /**
@@ -100,7 +101,11 @@ int averageOfThree(int first, int second, int third);
 
 //TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
 int squareOf(int thingToSquare);
-
+{printf("square of 4,2squared);
+        printf (square of 9, 3squared);
+        printf (square of 16, 4 squared);
+        return thesquareofnumber
+        }
 /**
 * @brief Where your program starts running.
 * @param argc How many 'tokens' were typed when you ran the program
@@ -135,6 +140,7 @@ int scratchpad2;
     printf("Averages...\n");
 //TASK 4: PUT averageOfThree FUNCTION CALLS HERE
     printf("\n\n");
+    the square root of ("4", 2)
    
     printf("Squares...\n");
     shaggy_dog=0;
