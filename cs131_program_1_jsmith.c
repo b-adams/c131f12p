@@ -1,20 +1,9 @@
 /**
  * @file cs131_program_1_FLAST.c
- * @author Jsmith
-
+ * @author Jsmith, Prof. Adams
+ * @status Workin
  
-//     Double check there are no other // comments in your file
-//     Make one more snapshot with a message like "Done final cleanup"
-//     Tag your snapshot FLAST.prog.1
-//     Turn in your work in Moodle
-//
-// FYI, the task lines will ask you to:
-//   Write a documentation block for squareOf
-//   Write a declaration for the nextFibonacci function
-//   Write the function calls that find the averages of (1,2,3), (10, 10, 10), (11, 10, 10), (10, 12, 10), and (10,10,13)
-//   Write a definition for the nextInteger function
 
-#include <stdio.h>
 
 /**
  * @author Prof. Adams
@@ -27,7 +16,10 @@
  * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
  *
  */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+
+
+#include <stdio.h>
+
 int nextFibonacci(int previous, int preprevious);
 
 /**
@@ -72,7 +64,7 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
+
 /**
  * @brief finds the square of a number.
  * @param the number to square.
@@ -114,7 +106,6 @@ int main(int argc, char* argv[])
     printf("\n\n");
    
     printf("Averages...\n");
-	//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
 	averageOfThree(1,2,3);
 	averageOfThree(10, 10, 10);
 	averageOfThree(11, 10, 10);
@@ -173,11 +164,12 @@ int nextUlam(int previous)
 	return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
 
 int nextInteger(int previous)
 {
-	return previous++;
+	previous++;
+	printf("the next integer is: %d \n", previous);
+	return previous;
 }
 
 int averageOfThree(int first, int second, int third)
