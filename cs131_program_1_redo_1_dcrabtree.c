@@ -3,30 +3,8 @@
 * @author Danielle Crabtree
 * @author Prof. Adams
 * @date September 12, 2012
+* @status Working!
 */
-
-
-//
-// There are four more tasks.
-// Each task has a line that starts with "// TASK"
-// You may do the rest of the tasks in any order
-// Once you have followed the instructions for a task:
-// Delete the "// TASK..." comment
-// Save a snapshot with a message describing the task you completed
-// Once you have done all the tasks, and your program compiles and runs:
-// Add a line to the documentation at the top that says:
-// * @status Working!
-// Delete this big block of comments
-// Double check there are no other // comments in your file
-// Make one more snapshot with a message like "Done final cleanup"
-// Tag your snapshot FLAST.prog.1
-// Turn in your work in Moodle
-//
-// FYI, the task lines will ask you to:
-// Write a documentation block for squareOf
-// Write a declaration for the nextFibonacci function
-// Write the function calls that find the averages of (1,2,3), (10, 10, 10), (11, 10, 10), (10, 12, 10), and (10,10,13)
-// Write a definition for the nextInteger function
 
 #include <stdio.h>
 
@@ -56,8 +34,8 @@ int nextFibonacci (int previous, int preprevious);
 * If it's odd, the next number is one more than three times the current number.
 * Some guy named Ulam things that, eventually, this pattern will always lead you to 1.
 */
-int nextUlam(int previous);
 
+int nextUlam(int previous);
 
 /**
 * @author Prof. Adams
@@ -69,8 +47,8 @@ int nextUlam(int previous);
 * Really, this is just a glorified way to add one.
 * (And put some spam on the screen in the process).
 */
-int nextInteger(int previous);
 
+int nextInteger(int previous);
 
 /**
 * @author Prof. Adams
@@ -83,8 +61,8 @@ int nextInteger(int previous);
 *
 * Adds up all the inputs, then divides the total by three. Easy peasy.
 */
-int averageOfThree(int first, int second, int third);
 
+int averageOfThree(int first, int second, int third);
 
 /**
 *@author Prof. Adams/ Danielle Crabtree
@@ -113,6 +91,7 @@ int squareOf(int thingToSquare);
 *
 * In the fourth and last stage, it finds the averages of a few trios of numbers.
 */
+
 int main(int argc, char* argv[])
 {
 int shaggy_dog;
