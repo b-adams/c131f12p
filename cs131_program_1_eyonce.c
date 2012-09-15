@@ -119,13 +119,10 @@ int main (int argc, char* argv[])
     printf("Averages...\n");
 	
         {
-        printf ("nextInteger,1");
-        printf ("nextInteger,2");
-        printf ("nextInteger,3");
-        printf ("nextInteger,4");
-        printf ("nextInteger,5");
-        printf ("nextInteger,6");
-        return 0;
+        averafeOfThree (1);
+        averageOfThree (2);
+        averageOfThree (3);
+
         }
    
     printf("Squares...\n");
