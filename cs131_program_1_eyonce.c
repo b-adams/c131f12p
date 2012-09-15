@@ -33,6 +33,7 @@
  *The forumla for the next number N in the nextFibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 */
 
+int nextFibonacci sequence (int x, int y);
 
 /**
  * @author Prof. Adams
