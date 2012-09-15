@@ -76,7 +76,11 @@ int nextInteger(int previous);
  */
 int averageOfThree(int first, int second, int third);
 
-
+/**
+ * @brief Finds the square of two numbers.
+ * @param thingToSquare Number that is squared.
+ * @return The square of the given number.
+*/
 int squareOf(int thingToSquare);
 
 
