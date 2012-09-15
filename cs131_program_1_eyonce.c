@@ -177,11 +177,15 @@ int nextUlam(int previous)
 }
 
 
-/**
+int nextInteger (int previous)
+{
+	printf(\tThe next integer after %d is %d\n",
+	       previous, (previous+1);
+	return (previous+1);
+}
 
-Calculates the average of three integers.
 
-*/
+
 int averageOfThree(int first, int second, int third)
 {
 	printf("\tThe average of %d, %d, %d is %d\n",
