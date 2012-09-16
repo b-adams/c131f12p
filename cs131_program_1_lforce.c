@@ -1,9 +1,9 @@
 /**
- * @status working
- * @file cs131_program_1_FLAST.c
+ * @file cs131_program_1_lforce.c
  * @author Larry Force
  * @author Prof. Adams
  * @date September 6, 2012
+ * @status working
  */
 
 
