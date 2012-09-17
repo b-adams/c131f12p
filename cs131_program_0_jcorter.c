@@ -2,7 +2,7 @@
  * @file cs131_program_0_jcorter.c
  * @author Jessica Corter
  * @date 09/17/2012
- * @status Working and documentation completed
+ * @status documentation completed and program working
 */
 
 #include <stdio.h>
