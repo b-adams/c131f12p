@@ -3,29 +3,8 @@
 * @author Zakarra Butts
 * @author Prof. Adams
 * @date September 3, 2012
+* @status Working!
 */
-
-// INSTRUCTIONS:
-// There are four more tasks.
-// Each task has a line that starts with "// TASK"
-// You may do the rest of the tasks in any order
-// Once you have followed the instructions for a task:
-// Delete the "// TASK..." comment
-// Save a snapshot with a message describing the task you completed
-// Once you have done all the tasks, and your program compiles and runs:
-// Add a line to the documentation at the top that says:
-// * @status Working!
-// Delete this big block of comments
-// Double check there are no other // comments in your file
-// Make one more snapshot with a message like "Done final cleanup"
-// Tag your snapshot FLAST.prog.1
-// Turn in your work in Moodle
-//
-// FYI, the task lines will ask you to:
-// Write a documentation block for squareOf
-// Write a declaration for the nextFibonacci function
-// Write the function calls that find the averages of (1,2,3), (10, 10, 10), (11, 10, 10), (10, 12, 10), and (10,10,13)
-// Write a definition for the nextInteger function
 
 #include <stdio.h>
 
