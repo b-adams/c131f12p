@@ -3,7 +3,7 @@
 * @author Pamela Badian-Pessot
 * @date September 17, 2012
 * @brief Program 0: Hello world
-* @status Being written
+* @status programcompiling and working
 */
 
 #include <stdio.h>
