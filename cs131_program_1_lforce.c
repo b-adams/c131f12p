@@ -3,6 +3,7 @@
  * @author Larry Force
  * @author Prof. Adams
  * @date September 6, 2012
+ * @brief prints demonstrations of several mathematical functions
  * @status working
  */
 
@@ -74,6 +75,7 @@ int averageOfThree(int first, int second, int third);
  * takes the input and multiplies it by itself to give it's square.
  * 
  */
+
 int squareOf(int thingToSquare);
 
 /**
