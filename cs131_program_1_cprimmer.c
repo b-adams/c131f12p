@@ -6,14 +6,7 @@
 */
 
 
-//
-// TASK 1/5: ADD INITIAL CONTENT:
-// Open cs131_program_1_FLAST.c for editing (in Komodo or Pico)
-// Paste the contents of this file into cs131_program_1_FLAST.c
-// Modify the documentation at the very top to fix the FLAST, YOUR NAME HERE, and THE CURRENT DATE
-// Save a snapshot with commit message "Starting content added to file"
-// (Save your changes, 'git add' again, and 'git commit' with the requested message)
-//
+
 // There are four more tasks.
 // Each task has a line that starts with "// TASK"
 // You may do the rest of the tasks in any order
@@ -48,7 +41,8 @@
 * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 *
 */
-//TASK 2: PUT DECLARATION LINE FOR nextFibonacci HERE
+
+int nextfibonacci(previous, preprevious);
 
 
 /**
