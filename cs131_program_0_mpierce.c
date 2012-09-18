@@ -6,7 +6,7 @@
  */
 int main(int argc, char* argv[])
 {
-  printf("Hello, World !\n");
-  printf("My name is Michael Pierce and I am in CS131!\n");
+  printf("Hello, %s, World!\n");
+  printf("My name is %s, Michael Pierce and I am in CS131!\n");
   return 0; 
 }
