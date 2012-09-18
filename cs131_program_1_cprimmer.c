@@ -5,12 +5,7 @@
 * @date September 7 2012
 */
 
-// INSTRUCTIONS:
-// TASK 0/5: LOG IN TO ECLIPSE AND TYPE THE FOLLOWING IN PuTTY:
-// cd ~/cs131
-// touch cs131_program_1_FLAST.c
-// git add cs131_program_1_FLAST.c
-// git commit -m "Initial creation of Program 1 source code file"
+
 //
 // TASK 1/5: ADD INITIAL CONTENT:
 // Open cs131_program_1_FLAST.c for editing (in Komodo or Pico)
