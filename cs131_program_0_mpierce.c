@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ *@brief Displays Pre-Written message
+ *@return Prints message on screen
+ */
 int main(int argc, char* argv[])
 {
   printf("Hello, World !\n");
