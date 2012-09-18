@@ -1,5 +1,5 @@
 /**
- *@file cs131_program_0d_cschrom.c
+ *@file cs131_program_0_cschrom.c
  *@brief The program prints "Hello World!", My name, and my class
  *@author Colby Schrom
  *@date 9/17/12
