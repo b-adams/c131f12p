@@ -4,3 +4,10 @@
  *@date Sept 17
  *@status in progress
  */
+
+#include <stdio.h>
+
+int main (int argc, char* argv[])
+{
+    return 0;
+}
