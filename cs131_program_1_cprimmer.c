@@ -87,8 +87,11 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
-int squareOf(int thingToSquare);
+
+/**
+@brief finding the square of a number
+@param argc multiply the number by itself
+@return the square of the number 
 
 /**
 * @brief Where your program starts running.
