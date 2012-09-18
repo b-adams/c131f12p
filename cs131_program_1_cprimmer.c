@@ -91,7 +91,8 @@ int averageOfThree(int first, int second, int third);
 /**
 @brief finding the square of a number
 @param argc multiply the number by itself
-@return the square of the number 
+@return the square of the number
+*/
 
 /**
 * @brief Where your program starts running.
@@ -125,17 +126,16 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
-    printf("\n\n");
-   
-    printf("Squares...\n");
-    shaggy_dog=0;
-    squareOf( shaggy_dog=nextInteger(shaggy_dog) );
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    printf("\n\n");
+
+ int main()
+ {
+    averageofthree(1,2,3);
+    averageofthree(10,10,10);
+    averageofthree(11,10,10);
+    averageofthree(10,12,10);
+    averageofthree(10,10,13);
+    return averageofthreenumbers;
+ }
 
 printf("Fibonacci numbers...\n");
 shaggy_dog=nextFibonacci(1,1);
