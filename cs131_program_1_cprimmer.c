@@ -3,6 +3,7 @@
 * @author Cody Primmer
 * @author Prof. Adams
 * @date September 7 2012
+* @status working
 */
 
 
@@ -179,8 +180,12 @@ printf("\tThe Ulam number after %d is %d\n",
 return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
 
+int nextInteger(int previous)
+{
+    printf ("1+%d is %d\n", previous, previous+1);
+    return previous+1
+}
 int averageOfThree(int first, int second, int third)
 {
 printf("\tThe average of %d, %d, %d is %d\n",
