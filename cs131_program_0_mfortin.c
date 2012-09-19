@@ -1,5 +1,5 @@
 /**
-* @file cs131_program_0d_mfortin.c
+* @file cs131_program_0_mfortin.c
 * @author MELISSA_FORTIN
 * @date SEPTEMBER_17
 * @brief Program 0d: Adding documentation to program 0c
