@@ -6,7 +6,6 @@
  * @brief Program 0: Says "Hello World! My name is Jake, and I am in cs131."
  */
 
-
 #include <stdio.h>
 
 /**
