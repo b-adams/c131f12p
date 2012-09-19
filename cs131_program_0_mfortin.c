@@ -1,24 +1,18 @@
 /**
 * @file cs131_program_0_mfortin.c
 * @author MELISSA_FORTIN
-* @date SEPTEMBER_17
-* @brief Program 0d: Adding documentation to program 0c
+* @date SEPTEMBER_19
+* @brief Program 0d: Adding documentation to program 0
 *
-* @todo Add documentation to program 0c
-* @done Added documentation to program 0c, and it's now 0d
+* @todo Fix adding documentation to program 0
+* @done Re-added documentation to program 0, and it's now 0d
 *
-* @status DESCRIBE_IF_EVERYTHING_WORKING_OR_WHAT_IS_NOT_YET_RIGHT
+* @status working
 *
 * @assistance TA Joshua Brutscher
 */
 
 #include <stdio.h>
-
-int main(int argc, char* argv[])
-{
-    printf("Hello, World. My name is Melissa Fortin, and I am in CS131\n");
-    return 0;
-}
 
 /**
 * @brief Main procedure.
@@ -29,4 +23,9 @@ int main(int argc, char* argv[])
 * @author MELISSA_FORTIN
 */
 
+int main(int argc, char* argv[])
+{
+    printf("Hello, World. My name is Melissa Fortin, and I am in CS131\n");
+    return 0;
+}
 
