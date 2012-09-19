@@ -5,7 +5,7 @@
 * @brief Program 2: Programming an arithmetic trick involving powers of two
 *
 * @todo Assignment 2
-* @done Numbers 1-5
+* @done Numbers 1-7
 *
 * @status In progress
 *
@@ -72,3 +72,39 @@ int twice(int n)
  
  Very simple function, should just return 2*n or n+n
 */
+
+int trickCheckArithmetic(int theUsersNumber);
+int trickCheckArithmetic(int theUsersNumber)
+{
+    //scanf ("(%d)", theUsersNumber);
+    printf ("First, subtract 2^0\n");
+    scanf ("%d",twoToThe(theUsersNumber));
+    printf ("Next, multiply by 2^2\n");
+    scanf ("%d",twoToThe(theUsersNumber));
+    printf ("Now, add 2^3\n");
+    scanf ("%d",twoToThe(theUsersNumber));;
+    printf ("And divide by 2^1\n");
+    scanf ("%d",twoToThe(theUsersNumber));
+    printf ("Finally, subtract twice your original number.\n");
+
+}
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+
+/**
+ @brief Pause until the user is ready to continue
+ @sideeffect Prompts the user to press enter
+ 
+ After printing a prompt, this function calls the getchar function
+ which will scan for the next letter in the stream. If the user presses
+ enter, a newline will be the next character, getchar will finish, and
+ the rest of the program will continue.
+ */
