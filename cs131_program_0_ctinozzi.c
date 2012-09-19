@@ -2,6 +2,6 @@
 
 int main (int argc, char* arv[])
 {
-    printf("Hello there, World!\n");
+    printf("Hello, world.  My name is Chris Tinozzi, and I am in CS131.\n");
     return 0;
 }
