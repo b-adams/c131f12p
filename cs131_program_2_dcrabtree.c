@@ -41,6 +41,22 @@ int twoToThe(int exponent);
  */
 int twice (int n);
 
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+
+int trickCheckArithmetic(int theUsersNumber)
+
+/**Documentation Block
+ */
+
 int main(int argc, char* argv[])
 {
     return 0;
@@ -67,4 +83,11 @@ int twice (int n)
     
     return n*2; 
 
+}
+
+int trickCheckArithmetic (int theUsersNumber)
+{
+    int theArithmetic
+    
+    print f
 }

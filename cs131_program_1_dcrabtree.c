@@ -1,5 +1,5 @@
 /**
-* @file cs131_program_1_redo_1_dcrabtree.c
+* @file cs131_program_1_dcrabtree.c
 * @author Danielle Crabtree
 * @author Prof. Adams
 * @date September 12, 2012
