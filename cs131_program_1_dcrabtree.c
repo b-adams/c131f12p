@@ -1,9 +1,9 @@
 /**
-* @file cs131_program_1_dcrabtree.c
+* @file cs131_program_1_redo_1_dcrabtree.c
 * @author Danielle Crabtree
 * @author Prof. Adams
-* @date September 7, 2012
-* * @status Working!
+* @date September 12, 2012
+* @status Working!
 */
 
 #include <stdio.h>
@@ -22,7 +22,6 @@
 
 int nextFibonacci (int previous, int preprevious);
 
-
 /**
 * @author Prof. Adams
 * @brief Figure out Ulam numbers... whatever those are.
@@ -35,8 +34,8 @@ int nextFibonacci (int previous, int preprevious);
 * If it's odd, the next number is one more than three times the current number.
 * Some guy named Ulam things that, eventually, this pattern will always lead you to 1.
 */
-int nextUlam(int previous);
 
+int nextUlam(int previous);
 
 /**
 * @author Prof. Adams
@@ -48,8 +47,8 @@ int nextUlam(int previous);
 * Really, this is just a glorified way to add one.
 * (And put some spam on the screen in the process).
 */
-int nextInteger(int previous);
 
+int nextInteger(int previous);
 
 /**
 * @author Prof. Adams
@@ -62,9 +61,8 @@ int nextInteger(int previous);
 *
 * Adds up all the inputs, then divides the total by three. Easy peasy.
 */
+
 int averageOfThree(int first, int second, int third);
-
-
 
 /**
 *@author Prof. Adams/ Danielle Crabtree
@@ -73,6 +71,7 @@ int averageOfThree(int first, int second, int third);
 *@sideeffect Prints "The square of X is Y" on screen, where X is the input and Y is the square of X
 *@return The square of the number
 */
+
 int squareOf(int thingToSquare);
 
 /**
@@ -92,6 +91,7 @@ int squareOf(int thingToSquare);
 *
 * In the fourth and last stage, it finds the averages of a few trios of numbers.
 */
+
 int main(int argc, char* argv[])
 {
 int shaggy_dog;
@@ -183,4 +183,4 @@ int squareOf(int thingToSquare)
 {
 printf("\tThe square of %d is %d\n", thingToSquare, thingToSquare*thingToSquare);
 return thingToSquare*thingToSquare;
-}    
+}
