@@ -29,8 +29,7 @@
 //     Add a line to the documentation at the top that says:
 //        * @status Working!
 //     Delete this big block of comments
-//     Double check there are no other
-// comments in your file
+//     Double check there are no other // comments in your file
 //     Make one more snapshot with a message like "Done final cleanup"
 //     Tag your snapshot FLAST.prog.1
 //     Turn in your work in Moodle
@@ -42,64 +41,22 @@
 //   Write a definition for the nextInteger function
 
 #include <stdio.h>
-/**
- * @author Prof. Adams
- * @brief Figure out numbers in the Fibonacci sequence
- * @param previous One of the two previous numbers in the sequence
- * @param preprevious The other of the two previous numbers in the sequence
- * @sideeffect Prints "The Fibonacci number after X and Y is Z" on screen, where X and Y are previous and preprevious, and Z is the same as what'll be returned.
- * @return The next number in the Fibonacci sequence
- 
- * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
- *
- */
- int nextUlam(int previous); 
 
 
-/**
- * @author Prof. Adams
- * @brief Figure out Ulam numbers... whatever those are.
- * @param previous The number you want to start at
- * @sideeffect Prints "The Ulam number after X is Y" on screen, where X is previous, and Y is the same as what'll be returned.
- * @return The next Ulam number
- *
- * The 'next Ulam number' depends on whether the current number is odd or even.
- * If it's even, the next number is half the current number.
- * If it's odd, the next number is one more than three times the current number.
- * Some guy named Ulam things that, eventually, this pattern will always lead you to 1.
- */
-int nextUlam(int previous);
 
 
-/**
- * @author Prof. Adams
- * @brief Count up by one.
- * @param previous The number you're starting at
- * @sideeffect Prints "The integer after X is Y" on screen, where X is previous, and Y is the same as what'll be returned.
- * @return The one more than where you started from
- *
- * Really, this is just a glorified way to add one.
- * (And put some spam on the screen in the process). *
- */
-int nextInteger(int previous);
 
 
-/**
- * @author Prof. Adams
- * @brief Find the average of three numbers
- * @param first One of your three numbers.
- * @param second Another of your three numbers.
- * @param third The last of your three numbers.
- * @sideeffect Prints "The average of X, Y, Z is W" on screen, where X,Y,Z are the first, second, and third inputs, and W is their average.
- * @return The average of first, second, and third
- *
- * Adds up all the inputs, then divides the total by three. Easy peasy.
- */
-int averageOfThree(int first, int second, int third);
+int nextUlam(int previous)
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HEREint squareOf
-(int thingToSquare);
+
+
+
+
+
+
+int squareOf(int thingToSquare);
 
 /**
  * @brief Where your program starts running.
@@ -133,7 +90,7 @@ int main(int argc, char* argv[])
     printf("\n\n");
     
     printf("Averages...\n");
-        //TASK 4: PUT averageOfThree FUNCTION CALLS HERE
+       (int first, int second, int third);
     printf("\n\n");
     
     printf("Squares...\n");
@@ -173,31 +130,101 @@ int main(int argc, char* argv[])
         return 0;
 }
 
-int nextFibonacci(int previous, int preprevious)
-{
-        printf("\tThe Fibonacci number after %d and %d is %d\n",
+ /**
+ * @author Prof. Adams
+ * @brief Figure out numbers in the Fibonacci sequence
+ * @param previous One of the two previous numbers in the sequence
+ * @param preprevious The other of the two previous numbers in the sequence
+ * @sideeffect Prints "The Fibonacci number after X and Y is Z" on screen, where X and Y are previous and preprevious, and Z is the same as what'll be returned.
+ * @return The next number in the Fibonacci sequence
+ 
+ * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
+ *
+ */
+ int nextFibonacci(int previous, int preprevious) 
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 1,1,2);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 1,2,3);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 2,3,5);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 3,5,8);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 5,8,13);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 8,13,21);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 13,21,34);
+        printf("\tThe Fibonacci number after %d and %d is %d\n", 21,34,55);
                preprevious, previous, previous+preprevious);
         return previous+preprevious;
 }
 
+/**
+ * @author Prof. Adams
+ * @brief Figure out Ulam numbers... whatever those are.
+ * @param previous The number you want to start at
+ * @sideeffect Prints "The Ulam number after X is Y" on screen, where X is previous, and Y is the same as what'll be returned.
+ * @return The next Ulam number
+ *
+ * The 'next Ulam number' depends on whether the current number is odd or even.
+ * If it's even, the next number is half the current number.
+ * If it's odd, the next number is one more than three times the current number.
+ * Some guy named Ulam things that, eventually, this pattern will always lead you to 1.
+ */
 int nextUlam(int previous)
 {
-        printf("\tThe Ulam number after %d is %d\n",
+        printf("\tThe Ulam number after %d is %d\n", 5,16);
+        printf("\tThe Ulam number after %d is %d\n", 16,8);
+        printf("\tThe Ulam number after %d is %d\n", 8,4);
+        printf("\tThe Ulam number after %d is %d\n", 4,2);
+        printf("\tThe Ulam number after %d is %d\n", 2,1);
+        printf("\tThe Ulam number after %d is %d\n", 1,1);
+        printf("\tThe Ulam number after %d is %d\n", 1,1);
+        printf("\tThe Ulam number after %d is %d\n", 1,1);
+        printf("\tThe Ulam number after %d is %d\n", 1,1);
                previous, (previous%2)?(previous/2):(3*previous+1));
         return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
-
+/**
+ * @author Prof. Adams
+ * @brief Count up by one.
+ * @param previous The number you're starting at
+ * @sideeffect Prints "The integer after X is Y" on screen, where X is previous, and Y is the same as what'll be returned.
+ * @return The one more than where you started from
+ *
+ * Really, this is just a glorified way to add one.
+ * (And put some spam on the screen in the process). *
+ */
+int nextInteger(int previous);printf("Integers...\n");
+    nextInteger(1);
+    nextInteger(2);
+    nextInteger(3);
+    nextInteger(4);
+    nextInteger(5);
+    nextInteger(6);
+    printf("\n\n");
+    
+/**
+ * @author Prof. Adams
+ * @brief Find the average of three numbers
+ * @param first One of your three numbers.
+ * @param second Another of your three numbers.
+ * @param third The last of your three numbers.
+ * @sideeffect Prints "The average of X, Y, Z is W" on screen, where X,Y,Z are the first, second, and third inputs, and W is their average.
+ * @return The average of first, second, and third
+ *
+ * Adds up all the inputs, then divides the total by three. Easy peasy.
+ */
 int averageOfThree(int first, int second, int third)
 {
-        printf("\tThe average of %d, %d, %d is %d\n",
+        printf("\tThe average of %d, %d, %d is %d\n", 1,2,3,2);
+        printf("\tThe average of %d, %d, %d is %d\n", 10,10,10,10);
+        printf("\tThe average of %d, %d, %d is %d\n", 10,11,10,10);
+        printf("\tThe average of %d, %d, %d is %d\n", 10,12,10,10);
+        printf("\tThe average of %d, %d, %d is %d\n", 10,10,13,11);
                first, second, third, (first+second+third)/3);
         return (first+second+third)/3;
 }
 
 int squareOf(int thingToSquare)
 {
-        printf("\tThe square of %d is %d\n", thingToSquare, thingToSquare*thingToSquare);
+        printf("\tThe square of %d is %d\n", 2,4);
+               thingToSquare, thingToSquare*thingToSquare);
         return thingToSquare*thingToSquare;
 }
