@@ -5,7 +5,7 @@
 * @brief Program 2: Programming an arithmetic trick involving powers of two
 *
 * @todo Assignment 2
-* @done Added documentation block, defined int main
+* @done Numbers 1-5
 *
 * @status In progress
 *
@@ -57,4 +57,18 @@ int twoToThe(int exponent);
     return theResult;
 }
 
+int twice(int n);
+int twice(int n)
+{
+    const int timesTwo = 2;
+    return n*timesTwo;
+}
 
+/**
+ @brief Double a number
+ @param n The number to double
+ @sideeffect None
+ @returns Twice n
+ 
+ Very simple function, should just return 2*n or n+n
+*/
