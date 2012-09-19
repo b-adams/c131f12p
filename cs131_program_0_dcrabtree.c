@@ -1,5 +1,5 @@
 /**
- *@cs131_program_0_dcrabtree.c
+ *@file cs131_program_0_dcrabtree.c
  *@author Danielle Crabtree
  *@date September 16, 2012
  *@brief Program 0: Hello World Program
