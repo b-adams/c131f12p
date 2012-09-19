@@ -1,5 +1,5 @@
 /**
-* @file   cs131_program_0d_lforce.c
+* @file   cs131_program_0_lforce.c
 * @author Larry Force
 * @date   September 17, 2012
 * @brief  Displays text when run
