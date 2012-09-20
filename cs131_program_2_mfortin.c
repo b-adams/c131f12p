@@ -32,8 +32,13 @@ void trickInstructions();
 
 int main (int argc, char* argv[])
 {
-  
-return 0;
+    int theUsersNumber;
+    trickInstructions();
+    printf ("Input a number/n");
+    scanf ("%d", theUsersNumber);
+    trickCheckArithmetic(theUsersNumber);
+    printf ("The answer should be %d/n", THE_ANSWER_EVERY_TIME);
+    return 0;
 }
 
 /**
