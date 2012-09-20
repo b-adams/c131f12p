@@ -5,7 +5,7 @@
 * @brief Program 2: Programming an arithmetic trick involving powers of two
 *
 * @todo Assignment 2
-* @done Numbers 1-7
+* @done Numbers 1-8
 *
 * @status In progress
 *
@@ -28,6 +28,7 @@ int twice(int n);
 int twoToThe(int exponent);
 int trickCheckArithmetic(int theUsersNumber);
 void pause();
+void trickInstructions();
 
 int main (int argc, char* argv[])
 {
@@ -107,14 +108,27 @@ int trickCheckArithmetic(int theUsersNumber)
 /**
  @brief Pause until the user is ready to continue
  @sideeffect Prompts the user to press enter
- 
- After printing a prompt, this function calls the getchar function
- which will scan for the next letter in the stream. If the user presses
- enter, a newline will be the next character, getchar will finish, and
- the rest of the program will continue.
  */
 
 void pause()
 {
     printf ("Press Enter\n");
+    scanf ("%d", getchar);
+}
+
+/**
+ @brief Prints all the instructions one at a time with pauses in between
+ @sideeffect Goes through instructions step by step at users pace
+*/
+void trickInstructions()
+{
+    printf ("First, subtract 2^0\n");
+    void pause();
+    printf ("Next, multiply by 2^2\n");
+    void pause();
+    printf ("Now, add 2^3\n");
+    void pause();
+    printf ("And divide by 2^1\n");
+    void pause();
+    printf ("Finally, subtract twice your original number.\n");
 }
