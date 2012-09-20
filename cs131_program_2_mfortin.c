@@ -24,6 +24,7 @@
  */
 
 const int THE_ANSWER_EVERY_TIME =2;
+const int timesTwo = 2;
 int twice(int n);
 int twoToThe(int exponent);
 int trickCheckArithmetic(int theUsersNumber);
@@ -55,6 +56,8 @@ int main (int argc, char* argv[])
 
 int twoToThe(int exponent)
 {
+    printf ("int twoToThe(int exponent)");
+    
     int theResult;
     
     printf("-> Calling twoToThe(%d)\n",exponent);
@@ -79,7 +82,7 @@ int twoToThe(int exponent)
 
 int twice(int n)
 {
-    const int timesTwo = 2;
+    printf ("int twice(int n)");
     return n*timesTwo;
 }
 
@@ -96,6 +99,7 @@ int twice(int n)
 
 int trickCheckArithmetic(int theUsersNumber)
 {
+    printf ("int trickCheckArithmetic(int theUsersNumber)");
     //scanf ("(%d)", theUsersNumber);
     printf ("First, subtract 2^0\n");
     scanf ("%d",twoToThe(theUsersNumber));
@@ -117,6 +121,7 @@ int trickCheckArithmetic(int theUsersNumber)
 
 void pause()
 {
+    printf ("void pause()");
     printf ("Press Enter\n");
     scanf ("%d", getchar);
 }
@@ -127,6 +132,7 @@ void pause()
 */
 void trickInstructions()
 {
+    printf ("void trickInstructions()");
     printf ("First, subtract 2^0\n");
     void pause();
     printf ("Next, multiply by 2^2\n");
