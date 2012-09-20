@@ -36,10 +36,10 @@ int main (int argc, char* argv[])
 {
     int theUsersNumber;
     trickInstructions();
-    printf ("Input a number/n");
+    printf ("Input a number\n");
     scanf ("%d", theUsersNumber);
     trickCheckArithmetic(theUsersNumber);
-    printf ("The answer should be %d/n", THE_ANSWER_EVERY_TIME);
+    printf ("The answer should be %d\n", THE_ANSWER_EVERY_TIME);
     return 0;
 }
 
@@ -84,8 +84,8 @@ int twoToThe(int exponent)
 
 int twice(int n)
 {
-    printf ("-> Calling int twice(%d)/n", n);
-    printf ("<- int twice(%d) returns %d/n", n, n*timesTwo);
+    printf ("-> Calling int twice(%d)\n", n);
+    printf ("<- int twice(%d) returns %d\n", n, n*timesTwo);
     return n*timesTwo;
 }
 
@@ -102,7 +102,7 @@ int twice(int n)
 
 int trickCheckArithmetic(int theUsersNumber)
 {
-    printf ("-> Calling int trickCheckArithmetic(%d)/n", theUsersNumber);
+    printf ("-> Calling int trickCheckArithmetic(%d)\n", theUsersNumber);
     //scanf ("(%d)", theUsersNumber);
     printf ("First, subtract 2^0\n");
     scanf ("%d",twoToThe(theUsersNumber));
@@ -113,7 +113,7 @@ int trickCheckArithmetic(int theUsersNumber)
     printf ("And divide by 2^1\n");
     scanf ("%d",twoToThe(theUsersNumber));
     printf ("Finally, subtract twice your original number.\n");\
-    printf ("<- int trickCheckArithmetic(%d) returns %d/n", theUsersNumber, THE_ANSWER_EVERY_TIME);
+    printf ("<- int trickCheckArithmetic(%d) returns %d\n", theUsersNumber, THE_ANSWER_EVERY_TIME);
     return THE_ANSWER_EVERY_TIME;
 }
 
@@ -125,10 +125,10 @@ int trickCheckArithmetic(int theUsersNumber)
 
 void pause()
 {
-    printf ("-> Calling void pause()/n");
+    printf ("-> Calling void pause()\n");
     printf ("Press Enter\n");
-    scanf ("%d", getchar);
-    printf ("<- void pause() returns nothing/n");
+    scanf ("%d", getchar());
+    printf ("<- void pause() returns nothing\n");
 }
 
 /**
@@ -137,7 +137,7 @@ void pause()
 */
 void trickInstructions()
 {
-    printf ("-> Calling void trickInstructions()/n");
+    printf ("-> Calling void trickInstructions()\n");
     printf ("First, subtract 2^0\n");
     void pause();
     printf ("Next, multiply by 2^2\n");
@@ -147,5 +147,5 @@ void trickInstructions()
     printf ("And divide by 2^1\n");
     void pause();
     printf ("Finally, subtract twice your original number.\n");
-    printf ("<- void trickInstructions() returns nothing/n");
+    printf ("<- void trickInstructions() returns nothing\n");
 }
