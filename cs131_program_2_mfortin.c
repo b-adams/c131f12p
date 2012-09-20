@@ -5,11 +5,12 @@
 * @brief Program 2: Programming an arithmetic trick involving powers of two
 *
 * @todo Assignment 2
-* @done Numbers 1-8
+* @done Numbers 1-11
 *
 * @status In progress
 *
 * @assistance TA Josh Brutscher
+* @assistance TA Constance LeBerth
 */
 
 
