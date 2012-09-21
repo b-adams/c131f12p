@@ -9,6 +9,15 @@
  
  #include <stdio.h>
  
+  /**
+ @brief The answer that the trick always comes up with
+ 
+ For not-very-mysterious algebraic reasons, this trick will always come up
+ with the same answer. Rather than have '2' randomly show up in our code as
+ a 'magic number', we give it a name here.
+ */
+ 
+ const int THE_ANSWER_EVERY_TIME=2
  
  /**
   * @author Larry Force
@@ -24,15 +33,6 @@
     return 0 ;
  }
  
- /**
- @brief The answer that the trick always comes up with
- 
- For not-very-mysterious algebraic reasons, this trick will always come up
- with the same answer. Rather than have '2' randomly show up in our code as
- a 'magic number', we give it a name here.
- */
- 
- const int THE_ANSWER_EVERY_TIME=2
  
  
  /**
@@ -58,16 +58,61 @@ int twoToThe(int exponent);
  * Very simple function, should just return 2*n or n+n
  */
  
- int twice(int n)
+ int twice(int n) ;
+ 
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+
+int trickCheckArithmetic(int theUsersNumber) ;
  
  
  
  
  //definitions start here
  
+ 
+ int trickCheckArithmetic(int theUsersNumber)
+ {
+    
+    int x ;
+    int y ;
+
+printf("What is your number?") ;
+scanf("%d", &theUsersNumber) ;
+
+printf("First, subtract 2^0") ;
+theUsersNumber-twoToThe(0)=x ;
+printf("The result is %d." , x) ;
+
+printf("Next, multiply by 2^2") ;
+x*twoToThe(2)=y ;
+printf("The result is %d." , y) ;
+
+printf("Now, add 2^3") ;
+y+twoToThe(3)=x ;
+printf("The result is %d." , x) ;
+
+printf("And divide by 2^1") ;
+x/twoToThe(1)=y ;
+printf("The result is %d." , y) ;
+
+printf("Finally, subtract twice your original number.") ;
+y-(twoToThe(1)*theUsersNumber)
+printf("The final result is %d" , THE_ANSWER_EVERY_TIME)
+ }
+ 
+ 
  int twice (int n)
  {
-    (int n)*2
+    (n)+(n)
  }
  
  
