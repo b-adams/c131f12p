@@ -101,8 +101,10 @@ int main(int argc, char* argv[]);
 int main(int argc, char* argv[])
 
 {
-
-     return 0;
+    trickInstrustions;
+    getNumberFromUser;
+    trickArithmetic (int theUsersNumber);    
+    return THE_ANSWER_EVERY_TIME;
     
 }
 
