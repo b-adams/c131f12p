@@ -122,6 +122,12 @@ int twoToThe(int exponent)
     return theResult;
 }
 
+int twice(int number)
+{
+
+    return number*2;
+}
+
 int trickCheckArithmetic(int theUsersNumber)
 {
     printf ("subtract 2^0\n");
