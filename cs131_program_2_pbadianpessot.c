@@ -25,8 +25,21 @@
 
 const int THE_ANSWER_EVERY_TIME=2;
 
+/**
+ @brief Compute a power of 2
+ @param exponent The exponent: how many times to multiply 2 by itself.
+ @sideeffect None
+ @returns 2^n
+ 
+ This works by using the fact that 2^n is twice 2^(n-1), and 2^0 is 1
+ So, if the user gives 0 for n, this just returns n
+ Otherwise, it returns twice the value of twoToThe(n-1)
+ */
+
 int main(int argc, char* argv[])
 {
+int twoToThe(int exponent);
+
 return 0;
 }
 
