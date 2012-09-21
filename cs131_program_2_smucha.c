@@ -52,5 +52,11 @@ int twoToThe(int exponent)
 
 int twice(int n)
 {
+    int theResult;
     
+    printf("-> Calling twice(%d)\n",n);
+    
+    prinf("<- twice(%d) returns %d\n",n, theResult);
+    
+    return theResult;
 }
