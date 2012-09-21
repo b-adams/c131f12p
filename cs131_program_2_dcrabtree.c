@@ -9,6 +9,7 @@
 #include <stdio.h>
 
 /**
+ @author Danielle Crabtree/ Professor Adams
  @brief The answer that the trick always comes up with
  
  For not-very-mysterious algebraic reasons, this trick will always come up
@@ -19,6 +20,7 @@
 const int THE_ANSWER_EVERY_TIME = 2;
 
 /**
+ @author Danielle Crabtree/ Professor Adams
  @brief Compute a power of 2
  @param exponent The exponent: how many times to multiply 2 by itself.
  @sideeffect None
@@ -32,6 +34,7 @@ const int THE_ANSWER_EVERY_TIME = 2;
 int twoToThe(int exponent);
 
 /**
+ @author Danielle Crabtree/ Professor Adams
  @brief Double a number
  @param n The number to double
  @sideeffect None
@@ -42,6 +45,7 @@ int twoToThe(int exponent);
 int twice (int n);
 
 /**
+ @author Danielle Crabtree/ Professor Adams
  @brief Walk the user through the arithmetic in the trick
  @param theUsersNumber Whatever number the user picked
  @sideeffect Displays the computations for each step of the trick.
@@ -87,7 +91,12 @@ int twice (int n)
 
 int trickCheckArithmetic (int theUsersNumber)
 {
-    int theArithmetic
     
-    print f
+    printf("Pick any number and enter it here: ");
+    scan("%d", theUsersNumber);
+    return theUsersNumber;
+}
+
+int twoToThe (int n)
+    printf("Subtract 2^0 from the number that you chose)
 }
