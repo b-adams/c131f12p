@@ -16,7 +16,7 @@
  a 'magic number', we give it a name here.
  */
 
- const int THE_ANSWER__EVERY_TIME = 2;
+ const int THE_ANSWER_EVERY_TIME = 2;
 
 /**
  @brief Compute a power of 2
@@ -53,7 +53,7 @@ int twice (int n);
  and then subtracting twice the original number.
  */
 
-int trickCheckArithmetic (int the UsersNumber);
+int trickCheckArithmetic(int theUsersNumber);
 
 /**
  @brief Pause until the user is ready to continue
@@ -65,7 +65,7 @@ int trickCheckArithmetic (int the UsersNumber);
  the rest of the program will continue.
  */
 
-void pause ();
+void pause();
 
 /**
  @brief Prints instructions one at a time with pauses in between
@@ -73,7 +73,7 @@ void pause ();
 
  */
 
-void trickInstructions ();
+void trickInstructions();
 
 /**
  @brief Gets the user to pick a number
@@ -84,7 +84,7 @@ void trickInstructions ();
  and then returns the value stored in that variable to the calling code.
  */
 
-int getNumberFromUser ();
+int getNumberFromUser();
 
 /**
  * @brief Main procedure.
@@ -102,9 +102,9 @@ int main(int argc, char* argv[])
 
 {
     printf ("This is the main function.\n");
-    trickInstrustions;
-    getNumberFromUser;
-    trickArithmetic (int theUsersNumber);    
+    trickInstructions();
+    getNumberFromUser();
+    trickCheckArithmetic (int theUsersNumber);    
     printf ("This is the main function and it returns the integer two.\n");
     return THE_ANSWER_EVERY_TIME;
     
@@ -133,18 +133,17 @@ int twice (int n)
     return 2*n;   
 }
 
-int trickCheckArithmetic (int theUsersNumber)
+int trickCheckArithmetic(int theUsersNumber)
 
 {
-    printf ("This is the trickCheckArithmetic (int theUsersNumber) function.\n");
-    
-    getNumberFromUser();
-    
+    int result;
+       
+    printf ("This is the trickCheckArithmetic function.\n");
     result = theUsersNumber - twoToThe (0);
     printf ("Subtract 2^0 from your number: %d\n", result);
     
     result = result * twoToThe (2);
-    printf ("Multiply the result by 2^2: &d\n", result);
+    printf ("Multiply the result by 2^2: %d\n", result);
     
     result = result + twoToThe (3);
     printf ("Add 2^3 to your result: %d\n", result);
@@ -153,50 +152,51 @@ int trickCheckArithmetic (int theUsersNumber)
     printf ("Divide the result by 2^1: %d\n", result);
     
     result = result - twice (theUsersNumber);
-    printf (Finally, take the result and subtract two times your original number; %d\n, resultesult);
+    printf ("Take the result and subtract two times your original number: %d.\n, result");
     
-    printf ("Lemme guess...your answer was %d\n", THE_ANSWER_EVERY_TIME);
-    printf ("This is the trickCheckArithmetic (int theUsersNumber) function and it returns the integer two.\n");
+    printf ("Lemme guess...your answer was %d\n", result);
+    printf ("This is the trickCheckArithmetic function and it returns the integer two.\n");
     return THE_ANSWER_EVERY_TIME;
 }
 
-void pause ()
+void pause()
 {
-    printf ("This is the pause function.\n");
     char var1;
-    printf ("Paused, please enter a character and then hit enter when ready to continue.");
-    scanf (" %c", &var1);
-    printf ("This is the pause function and it returns nothing.\n");
+    printf("This is the pause function.\n");
+    printf("Paused, please enter a character and then hit enter when ready to continue.");
+    scanf(" %c", &var1);
+    printf("This is the pause function and it returns nothing.\n");
     return;    
 }
 
-void trickInstructions ()
+void trickInstructions()
 {
-    printf ("This is the trickInstructions function.\n");
-    Printf ("Think of a number.");
-    pause;
-    printf ("Subtract 2^0 from your number: ");
-    pause;
-    printf ("Multiply the result by 2^2: ");
-    pause;
-    printf ("Add 2^3 to your result: ");
-    pause;
-    printf ("Divide the result by 2^1: ");
-    pause;
-    printf (Finally, take the result and subtract two times your original number: );
-    pause;
-    printf ("Lemme guess...your answer was %d\n", THE_ANSWER_EVERY_TIME);    
-    printf ("This is the trickInstructions function and it returns nothing.\n");
+    printf("This is the trickInstructions function.\n");
+    printf("Think of a number.");
+    pause();
+    printf("Subtract 2^0 from your number: ");
+    pause();
+    printf("Multiply the result by 2^2: ");
+    pause();
+    printf("Add 2^3 to your result: ");
+    pause();
+    printf("Divide the result by 2^1: ");
+    pause();
+    printf("Take the result and subtract two times your original number: ");
+    pause();
+    printf("Lemme guess...your answer was % d\n", THE_ANSWER_EVERY_TIME);    
+    printf("This is the trickInstructions function and it returns nothing.\n");
     return;
       
 }
 
-int getNumberFromUser ()
+int getNumberFromUser()
 
 {
+    int theUsersNumber;
     printf ("This is the getNumberFromUser function.\n");
-    printf ("Please enter your number: %d\n")
-    scanf ("%d", theUsersNumber);
+    printf ("Please enter your number and press enter: \n");
+    scanf ("% d", theUsersNumber);
     printf ("This is the getNumberFromUser function and it returns the integer the user entered.\n");
     return theUsersNumber;   
     
