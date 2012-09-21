@@ -28,6 +28,16 @@ const int THE_ANSWER_EVERY_TIME
  */
 int twoToThe(int exponent);
 
+/**
+ @brief Double a number
+ @param n The number to double
+ @sideeffect None
+ @returns Twice n
+ 
+ Very simple function, should just return 2*n or n+n
+ */
+int twice(int n);
+
 
 int main (int argc, char* argv[])
 {
@@ -47,4 +57,11 @@ int twoToThe(int exponent)
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
     return theResult;
+}
+
+int twice(int n)
+{
+    int theResult;
+    
+    printf()
 }
