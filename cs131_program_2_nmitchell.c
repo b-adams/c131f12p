@@ -80,3 +80,40 @@ int twice(int n)
     
     return n + n;
 }
+
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+
+int trickCheckArithmetic(int theUsersNumber);
+
+int trickCheckArithmetic(int theUsersNumber)
+
+{
+    printf("please enter a number \n");
+    scanf("%d", &theUsersNumber);
+    originalNumber = theUsersNumber
+    printf("you entered %d as your number \n", theUsersNumber);
+    printf("now im going to subtract 1 from your number \n");
+    theUsersNumber = theUsersNumber - twoToThe(0);
+    printf("your number is now %d \n", theUsersNumber);
+    printf("now im going to multiply you number by 4 \n");
+    theUsersNumber = theUsersNumber * twoToThe(2);
+    printf("your number is now %d \n", theUsersNumber);
+    printf("now im going to add 8 to your number \n");
+    theUsersNumber = theUsersNumber + twoToThe(3);
+    printf("your number is now %d \n", theUsersNumber);
+    printf("now im going to divide your number by 2 \n");
+    theUsersNumber = theUsersNumber / twoToThe(1);
+    printf("your number is now %d \n", theUsersNumber);
+    printf("now im going to subtract twice your original number \n");
+    theUsersNumber = theUsersnumber - (originalNumber * twoToThe(1));
+    printf("your number is now %d \n", theUsersNumber);
+}
