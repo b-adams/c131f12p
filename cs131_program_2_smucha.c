@@ -27,8 +27,22 @@ int twoToThe(int exponent);
  
  Very simple function, should just return 2*n or n+n
  */
-
 int twice(int n);
+
+
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+int trickCheckArithmetic(int theUsersNumber);
+
+
 
 int main(int argc, char* argv[])
 {
@@ -56,7 +70,18 @@ int twice(int n)
     
     printf("-> Calling twice(%d)\n",n);
     
-    prinf("<- twice(%d) returns %d\n",n, theResult);
+    printf("<- twice(%d) returns %d\n",n, theResult);
+    
+    return theResult;
+}
+
+int trickCheckArithmetic(int theUsersNumber)
+{
+    int theResult;
+    
+    printf("-> Calling trickCheckArithemic(%d)\n",theUsersNumber);
+    
+    printf("<- trickCheckArithmetic(%d) returns %d\n",theUserNumber, theResult);
     
     return theResult;
 }
