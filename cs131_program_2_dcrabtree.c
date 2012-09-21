@@ -79,18 +79,14 @@ void pause();
 
 void trickInstructions();
 
-/**Documentation Block
- */
-
 int main(int argc, char* argv[])
 {
     int theUsersNumber;
     
-    printf("Pick any number and enter it here: ");
-    scanf("%d", &theUsersNumber);
-    pause();
-    return theUsersNumber;
-}
+    trickInstructions();
+    trickCheckArithmetic(theUsersNumber);    
+    return 0;
+}//main
 
 int twoToThe(int exponent)
 {
