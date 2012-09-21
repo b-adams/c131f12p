@@ -82,9 +82,31 @@ void trickInstructions();
 int main(int argc, char* argv[])
 {
     int theUsersNumber;
+    int theResultSoFar;
     
     trickInstructions();
-    trickCheckArithmetic(theUsersNumber);    
+    
+    printf("Pick any number and enter it here: ");
+    scanf("%d", &theUsersNumber);
+    printf("Subtract 2^0 from your number to get %d\n", theUsersNumber-twoToThe(0));
+    theResultSoFar= theUsersNumber;
+    pause();
+    theResultSoFar= theUsersNumber-twoToThe(0);
+    printf("Multiply by 2^2 from the previous number to get %d\n", theResultSoFar*twoToThe(2));
+    pause();
+    theResultSoFar= theResultSoFar*twoToThe(2);
+    printf("Add 2^3 to the previous number and get %d\n", theResultSoFar+twoToThe(3));
+    pause();
+    theResultSoFar= theResultSoFar+twoToThe(3);
+    printf("Divide the previous number by 2^1 and get %d\n", theResultSoFar/twoToThe(1));
+    pause();
+    theResultSoFar= theResultSoFar/twoToThe(1);
+    printf("Finally, subract twice your original number and your answer is %d\n", theResultSoFar- twice(theUsersNumber));
+    pause();
+    theResultSoFar=theResultSoFar- twice(theUsersNumber);
+    
+    
+    
     return 0;
 }//main
 
@@ -104,7 +126,6 @@ int twoToThe(int exponent)
 
 int twice (int n)
 {
-    printf("Twice the orginal number is %d\n", n*2);
     return n*2; 
 
 }
@@ -127,7 +148,6 @@ int trickCheckArithmetic (int theUsersNumber)
     pause();
     theResultSoFar= theResultSoFar/twoToThe(1);
     printf("Finally, subract twice your original number: %d\n", theResultSoFar- twice(theUsersNumber));
-    pause();
     theResultSoFar=theResultSoFar- twice(theUsersNumber);
     
     return theResultSoFar; 
