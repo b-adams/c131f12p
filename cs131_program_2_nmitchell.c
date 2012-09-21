@@ -62,3 +62,13 @@ int twoToThe(int exponent)
     return theResult;
 }
 
+/**
+ @brief Double a number
+ @param n The number to double
+ @sideeffect None
+ @returns Twice n
+ 
+ Very simple function, should just return 2*n or n+n
+ */
+
+int twice(int n)
