@@ -34,4 +34,9 @@ int main( int argc, char * argv[] )
    return 0;
 }
 
+/**
+* @brief keeps the answer the same everytime 
+*/
+const int THE_ANSWER_EVERYTIME = 2;
+
 
