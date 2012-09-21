@@ -58,6 +58,18 @@ int twice (int n);
 
 int trickCheckArithmetic(int theUsersNumber);
 
+/**
+ @brief Pause until the user is ready to continue
+ @sideeffect Prompts the user to press enter
+ 
+ After printing a prompt, this function calls the getchar function
+ which will scan for the next letter in the stream. If the user presses
+ enter, a newline will be the next character, getchar will finish, and
+ the rest of the program will continue.
+ */
+
+void pause();
+
 /**Documentation Block
  */
 
@@ -66,7 +78,8 @@ int main(int argc, char* argv[])
     int theUsersNumber;
     
     printf("Pick any number and enter it here: ");
-    scanf("%d", theUsersNumber);
+    scanf("%d", &theUsersNumber);
+    pause();
     return theUsersNumber;
 }
 
@@ -84,10 +97,10 @@ int twoToThe(int exponent)
     return theResult;
 }
 
-int twice (int theUsersNumber)
+int twice (int n)
 {
-    printf("Twice the orginal number is %d\n", theUsersNumber*2);
-    return theUsersNumber*2; 
+    printf("Twice the orginal number is %d\n", n*2);
+    return n*2; 
 
 }
 
@@ -97,23 +110,31 @@ int trickCheckArithmetic (int theUsersNumber)
     
     theResultSoFar= theUsersNumber;
     printf("Subtract 2^0: %d\n", theUsersNumber-twoToThe(0));
-    
+    pause();
     theResultSoFar= theUsersNumber-twoToThe(0);
     printf("Multiply by 2^2: %d\n", theResultSoFar*twoToThe(2));
-    
+    pause();
     theResultSoFar= theResultSoFar*twoToThe(2);
     printf("Add 2^3: %d\n", theResultSoFar+twoToThe(3));
-    
+    pause();
     theResultSoFar= theResultSoFar+twoToThe(3);
     printf("Divide by 2^1: %d\n", theResultSoFar/twoToThe(1));
-    
+    pause();
     theResultSoFar= theResultSoFar/twoToThe(1);
     printf("Finally, subract twice your original number: %d\n", theResultSoFar- twice(theUsersNumber));
-    
+    pause();
     theResultSoFar=theResultSoFar- twice(theUsersNumber);
     
     return theResultSoFar; 
 }
+
+void pause()
+{
+    char stop;
+    printf("Paused! Press Enter to continue.\n");
+    scanf(" %c", &stop);
+}
+
 
 
 
