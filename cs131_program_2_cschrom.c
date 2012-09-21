@@ -17,10 +17,22 @@
  a 'magic number', we give it a name here.
  */
 
-const int THE_ANSWER_EVERY_TIME = 2
+const int THE_ANSWER_EVERY_TIME = 2;
+const int timesTwo = 2;
+int twice(int n);
+int twoToThe(int exponent);
+int trickCheckArithmetic(int theUsersNumber);
+void pause();
+void trickInstructions();
 
 int main(int argc, char* argv[])
 {
+   int theUsersNumber;
+   trickInstructions();
+   printf ("Input a number\n");
+   scanf ("%d", &theUsersNumber);
+   trickCheckArithmetic(theUsersNumber);
+   printf ("The answer should be %d\n", THE_ANSWER_EVERY_TIME);
    return 0;
 }
 
@@ -35,7 +47,7 @@ int main(int argc, char* argv[])
  Otherwise, it returns twice the value of twoToThe(n-1)
  [We'll talk about this 'recursion' trick later in the class. It's very useful.]
  */
-int twoToThe(int exponent);
+int twoToThe(int exponent)
 {
     int theResult;
     
@@ -48,4 +60,81 @@ int twoToThe(int exponent);
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
     return theResult;
+}
+
+/**
+@brief Double a number
+@param n The number to double
+@sideeffect None
+@returns Twice n
+
+Very simple function, should just return 2*n or n+n
+*/
+
+int twice(int n)
+{
+printf ("-> Calling int twice(%d)\n", n);
+printf ("<- int twice(%d) returns %d\n", n, n*timesTwo);
+return n*timesTwo;
+}
+
+/**
+@brief Walk the user through the arithmetic in the trick
+@param theUsersNumber Whatever number the user picked
+@sideeffect Displays the computations for each step of the trick.
+@returns the result of going through the arithmetic of the trick
+
+Displays values of 2^k for the various k, and
+Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+and then subtracting twice the original number.
+*/
+
+int trickCheckArithmetic(int theUsersNumber)
+{
+printf ("-> Calling int trickCheckArithmetic(%d)\n", theUsersNumber);
+//scanf ("(%d)", theUsersNumber);
+printf ("First, subtract 2^0\n");
+scanf ("%d", twoToThe(theUsersNumber));
+printf ("Next, multiply by 2^2\n");
+scanf ("%d", twoToThe(theUsersNumber));
+printf ("Now, add 2^3\n");
+scanf ("%d", twoToThe(theUsersNumber));
+printf ("And divide by 2^1\n");
+scanf ("%d", twoToThe(theUsersNumber));
+printf ("Finally, subtract twice your original number.\n");\
+printf ("<- int trickCheckArithmetic(%d) returns %d\n", theUsersNumber, THE_ANSWER_EVERY_TIME);
+return THE_ANSWER_EVERY_TIME;
+}
+
+
+/**
+@brief Pause until the user is ready to continue
+@sideeffect Prompts the user to press enter
+*/
+
+void pause()
+{
+printf ("-> Calling void pause()\n");
+printf ("Press Enter\n");
+scanf ("%d", getchar());
+printf ("<- void pause() returns nothing\n");
+}
+
+/**
+@brief Prints \the instructions all at one time.
+@sideeffect Goes through instructions step by step at users pace
+*/
+void trickInstructions()
+{
+printf ("-> Calling void trickInstructions()\n");
+printf ("First, subtract 2^0\n");
+void pause();
+printf ("Next, multiply by 2^2\n");
+void pause();
+printf ("Now, add 2^3\n");
+void pause();
+printf ("And divide by 2^1\n");
+void pause();
+printf ("Finally, subtract twice your original number.\n");
+printf ("<- void trickInstructions() returns nothing\n");
 }
