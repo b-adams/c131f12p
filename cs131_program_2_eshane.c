@@ -62,7 +62,7 @@ int twoToThe(int exponent)
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
 	else if(exponent==0) theResult=1;
-	else theResult=twice(twoToThe(exponent-1));
+	else theResult = twice(twoToThe(exponent-1));
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
@@ -103,14 +103,16 @@ int trickCheckArithmetic(int theUsersNumber);
 
 int trickCheckArithmetic(int theUsersNumber)
 {
+    int originalNumber = 0;
+
     printf ("Please enter a number, and I'll show you a trick: \n");
     scanf ("%d", &theUsersNumber);
     originalNumber = theUsersNumber;
     printf ("You entered %d as your number.\n", theUsersNumber);
     printf ("Now I'm going to subtract 1 from this number\n");
-    theUsersNumber = the UsersNumber - twoToThe(0);
+    theUsersNumber = theUsersNumber - twoToThe(0);
     printf ("Your number is now %d.\n", theUsersNumber);
-    printf ("Now im going to multiply by 4.\n")
+    printf ("Now im going to multiply by 4.\n");
     theUsersNumber = theUsersNumber * twoToThe(2);
     printf ("Your number is now %d.\n", theUsersNumber);
     printf ("Now im going to add 8.\n");
@@ -139,7 +141,30 @@ void pause();
 void pause()
 {
     printf ("Please press enter.");
-    scanf ("%c", &);
+}
+
+/**
+ *@brief prints all instruction one at a time
+ *@sideeffects none
+ */
+
+void trickInstructions();
+
+void trickInstructions()
+{
+    printf ("Pick a number, then press enter.\n");
+    
+    printf ("Now subtract 1.\n");
+    
+    printf ("Now, multiply by 4.\n");
+    
+    printf ("Now, add 8.\n");
+    
+    printf ("Now, divide by 2.\n");
+    
+    printf ("Now subtract twice your original number."\n);
+    
+    printf ("I bet your number was 2, am I right?\n");
 }
 
 
