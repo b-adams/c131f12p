@@ -1,5 +1,12 @@
 /**
- *@File cs131_program_2_mpierce.c
- *@Author Michael Pierce
- *@Date Septmeber 21, 2012
+ *@file cs131_program_2_mpierce.c
+ *@author michael pierce
+ *@date septmeber 21, 2012
  */
+
+#include <stdio.h>
+
+int main(int argc, char* argv[])
+{
+    return 0;
+}
