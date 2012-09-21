@@ -70,6 +70,15 @@ int trickCheckArithmetic(int theUsersNumber);
 
 void pause();
 
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Prints the instructions for the user one at a time with pauses in between
+ @sideeffect Displays the instructions to the trick
+ @return The step by step instuctions of the trick with pauses inbetween
+ */
+
+void trickInstructions();
+
 /**Documentation Block
  */
 
@@ -135,6 +144,22 @@ void pause()
     scanf(" %c", &stop);
 }
 
+void trickInstructions()
+{
+    printf("Pick any number\n");
+    pause();
+    printf("Subtract 2^0\n");
+    pause();
+    printf("Multiply by 2^2\n");
+    pause();
+    printf("Add 2^3\n");
+    pause();
+    printf("Divide by 2^1\n");
+    pause();
+    printf("Subtract twice your original number\n");
+    pause();
+    printf("Let me guess...your number is 2!\n");
+}
 
 
 
