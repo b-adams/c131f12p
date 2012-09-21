@@ -36,21 +36,39 @@
  
  
  /**
- @brief Compute a power of 2
- @param exponent The exponent: how many times to multiply 2 by itself.
- @sideeffect None
- @returns 2^n
- 
- This works by using the fact that 2^n is twice 2^(n-1), and 2^0 is 1
- So, if the user gives 0 for n, this just returns n
- Otherwise, it returns twice the value of twoToThe(n-1)
- [We'll talk about this 'recursion' trick later in the class. It's very useful.]
+ * @brief Compute a power of 2
+ * @param exponent The exponent: how many times to multiply 2 by itself.
+ * @sideeffect None
+ * @returns 2^n
+ * 
+ * This works by using the fact that 2^n is twice 2^(n-1), and 2^0 is 1
+ * So, if the user gives 0 for n, this just returns n
+ * Otherwise, it returns twice the value of twoToThe(n-1)
+ * [We'll talk about this 'recursion' trick later in the class. It's very useful.]
  */
 
 int twoToThe(int exponent);
  
+ /**
+ * @brief Double a number
+ * @param n The number to double
+ * @sideeffect None
+ * @returns Twice n
+ * 
+ * Very simple function, should just return 2*n or n+n
+ */
+ 
+ int twice(int n)
  
  
+ 
+ 
+ //definitions start here
+ 
+ int twice (int n)
+ {
+    (int n)*2
+ }
  
  
  
