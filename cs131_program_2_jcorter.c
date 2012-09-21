@@ -101,6 +101,7 @@ int main(int argc, char* argv[]);
 int main(int argc, char* argv[])
 
 {
+    printf ("This is the main function.\n");
     trickInstrustions;
     getNumberFromUser;
     trickArithmetic (int theUsersNumber);    
@@ -112,6 +113,7 @@ int twoToThe(int exponent)
 {
     int theResult;
     
+    printf ("This is the twoToThe function.\n");
     printf("-> Calling twoToThe(%d)\n",exponent);
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
@@ -125,13 +127,16 @@ int twoToThe(int exponent)
 
 int twice (int n)
 {
+    printf ("This is the twice function.\n");
     return 2*n;   
 }
 
 int trickCheckArithmetic (int theUsersNumber)
 
 {
-    getNumberFromUser ()
+    printf ("This is the trickCheckArithmetic function.\n");
+    
+    getNumberFromUser();
     
     result = theUsersNumber - twoToThe (0);
     printf ("Subtract 2^0 from your number: %d\n", result);
@@ -154,6 +159,7 @@ int trickCheckArithmetic (int theUsersNumber)
 
 void pause ()
 {
+    printf ("This is the pause function.\n");
     char var1;
     printf ("Paused, please enter a character and then hit enter when ready to continue.");
     scanf (" %c", &var1);
@@ -162,6 +168,7 @@ void pause ()
 
 void trickInstructions ()
 {
+    printf ("This is the trickInstructions function.\n");
     Printf ("Think of a number.");
     pause;
     printf ("Subtract 2^0 from your number: ");
@@ -182,6 +189,7 @@ void trickInstructions ()
 int getNumberFromUser ()
 
 {
+    printf ("This is the getNumberFromUser function.\n");
     printf ("Please enter your number: %d\n")
     scanf ("%d", theUsersNumber);
     return theUsersNumber;   
