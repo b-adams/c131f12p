@@ -63,7 +63,11 @@ int trickCheckArithmetic(int theUsersNumber);
 
 int main(int argc, char* argv[])
 {
-    return 0;
+    int theUsersNumber;
+    
+    printf("Pick any number and enter it here: ");
+    scanf("%d", theUsersNumber);
+    return theUsersNumber;
 }
 
 int twoToThe(int exponent)
@@ -89,9 +93,27 @@ int twice (int theUsersNumber)
 
 int trickCheckArithmetic (int theUsersNumber)
 {
+    int theResultSoFar;
     
-    printf("Pick any number and enter it here: ");
-    scanf("%d", theUsersNumber);
-    return theUsersNumber;
+    theResultSoFar= theUsersNumber;
+    printf("Subtract 2^0: %d\n", theUsersNumber-twoToThe(0));
+    
+    theResultSoFar= theUsersNumber-twoToThe(0);
+    printf("Multiply by 2^2: %d\n", theResultSoFar*twoToThe(2));
+    
+    theResultSoFar= theResultSoFar*twoToThe(2);
+    printf("Add 2^3: %d\n", theResultSoFar+twoToThe(3));
+    
+    theResultSoFar= theResultSoFar+twoToThe(3);
+    printf("Divide by 2^1: %d\n", theResultSoFar/twoToThe(1));
+    
+    theResultSoFar= theResultSoFar/twoToThe(1);
+    printf("Finally, subract twice your original number: %d\n", theResultSoFar- twice(theUsersNumber));
+    
+    theResultSoFar=theResultSoFar- twice(theUsersNumber);
+    
+    return theResultSoFar; 
 }
+
+
 
