@@ -42,6 +42,19 @@ int twoToThe(int exponent);
 
 int twice (int n);
 
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+
+int trickCheckArithmetic (int the UsersNumber);
+
 
 /**
  * @brief Main procedure.
@@ -81,5 +94,29 @@ int twoToThe(int exponent)
 int twice (int n)
 {
     return 2*n;   
+}
+
+int trickCheckArithmetic (int theUsersNumber)
+
+{
+    getNumberFromUser ()
+    
+    result = theUsersNumber - twoToThe (0);
+    printf ("Subtract 2^0 from your number: %d\n", result);
+    
+    result = result * twoToThe (2);
+    printf ("Multiply the result by 2^2: &d\n", result);
+    
+    result = result + twoToThe (3);
+    printf ("Add 2^3 to your result: %d\n", result);
+    
+    result = result / twoToThe (1);
+    printf ("Divide the result by 2^1: %d\n", result);
+    
+    result = result - twice (theUsersNumber);
+    printf (Finally, take the result and subtract two times your original number; %d\n, resultesult);
+    
+    printf ("Lemme guess...your answer was %d\n", THE_ANSWER_EVERY_TIME);    
+    return;
 }
 
