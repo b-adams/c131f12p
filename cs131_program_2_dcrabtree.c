@@ -114,13 +114,11 @@ int twoToThe(int exponent)
 {
     int theResult;
     
-    printf("-> Calling twoToThe(%d)\n",exponent);
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
 	else if(exponent==0) theResult=1;
 	else theResult=twice(twoToThe(exponent-1));
     
-    printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     return theResult;
 }
 
