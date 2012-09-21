@@ -19,6 +19,8 @@
 int main(int argc, char* argv[])
 
 {
+    void trickInstuctions();
+    int trickCheckArithmetic(int theUsersNumber);
     return 0;
 }
 
@@ -117,7 +119,7 @@ int trickCheckArithmetic(int theUsersNumber)
     theUsersNumber = theUsersNumber / twoToThe(1);
     printf("your number is now %d \n", theUsersNumber);
     printf("now im going to subtract twice your original number \n");
-    theUsersNumber = theUsersNumber - (originalNumber * twoToThe(1));
+    theUsersNumber = theUsersNumber - twice(originalNumber);
     printf("your number is now %d \n", theUsersNumber);
 }
 
@@ -137,7 +139,6 @@ void pause()
 
 {
     printf("please press enter");
-    scanf("%c", &);
 }
 
 /**
