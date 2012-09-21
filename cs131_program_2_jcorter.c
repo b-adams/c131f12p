@@ -32,6 +32,18 @@
 int twoToThe(int exponent);
 
 /**
+ @brief Double a number
+ @param n The number to double
+ @sideeffect None
+ @returns Twice n
+ 
+ Very simple function, should just return 2*n or n+n
+ */
+
+int twice (int n);
+
+
+/**
  * @brief Main procedure.
 
  * @param argv the command line (typed arguments)
@@ -65,3 +77,9 @@ int twoToThe(int exponent)
     
     return theResult;
 }
+
+int twice (int n)
+{
+    return 2*n;   
+}
+
