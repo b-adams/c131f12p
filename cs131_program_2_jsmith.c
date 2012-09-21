@@ -4,9 +4,6 @@
 * @date   September 20th
 * @brief  Program 2: Magic Number Generator
 * @todo 
-    Create cs131_program_2_FLAST.c with a file documentation block at the top with the filename, author name, date, and status (in progress)
-    Define int main(int argc, char* argv[]) so that it just returns zero (like a Hello World program, but withut the printing)
-    Create an integer constant named THE_ANSWER_EVERY_TIME that holds the value of the answer to the trick, and document it.
     Copy the linked documentation, declaration, and definition for int twoToThe(int n) into the appropriate locations in your file.
     Declare a function int twice(int n), copy the documentation that I provide into the appropriate place, and make a definition for it.
     Declare, define, and document a function int trickCheckArithmetic(int theUsersNumber) which takes any number as input, then prints out each instruction for the trick followed by the result of following those instructions, and finally returns the final result of following all the instructions.
@@ -16,7 +13,10 @@
     Go back through all your functions and modify them so that their first step is to print out the name of the function being called and the arguments (if any) that are supplied.
     Go back through all your functions and modify them so that their last step before returning is to print out the name of the function and the value it is returning.
 
-* @done 
+* @done
+    Create cs131_program_2_FLAST.c with a file documentation block at the top with the filename, author name, date, and status (in progress)
+    Define int main(int argc, char* argv[]) so that it just returns zero (like a Hello World program, but withut the printing)
+    Create an integer constant named THE_ANSWER_EVERY_TIME that holds the value of the answer to the trick, and document it.
 * 
 * @status In Progress
 * 
@@ -27,7 +27,10 @@
 
 #include <stdio.h>
 
-
+/**
+* @brief The answer to the trick
+*/
+const int THE_ANSWER_EVERY_TIME = 7;
 
 /**
 * @brief WHAT_THIS_FUNCTION_IS_FOR
