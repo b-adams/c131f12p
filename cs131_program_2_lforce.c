@@ -7,3 +7,21 @@
   */
  
  
+ #include <stdio.h>
+ 
+ 
+ /**
+  * @author Larry Force
+  * @brief main function
+  * @param How many 'tokens' were typed when you ran the program
+  * @param A collection of all the tokens that were typed
+  * @sideeffect The program is the side effect.
+  * @return This returns 0
+  */
+ 
+ int main (int argc, char* argv[])
+ {
+    return 0 ;
+ }
+ 
+ 
