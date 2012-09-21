@@ -38,9 +38,21 @@ const int THE_ANSWER_EVERY_TIME=2;
 
 int main(int argc, char* argv[])
 {
-int twoToThe(int exponent);
-
-return 0;
+  int twoToThe(int exponent);
+  return 0;
 }
 
-
+int twoToThe(int exponent)
+{
+    int theResult;
+    
+    printf("-> Calling twoToThe(%d)\n",exponent);
+    
+	if(exponent<0) theResult=1/twoToThe(-exponent);
+	else if(exponent==0) theResult=1;
+	else theResult=twice(twoToThe(exponent-1));
+    
+    printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
+    
+    return theResult;
+}
