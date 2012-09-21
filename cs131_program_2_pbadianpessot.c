@@ -7,13 +7,7 @@
 
 #include <stdio.h>
 
-/**
-* @brief main procefure
-* @param argv the command line (typed arguments)
-* @param argc the number of options in the command line.
-* @return zero if successful
-* @author Pamela Badian-Pessot
-*/
+
 
 /**
  @brief The answer that the trick always comes up with
@@ -36,9 +30,45 @@ const int THE_ANSWER_EVERY_TIME=2;
  Otherwise, it returns twice the value of twoToThe(n-1)
  */
 
+int toToThe(int exponent);
+
+/**
+ @brief Double a number
+ @param n The number to double
+ @sideeffect None
+ @returns Twice n
+ 
+ Very simple function, should just return 2*n or n+n
+ */
+
+int twice(int n);
+
+/**
+ @brief Walk the user through the arithmetic in the trick
+ @param theUsersNumber Whatever number the user picked
+ @sideeffect Displays the computations for each step of the trick.
+ @returns the result of going through the arithmetic of the trick
+ 
+ Displays values of 2^k for the various k, and
+ Walks through subtracting 2^0, multiplying by 2^2, adding 2^3, dividing by 2^1,
+ and then subtracting twice the original number.
+ */
+
+int trickCheckArithmetic(int theUsersNumber)
+
+/**
+ @brief Double a number
+ @param n The number to double
+ @sideeffect None
+ @returns Twice n
+ 
+ Very simple function, should just return 2*n or n+n
+ */
+
+int twice(n)
+
 int main(int argc, char* argv[])
 {
-  int twoToThe(int exponent);
   return 0;
 }
 
@@ -54,5 +84,18 @@ int twoToThe(int exponent)
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
+    return theResult;
+}
+
+int twice(int n)
+{
+    int theDouble;
+    
+    printf("-> Calling twice(%d)\n", n);
+	
+	the Result=2n;   
+
+    print("<- twice(%d) returns %d\n, n, theDouble);
+   
     return theResult;
 }
