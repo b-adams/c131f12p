@@ -7,7 +7,15 @@
 
 #include <stdio.h>
 
+/**
+* @brief main procefure
+* @param argv the command line (typed arguments)
+* @param argc the number of options in the command line.
+* @return zero if successful
+* @author Pamela Badian-Pessot
+*/
+
 int main(int argc, char* argv[])
 {
-
+return 0;
 }
