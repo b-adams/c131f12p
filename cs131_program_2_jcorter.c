@@ -76,6 +76,17 @@ void pause ();
 void trickInstructions ();
 
 /**
+ @brief Gets the user to pick a number
+ @sideeffect Prompts the user to enter a number
+ @returns The number the user entered
+ 
+ This function scans the user's input into a local variable,
+ and then returns the value stored in that variable to the calling code.
+ */
+
+int getNumberFromUser ();
+
+/**
  * @brief Main procedure.
 
  * @param argv the command line (typed arguments)
@@ -165,3 +176,13 @@ void trickInstructions ()
     return;
       
 }
+
+int getNumberFromUser ()
+
+{
+    printf ("Please enter your number: %d\n")
+    scanf ("%d", theUsersNumber);
+    return theUsersNumber;   
+    
+}
+
