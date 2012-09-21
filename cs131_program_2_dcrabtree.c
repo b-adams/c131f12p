@@ -56,7 +56,7 @@ int twice (int n);
  and then subtracting twice the original number.
  */
 
-int trickCheckArithmetic(int theUsersNumber)
+int trickCheckArithmetic(int theUsersNumber);
 
 /**Documentation Block
  */
@@ -77,15 +77,13 @@ int twoToThe(int exponent)
 	else theResult=twice(twoToThe(exponent-1));
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
-    
     return theResult;
 }
 
-int twice (int n)
+int twice (int theUsersNumber)
 {
-    printf("twice(%d) returns %d\n",n, n*2);
-    
-    return n*2; 
+    printf("Twice the orginal number is %d\n", theUsersNumber*2);
+    return theUsersNumber*2; 
 
 }
 
@@ -93,10 +91,7 @@ int trickCheckArithmetic (int theUsersNumber)
 {
     
     printf("Pick any number and enter it here: ");
-    scan("%d", theUsersNumber);
+    scanf("%d", theUsersNumber);
     return theUsersNumber;
 }
 
-int twoToThe (int n)
-    printf("Subtract 2^0 from the number that you chose)
-}
