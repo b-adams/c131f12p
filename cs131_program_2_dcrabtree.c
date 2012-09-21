@@ -135,9 +135,9 @@ int trickCheckArithmetic (int theUsersNumber)
 
 void pause()
 {
-    char stop;
-    printf("Paused! Press Enter to continue.\n");
-    scanf(" %c", &stop);
+  	char var2;
+	printf("Paused! Press a key and then ENTER to continue");
+	scanf(" %c", &var2);
 }
 
 void trickInstructions()
