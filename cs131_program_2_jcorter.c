@@ -68,6 +68,14 @@ int trickCheckArithmetic (int the UsersNumber);
 void pause ();
 
 /**
+ @brief Prints instructions one at a time with pauses in between
+ @returns nothing
+
+ */
+
+void trickInstructions ();
+
+/**
  * @brief Main procedure.
 
  * @param argv the command line (typed arguments)
@@ -137,4 +145,23 @@ void pause ()
     printf ("Paused, please enter a character and then hit enter when ready to continue.");
     scanf (" %c", &var1);
     return;    
+}
+
+void trickInstructions ()
+{
+    Printf ("Think of a number.");
+    pause;
+    printf ("Subtract 2^0 from your number: ");
+    pause;
+    printf ("Multiply the result by 2^2: ");
+    pause;
+    printf ("Add 2^3 to your result: ");
+    pause;
+    printf ("Divide the result by 2^1: ");
+    pause;
+    printf (Finally, take the result and subtract two times your original number: );
+    pause;
+    printf ("Lemme guess...your answer was %d\n", THE_ANSWER_EVERY_TIME);    
+    return;
+      
 }
