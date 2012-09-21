@@ -19,7 +19,7 @@
 int main(int argc, char* argv[])
 
 {
-    return0;
+    return 0;
 }
 
 /**
@@ -55,7 +55,7 @@ int twoToThe(int exponent)
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
 	else if(exponent==0) theResult=1;
-	else theResult=twice(twoToThe(exponent-1));
+	else theResult = twice(twoToThe(exponent-1));
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
@@ -97,9 +97,12 @@ int trickCheckArithmetic(int theUsersNumber);
 int trickCheckArithmetic(int theUsersNumber)
 
 {
+    
+    int originalNumber = 0;
+    
     printf("please enter a number \n");
     scanf("%d", &theUsersNumber);
-    originalNumber = theUsersNumber
+    originalNumber = theUsersNumber;
     printf("you entered %d as your number \n", theUsersNumber);
     printf("now im going to subtract 1 from your number \n");
     theUsersNumber = theUsersNumber - twoToThe(0);
@@ -114,7 +117,7 @@ int trickCheckArithmetic(int theUsersNumber)
     theUsersNumber = theUsersNumber / twoToThe(1);
     printf("your number is now %d \n", theUsersNumber);
     printf("now im going to subtract twice your original number \n");
-    theUsersNumber = theUsersnumber - (originalNumber * twoToThe(1));
+    theUsersNumber = theUsersNumber - (originalNumber * twoToThe(1));
     printf("your number is now %d \n", theUsersNumber);
 }
 
@@ -137,3 +140,21 @@ void pause()
     scanf("%c", &);
 }
 
+/**
+ *@brief pritns instructions one at a time
+ *@sideeffect none
+ */
+
+void trickInstuctions();
+
+void trickInstuctions()
+
+{
+    printf("pick a number, any number\n");
+    printf("now subtract your number by 1 \n");
+    printf("now multiply by 4 \n");
+    printf("now add 8 \n");
+    printf("now divide 2 by \n");
+    printf("now subract twice your original number \n");
+    printf("you came out with the number 2 right? \n")
+}
