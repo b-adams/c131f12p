@@ -124,7 +124,23 @@ int trickCheckArithmetic(int theUsersNumber)
     printf ("Your number is now %d.\n", theUsersNumber);
 }
 
+/**
+ @brief Pause until the user is ready to continue
+ @sideeffect Prompts the user to press enter
+ 
+ After printing a prompt, this function calls the getchar function
+ which will scan for the next letter in the stream. If the user presses
+ enter, a newline will be the next character, getchar will finish, and
+ the rest of the program will continue.
+ */
 
+void pause();
+
+void pause()
+{
+    printf ("Please press enter.");
+    scanf ("%c", &);
+}
 
 
 
