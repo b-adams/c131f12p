@@ -71,4 +71,12 @@ int twoToThe(int exponent)
  Very simple function, should just return 2*n or n+n
  */
 
+int twice(int n);
+
 int twice(int n)
+
+{
+    n = n + n;
+    
+    return n + n;
+}
