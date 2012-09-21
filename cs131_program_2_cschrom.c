@@ -2,8 +2,8 @@
  *@file cs131_program_2_cschrom.c
  *@Author Colby Schrom
  *@date 9/19/12
- *@status In Progress
- *@assisstance Larry Force, Eric Shane, Jake Smith, Nate Mitchell
+ *@status Completed
+ *@assisstance Larry Force
  *@brief The Trick, (program 2)
  */
 
@@ -24,6 +24,13 @@ int twoToThe(int exponent);
 int trickCheckArithmetic(int theUsersNumber);
 void pause();
 void trickInstructions();
+
+/**
+ *@brief Main Function
+ *@param argc
+ *@param argv
+ *@sideeffect none
+ */
 
 int main(int argc, char* argv[])
 {
@@ -92,7 +99,7 @@ and then subtracting twice the original number.
 int trickCheckArithmetic(int theUsersNumber)
 {
 printf ("-> Calling int trickCheckArithmetic(%d)\n", theUsersNumber);
-//scanf ("(%d)", theUsersNumber);
+scanf ("(%d)", theUsersNumber);
 printf ("First, subtract 2^0\n");
 scanf ("%d", twoToThe(theUsersNumber));
 printf ("Next, multiply by 2^2\n");
