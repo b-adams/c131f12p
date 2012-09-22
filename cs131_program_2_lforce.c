@@ -86,10 +86,13 @@ int trickCheckArithmetic(int theUsersNumber) ;
  *@return nothing is returned
  */
 
-void trickInstructions()
+void trickInstructions() ;
 
 
 //main function
+
+
+
 
 
  /**
@@ -103,6 +106,9 @@ void trickInstructions()
  
  int main (int argc, char* argv[])
  {
+   trickInstructions() ;
+   trickCheckArithmetic(0) ;
+   printf("You should have gotten %d \n" , THE_ANSWER_EVERY_TIME) ;
     return 0 ;
  }
 
@@ -121,29 +127,28 @@ void trickInstructions()
     int w ;
     int v ;
     
-printf("What is your number?\n") ;
+printf("\n\nWhat is your number? \n") ;
 scanf("%d", &theUsersNumber) ;
 
-printf("First, subtract 2^0\n") ;
+printf("First, subtract 2^0 \n") ;
 x=theUsersNumber-twoToThe(0) ;
 printf("The result is %d. \n" , x) ;
-pause()
+pause() ;
 printf("Next, multiply by 2^2 \n") ;
 y=x*twoToThe(2) ;
 printf("The result is %d. \n\n" , y) ;
-pause()
+pause() ;
 printf("Now, add 2^3\n") ;
 z=y+twoToThe(3) ;
 printf("The result is %d. \n" , x) ;
-pause ()
-printf("And divide by 2^1\n") ;
+pause () ;
+printf("And divide by 2^1 \n") ;
 w=z/twoToThe(1) ;
-printf("The result is %d.\n" , y) ;
-pause()
-printf("Finally, subtract twice your original number.\n") ;
+printf("The result is %d. \n" , y) ;
+pause() ;
+printf("Finally, subtract twice your original number. \n") ;
 v=w-twice(theUsersNumber) ;
-pause()
-printf("The final result is %d\n" , v) ;
+printf("The final result is %d \n\n" , v) ;
 
  return THE_ANSWER_EVERY_TIME ;
  }
@@ -177,22 +182,22 @@ void pause ()
 {
    char RandomInput ;
    
-   printf("PAUSED. Press a key and then ENTER to continue");
-   scanf("%c" , RandomInput) ;
+   printf("\n\n\n Press ENTER to continue. \n");
+   scanf("%c" , &RandomInput) ;
    
 }
 
 
 void trickInstructions()
 {
-   printf("First, subtract 2^0")
-   pause()
-   printf("Next, multiply by 2^2")
-   pause()
-   printf("Now, add 2^3")
-   pause()
-   printf("And divide by 2^1")
-   pause()
-   printf("Finally, subtract twice your original number.")
-   pause()
+   printf("\n First, subtract 2^0") ;
+   pause() ;
+   printf("\n Next, multiply by 2^2") ;
+   pause();
+   printf("\n Now, add 2^3") ;
+   pause() ;
+   printf("\n And divide by 2^1") ;
+   pause() ;
+   printf("\n Finally, subtract twice your original number.") ;
+   pause() ;
 }
