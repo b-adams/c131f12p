@@ -67,6 +67,14 @@ int trickCheckArithmetic(int theUsersNumber);
 
 int twice(n);
 
+/**
+ @brief Lead through the arithmetic without a number
+ @sideeffect print instruction and propts user through process
+ @return THE_ANSWER_EVERY_TIME
+*/
+
+void trickInstructions();
+
 int main(int argc, char* argv[])
 {
   return 0;
@@ -118,3 +126,20 @@ int trickCheckArithmetic
     printf("Your number subtracted from your original number is %d", stepFour-number);
     printf("Your answer is %d",THE_ANSWER_ALL_THE_TIME);
 } 
+
+void trickInstructions()
+{
+    printf("Think of a number and press a key");
+    scanf("%c", &char);
+    printf("Subtract a 1 from your number and press a key");
+    scanf("%c", &char);
+    printf("Multiply that by 4 and press a key");
+    scanf("%c",&char);
+    printf("Now add 8 and press a key");
+    scanf("%c", &chat);
+    printf("Divide that by 2 and press a key");
+    scanf("%c", &char);
+    printf("Now subtract your original number and press a key");
+    scanf("%c". &char);
+    printf("Did you get Two?"); 
+}
