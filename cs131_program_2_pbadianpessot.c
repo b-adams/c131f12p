@@ -54,7 +54,7 @@ int twice(int n);
  and then subtracting twice the original number.
  */
 
-int trickCheckArithmetic(int theUsersNumber)
+int trickCheckArithmetic(int theUsersNumber);
 
 /**
  @brief Double a number
@@ -65,7 +65,7 @@ int trickCheckArithmetic(int theUsersNumber)
  Very simple function, should just return 2*n or n+n
  */
 
-int twice(n)
+int twice(n);
 
 int main(int argc, char* argv[])
 {
@@ -99,3 +99,22 @@ int twice(int n)
    
     return theResult;
 }
+
+int trickCheckArithmetic
+{
+    int number;	
+    int stepOne;
+    int stepTwo;
+    int stepThree;
+    int stepFour;
+
+    printf("Input a number");
+    scanf("%d", &number);
+    printf("*You entered %d*", number);
+    printf("Your number minus one is %d", number- twoToThe(0)=stepOne);
+    printf("Your number squared is %d", stepOne*twoToThe(2)=stepTwo);
+    printf("Your number plus eightis %d", stepTwo+twoToThe(3)=stepThree);
+    printf("Your number divided by %d", stepThree/twoToThe(1)=stepFour);
+    printf("Your number subtracted from your original number is %d", stepFour-number);
+    printf("Your answer is %d",THE_ANSWER_ALL_THE_TIME);
+} 
