@@ -77,7 +77,10 @@ void trickInstructions();
 
 int main(int argc, char* argv[])
 {
-  return 0;
+ trickCheckArithmetic;
+ printf("Now lets walkt through it");
+ trickCheckArithmetic;
+ return 0;
 }
 
 int twoToThe(int exponent)
