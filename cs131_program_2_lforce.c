@@ -3,7 +3,7 @@
   * @author Larry Force
   * @date Thursday, September 20
   * @brief Program 2, an arithmetic trick
-  * @status not done
+  * @status working
   */
  
  
@@ -150,7 +150,11 @@ printf("The result is %d. \n" , y) ;
 pause() ;
 printf("Finally, subtract twice your original number. \n") ;
 v=w-twice(theUsersNumber) ;
+
 printf("The final result is %d \n\n" , v) ;
+
+
+    printf("<- trickCheckArithmetic(%d) returns %d\n",theUsersNumber, THE_ANSWER_EVERY_TIME);
 
  return THE_ANSWER_EVERY_TIME ;
  }
@@ -159,6 +163,7 @@ printf("The final result is %d \n\n" , v) ;
  int twice (int n)
  {
    printf("-> Calling twice(%d)\n",n);
+       printf("<- twice(%d) returns %d\n",n, n+n);
     return (n+n) ;
  }
  
@@ -188,7 +193,7 @@ void pause ()
    
    printf("\n\n\n Press ENTER to continue. \n");
    scanf("%c" , &RandomInput) ;
-   
+      printf("<- pause() returns nothing\n");
 }
 
 
@@ -205,4 +210,5 @@ void trickInstructions()
    pause() ;
    printf("\n Finally, subtract twice your original number.") ;
    pause() ;
+    printf("<- trickinstructions() returns nothing\n");
 }
