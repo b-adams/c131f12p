@@ -106,6 +106,7 @@ void trickInstructions() ;
  
  int main (int argc, char* argv[])
  {
+   
    trickInstructions() ;
    trickCheckArithmetic(0) ;
    printf("You should have gotten %d \n" , THE_ANSWER_EVERY_TIME) ;
@@ -127,6 +128,7 @@ void trickInstructions() ;
     int w ;
     int v ;
     
+    printf("-> Calling trickCheckArithmetic(%d)\n",theUsersNumber);
 printf("\n\nWhat is your number? \n") ;
 scanf("%d", &theUsersNumber) ;
 
@@ -156,6 +158,7 @@ printf("The final result is %d \n\n" , v) ;
  
  int twice (int n)
  {
+   printf("-> Calling twice(%d)\n",n);
     return (n+n) ;
  }
  
@@ -180,6 +183,7 @@ printf("The final result is %d \n\n" , v) ;
 
 void pause ()
 {
+   printf(" \n -> Calling pause() \n ");
    char RandomInput ;
    
    printf("\n\n\n Press ENTER to continue. \n");
@@ -190,6 +194,7 @@ void pause ()
 
 void trickInstructions()
 {
+   printf("-> Calling trickInstructions()\n");
    printf("\n First, subtract 2^0") ;
    pause() ;
    printf("\n Next, multiply by 2^2") ;
