@@ -80,6 +80,13 @@ int twoToThe(int exponent);
 
 int trickCheckArithmetic(int theUsersNumber) ;
 
+/**
+ *@brief gives instructions for the program
+ *@sideeffect prints the instructions
+ *@return nothing is returned
+ */
+
+void trickInstructions()
 
 
 //main function
@@ -173,4 +180,19 @@ void pause ()
    printf("PAUSED. Press a key and then ENTER to continue");
    scanf("%c" , RandomInput) ;
    
+}
+
+
+void trickInstructions()
+{
+   printf("First, subtract 2^0")
+   pause()
+   printf("Next, multiply by 2^2")
+   pause()
+   printf("Now, add 2^3")
+   pause()
+   printf("And divide by 2^1")
+   pause()
+   printf("Finally, subtract twice your original number.")
+   pause()
 }
