@@ -39,6 +39,12 @@ int twoToThe(int exponent);
 int twice(int n);
 
 /**
+ *@brief To prompt user for an input
+ *@returns nothing
+ */
+void pause();
+
+/**
  @brief Walk the user through the arithmetic in the trick
  @param theUsersNumber Whatever number the user picked
  @sideeffect Displays the computations for each step of the trick.
@@ -75,5 +81,12 @@ int trickCheckArithmetic(int theUserNumber)
 
 }
 
+void pause()
+{
+    char var1;
+	printf("Press ENTER to continue");
+        scanf("%c", &var1);
+}
 
+    
 /*
