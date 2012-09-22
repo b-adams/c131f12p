@@ -9,6 +9,12 @@
  
  #include <stdio.h>
  
+ 
+ 
+ 
+ //declaring constants
+ 
+ 
   /**
  @brief The answer that the trick always comes up with
  
@@ -17,22 +23,23 @@
  a 'magic number', we give it a name here.
  */
  
- const int THE_ANSWER_EVERY_TIME=2
+ const int THE_ANSWER_EVERY_TIME=2 ;
+ 
+
+
+//declaring functions
  
  /**
-  * @author Larry Force
-  * @brief main function
-  * @param How many 'tokens' were typed when you ran the program
-  * @param A collection of all the tokens that were typed
-  * @sideeffect The program is the side effect.
-  * @return This returns 0
-  */
+ @brief Pause until the user is ready to continue
+ @sideeffect Prompts the user to press enter
  
- int main (int argc, char* argv[])
- {
-    return 0 ;
- }
- 
+ After printing a prompt, this function calls the getchar function
+ which will scan for the next letter in the stream. If the user presses
+ enter, a newline will be the next character, getchar will finish, and
+ the rest of the program will continue.
+ */
+
+void pause() ;
  
  
  /**
@@ -72,11 +79,30 @@ int twoToThe(int exponent);
  */
 
 int trickCheckArithmetic(int theUsersNumber) ;
+
+
+
+//main function
+
+
+ /**
+  * @author Larry Force
+  * @brief main function
+  * @param How many 'tokens' were typed when you ran the program
+  * @param A collection of all the tokens that were typed
+  * @sideeffect The program is the side effect.
+  * @return This returns 0
+  */
+ 
+ int main (int argc, char* argv[])
+ {
+    return 0 ;
+ }
+
+
  
  
- 
- 
- //definitions start here
+ //definitions
  
  
  int trickCheckArithmetic(int theUsersNumber)
@@ -84,35 +110,41 @@ int trickCheckArithmetic(int theUsersNumber) ;
     
     int x ;
     int y ;
-
-printf("What is your number?") ;
+    int z ;
+    int w ;
+    int v ;
+    
+printf("What is your number?\n") ;
 scanf("%d", &theUsersNumber) ;
 
-printf("First, subtract 2^0") ;
-theUsersNumber-twoToThe(0)=x ;
-printf("The result is %d." , x) ;
+printf("First, subtract 2^0\n") ;
+x=theUsersNumber-twoToThe(0) ;
+printf("The result is %d. \n" , x) ;
+pause()
+printf("Next, multiply by 2^2 \n") ;
+y=x*twoToThe(2) ;
+printf("The result is %d. \n\n" , y) ;
+pause()
+printf("Now, add 2^3\n") ;
+z=y+twoToThe(3) ;
+printf("The result is %d. \n" , x) ;
+pause ()
+printf("And divide by 2^1\n") ;
+w=z/twoToThe(1) ;
+printf("The result is %d.\n" , y) ;
+pause()
+printf("Finally, subtract twice your original number.\n") ;
+v=w-twice(theUsersNumber) ;
+pause()
+printf("The final result is %d\n" , v) ;
 
-printf("Next, multiply by 2^2") ;
-x*twoToThe(2)=y ;
-printf("The result is %d." , y) ;
-
-printf("Now, add 2^3") ;
-y+twoToThe(3)=x ;
-printf("The result is %d." , x) ;
-
-printf("And divide by 2^1") ;
-x/twoToThe(1)=y ;
-printf("The result is %d." , y) ;
-
-printf("Finally, subtract twice your original number.") ;
-y-(twoToThe(1)*theUsersNumber)
-printf("The final result is %d" , THE_ANSWER_EVERY_TIME)
+ return THE_ANSWER_EVERY_TIME ;
  }
  
  
  int twice (int n)
  {
-    (n)+(n)
+    return (n+n) ;
  }
  
  
@@ -131,4 +163,14 @@ printf("The final result is %d" , THE_ANSWER_EVERY_TIME)
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
     return theResult;
+}
+
+
+void pause ()
+{
+   char RandomInput ;
+   
+   printf("PAUSED. Press a key and then ENTER to continue");
+   scanf("%c" , RandomInput) ;
+   
 }
