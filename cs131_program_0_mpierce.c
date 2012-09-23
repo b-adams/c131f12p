@@ -1,12 +1,19 @@
+/**
+ *@file cs131_program_0_mpierce.c
+ *@author Michael Pierce
+ *@date september 19, 2012
+ *@status Working
+*/
+
 #include <stdio.h>
 
 /**
- *@brief Displays Pre-Written message
- *@return Prints message on screen
+ *@brief Main procedure, a Pre-written message
+ *@return nothing
  */
-int main(int argc, char* argv[])
+int main(void)
 {
-  printf("Hello, %s, World!\n");
-  printf("My name is %s, Michael Pierce and I am in CS131!\n");
+  printf("Hello, World!\n");
+  printf("My name is Michael Pierce and I am in CS131!\n");
   return 0; 
 }

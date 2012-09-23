@@ -43,6 +43,11 @@ int twice(int n);
  *@returns nothing
  */
 void pause();
+/**
+ *@brief prints all instructions for user
+ *@return instructions one by one\
+ */
+void trickInstructions();
 
 /**
  @brief Walk the user through the arithmetic in the trick
@@ -58,7 +63,13 @@ int trickCheckArithmetic(int theUsersNumber);
 
 int main(int argc, char* argv[])
 {
-    return 0;
+
+}
+
+int twice(int n)
+{
+    n=n*2;
+    return n*2;
 }
 
 int twoToThe(int exponent)
@@ -78,7 +89,7 @@ int twoToThe(int exponent)
 
 int trickCheckArithmetic(int theUserNumber)
 {
-
+    printf
 }
 
 void pause()
@@ -88,5 +99,8 @@ void pause()
         scanf("%c", &var1);
 }
 
+void trickIntrustions()
+{
     
+}
 /*
