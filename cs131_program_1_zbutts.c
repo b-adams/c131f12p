@@ -165,9 +165,8 @@ return (previous%2)?(previous/2):(3*previous+1);
 
 int nextInteger (int previous)
 {
-    printf ("\tThe next integer after %d is %d\n",
-            previous, (previous%2)?(previous/2):(3*previous+1));
-return (previous%2)?(previous/2):(3*previous+1);
+    printf ("\tThe next integer after %d is %d\n", x, x+1);
+    return (x+1); 
 }
 
 int averageOfThree(int first, int second, int third)
