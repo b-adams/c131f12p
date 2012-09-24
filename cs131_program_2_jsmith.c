@@ -35,7 +35,7 @@
 /**
 * @brief The answer to the trick
 */
-const int THE_ANSWER_EVERY_TIME = 7;
+const int THE_ANSWER_EVERY_TIME = 2;
 
 /**
  @brief Compute a power of 2
@@ -99,11 +99,15 @@ void trickInstructions();
 int main (int argc, char* argv[])
 {
     int theUsersNumber;
+    
     trickInstructions();
+    
     printf ("enter a number\n");
     scanf ("%d", &theUsersNumber);
     trickCheckArithmetic(theUsersNumber);
-    printf ("answer: %d\n", THE_ANSWER_EVERY_TIME);
+    
+    
+    
     return 0;
 }
 
@@ -111,13 +115,13 @@ int twoToThe(int exponent)
 {
     int theResult;
     
-    printf("-> Calling twoToThe(%d)\n",exponent);
+    //printf("-> Calling twoToThe(%d)\n",exponent);
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
 	else if(exponent==0) theResult=1;
 	else theResult=twice(twoToThe(exponent-1));
     
-    printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
+    //printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
     return theResult;
 }
@@ -130,36 +134,62 @@ int twice(int number)
 
 int trickCheckArithmetic(int theUsersNumber)
 {
+    int originalNumber = theUsersNumber;
     printf ("subtract 2^0\n");
-    scanf ("%d", twoToThe(theUsersNumber));
+    pause();
+    theUsersNumber = theUsersNumber - twoToThe(0);
+    printf ("you should have gotten: %d\n", theUsersNumber);
+    pause();
+    
     printf ("multiply by 2^2\n");
-    scanf ("%d", twoToThe(theUsersNumber));
+    pause();
+    theUsersNumber = theUsersNumber*twoToThe(2);
+    printf ("you should have gotten: %d\n", theUsersNumber);
+    pause();
+    
     printf ("add 2^3\n");
-    scanf ("%d", twoToThe(theUsersNumber));
+    pause();
+    theUsersNumber = theUsersNumber+twoToThe(3);
+    printf ("you should have gotten: %d\n", theUsersNumber);
+    pause();
+    
     printf ("divide by 2^1\n");
-    scanf ("%d", twoToThe(theUsersNumber));
-    printf ("subtract twice your original number.\n");\
+    pause();
+    theUsersNumber = theUsersNumber/twoToThe(1);
+    printf ("you should have gotten: %d\n", theUsersNumber);
+    pause();
+    
+    printf ("subtract twice your original number.\n");
+    pause();
+    theUsersNumber = theUsersNumber-twice(originalNumber);
+    printf ("you should have gotten: %d\n", theUsersNumber);
+    
     return THE_ANSWER_EVERY_TIME;
+    
 }
 
+
 void pause()
-{
- 
-    printf ("pausing\n");
-    scanf ("%d", getchar());
+{ 
+    char any;
     
+    printf ("(press enter to continue)\n");
+    scanf ("%c", &any);
 }
 
 void trickInstructions()
 {
-    
+    printf ("pick any number\n");
+    pause();
     printf ("subtract 2^0\n");
-    void pause();
+    pause();
     printf ("multiply by 2^2\n");
-    void pause();
+    pause();
     printf ("add 2^3\n");
-    void pause();
+    pause();
     printf ("divide by 2^1\n");
-    void pause();
+    pause();
     printf ("subtract twice your original number.\n");
+    pause();
+    printf ("I bet your answer is %d\n", THE_ANSWER_EVERY_TIME);
 }
