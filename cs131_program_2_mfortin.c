@@ -37,7 +37,7 @@ int main (int argc, char* argv[])
     int theUsersNumber;
     trickInstructions();
     printf ("Input a number\n");
-    scanf ("%d", theUsersNumber);
+    scanf ("%d", &theUsersNumber);
     trickCheckArithmetic(theUsersNumber);
     printf ("The answer should be %d\n", THE_ANSWER_EVERY_TIME);
     return 0;
@@ -105,13 +105,13 @@ int trickCheckArithmetic(int theUsersNumber)
     printf ("-> Calling int trickCheckArithmetic(%d)\n", theUsersNumber);
     //scanf ("(%d)", theUsersNumber);
     printf ("First, subtract 2^0\n");
-    scanf ("%d",twoToThe(theUsersNumber));
+    scanf ("%d", twoToThe(theUsersNumber));
     printf ("Next, multiply by 2^2\n");
-    scanf ("%d",twoToThe(theUsersNumber));
+    scanf ("%d", twoToThe(theUsersNumber));
     printf ("Now, add 2^3\n");
-    scanf ("%d",twoToThe(theUsersNumber));
+    scanf ("%d", twoToThe(theUsersNumber));
     printf ("And divide by 2^1\n");
-    scanf ("%d",twoToThe(theUsersNumber));
+    scanf ("%d", twoToThe(theUsersNumber));
     printf ("Finally, subtract twice your original number.\n");\
     printf ("<- int trickCheckArithmetic(%d) returns %d\n", theUsersNumber, THE_ANSWER_EVERY_TIME);
     return THE_ANSWER_EVERY_TIME;
