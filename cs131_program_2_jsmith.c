@@ -5,13 +5,12 @@
 * @brief  Program 2: Magic Number Generator
 * @todo 
 
+* @done
+* 
     Go back through all your functions and modify them so that their first step is to print out the name of the function being called and
     the arguments (if any) that are supplied.
     Go back through all your functions and modify them so that their last step before returning is to print out the name of the function
-    and the value it is returning.
-
-* @done
- 
+    and the value it is returning. 
     Modify main so that your program walks the user through the steps of the trick, then asks them to supply a number, then shows them what
     steps they should have taken and what results they should have got, then shows them what their final answer should have been.
     Declare, define, and document a function void trickInstructions() which prints all the instructions one at a time with pauses in between.
@@ -98,7 +97,7 @@ void trickInstructions();
 
 int main (int argc, char* argv[])
 {
-    printf ("calling main!")
+    printf ("calling main!");
     int theUsersNumber;
     
     trickInstructions();
@@ -108,35 +107,37 @@ int main (int argc, char* argv[])
     trickCheckArithmetic(theUsersNumber);
     
     
-    
+    printf ("main returning 0!");
     return 0;
 }
 
 int twoToThe(int exponent)
 {
-    printf ("calling twoToThe! arg: %d", exponent)
+    printf ("calling twoToThe! arg: %d", exponent);
     int theResult;
     
-    //printf("-> Calling twoToThe(%d)\n",exponent);
+    
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
 	else if(exponent==0) theResult=1;
 	else theResult=twice(twoToThe(exponent-1));
     
-    //printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
+    printf("twoToThe(%d) returns %d\n",exponent, theResult);
     
     return theResult;
 }
 
 int twice(int number)
 {
-    printf ("calling twice! arg: %d", number)
+    printf ("calling twice! arg: %d", number);
+    printf ("twice returns: %d", number*2);
     return number*2;
+    
 }
 
 int trickCheckArithmetic(int theUsersNumber)
 {
-    printf ("calling trickCheckArithmetic! arg: %d", theUsersNumber)
+    printf ("calling trickCheckArithmetic! arg: %d", theUsersNumber);
     int originalNumber = theUsersNumber;
     printf ("subtract 2^0\n");
     pause();
@@ -167,6 +168,8 @@ int trickCheckArithmetic(int theUsersNumber)
     theUsersNumber = theUsersNumber-twice(originalNumber);
     printf ("you should have gotten: %d\n", theUsersNumber);
     
+    printf ("trickCheckArithmetic returns: %d", THE_ANSWER_EVERY_TIME);
+    
     return THE_ANSWER_EVERY_TIME;
     
 }
@@ -174,16 +177,17 @@ int trickCheckArithmetic(int theUsersNumber)
 
 void pause()
 {
-    printf ("calling pause!")
+    printf ("calling pause!");
     char any;
     
     printf ("(press enter to continue)\n");
     scanf ("%c", &any);
+    printf ("pause returns nothing!");
 }
 
 void trickInstructions()
 {
-    printf ("calling trickInstructions!")
+    printf ("calling trickInstructions!");
     
     printf ("pick any number\n");
     pause();
@@ -198,4 +202,6 @@ void trickInstructions()
     printf ("subtract twice your original number.\n");
     pause();
     printf ("I bet your answer is %d\n", THE_ANSWER_EVERY_TIME);
+    
+    printf ("trickInstructions returns nothing!");
 }
