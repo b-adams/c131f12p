@@ -4,7 +4,7 @@
 * @date   September 17, 2012
 * @brief  Displays text when run
 * @status working
-* /
+*/
 
 
 #include <stdio.h>
