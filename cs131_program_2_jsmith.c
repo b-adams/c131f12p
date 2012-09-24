@@ -98,6 +98,7 @@ void trickInstructions();
 
 int main (int argc, char* argv[])
 {
+    printf ("calling main!")
     int theUsersNumber;
     
     trickInstructions();
@@ -113,6 +114,7 @@ int main (int argc, char* argv[])
 
 int twoToThe(int exponent)
 {
+    printf ("calling twoToThe! arg: %d", exponent)
     int theResult;
     
     //printf("-> Calling twoToThe(%d)\n",exponent);
@@ -128,12 +130,13 @@ int twoToThe(int exponent)
 
 int twice(int number)
 {
-
+    printf ("calling twice! arg: %d", number)
     return number*2;
 }
 
 int trickCheckArithmetic(int theUsersNumber)
 {
+    printf ("calling trickCheckArithmetic! arg: %d", theUsersNumber)
     int originalNumber = theUsersNumber;
     printf ("subtract 2^0\n");
     pause();
@@ -170,7 +173,8 @@ int trickCheckArithmetic(int theUsersNumber)
 
 
 void pause()
-{ 
+{
+    printf ("calling pause!")
     char any;
     
     printf ("(press enter to continue)\n");
@@ -179,6 +183,8 @@ void pause()
 
 void trickInstructions()
 {
+    printf ("calling trickInstructions!")
+    
     printf ("pick any number\n");
     pause();
     printf ("subtract 2^0\n");
