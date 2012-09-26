@@ -6,12 +6,13 @@
 */
 
 #include <stdio.h>
-
 /**
- *@brief Main procedure, a Pre-written message
- *@return nothing
- */
-int main(void)
+ *@brief Main procedure.
+ *@param argv the command line (typed arguments)
+ *@param argc the number of options in the command line.
+ *@return zero
+*/
+int main(int argc, char * argv[])
 {
   printf("Hello, World!\n");
   printf("My name is Michael Pierce and I am in CS131!\n");
