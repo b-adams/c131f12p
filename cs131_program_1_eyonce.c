@@ -33,7 +33,7 @@
  *The forumla for the next number N in the nextFibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 */
 
-int nextFibonacci sequence (int x, int y);
+int nextFibonacci (int x, int y);
 
 /**
  * @author Prof. Adams
@@ -119,9 +119,8 @@ int main (int argc, char* argv[])
     printf("Averages...\n");
 	
         {
-        averafeOfThree (1);
-        averageOfThree (2);
-        averageOfThree (3);
+        averageOfThree (1,2,3);
+	printf("\n\n");
 
         }
    
@@ -162,10 +161,10 @@ int main (int argc, char* argv[])
 	return 0;
 }
 
-int nextFibonacci(int previous, int preprevious)
+int nextFibonacci (int previous, int preprevious)
 {
 	printf("\tThe Fibonacci number after %d and %d is %d\n",
-           preprevious, previous, previous+preprevious);
+           previous, preprevious, previous+preprevious);
 	return previous+preprevious;
 }
 
@@ -179,8 +178,8 @@ int nextUlam(int previous)
 
 int nextInteger (int previous)
 {
-	printf(\tThe next integer after %d is %d\n",
-	       previous, (previous+1);
+	printf("\tThe next integer after %d is %d\n",
+	       previous, (previous+1));
 	return (previous+1);
 }
 
