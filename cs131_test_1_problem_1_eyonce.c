@@ -11,7 +11,7 @@ cont int C_T_F_SHIFT = 32;
         int tempToConvert;
 tempToConvert = -40;
     //Todo 7
-    //Todo5
+tempToConvert = getBoundedNumber(-40,50)
     //Todo 7 (again)
     return 0;
  }
