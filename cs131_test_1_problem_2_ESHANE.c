@@ -1,26 +1,24 @@
 /**
 */
 
-include <stdio.h>
+#include <stdio.h>
 
-const SOME_NUMBER;
+const int SOME_NUMBER = 4;
 
-int getTwoAndAddTwo (int a, int b)
+int getTwoAndAddTwo (int a, int b);
 
-int main ()
+int main (int argc, char* argv[])
 {
     int tomorrow;
-    tomorrow = gettwoandaddtwo(4, SOME_NUMBER);
-    printf(Please ask about it on November %dth"", tomorrow);
-    return today;
+    tomorrow = getTwoAndAddTwo(4, SOME_NUMBER);
+    printf("Please ask about it on November %dth\n", tomorrow);
+    return tomorrow;
 }
 
-int getTwoAndAddTwo(a, b)
+int getTwoAndAddTwo(int a, int b)
 {
-    int 1Var;
-    printf(please enter two numbers, in the);
-    printf(" form X IS 4 Y IS 5 THERE IS NO Z");
+    int firstVar;
     int secondVar;
-    scanf("X IS %d Y IS %d THERE IS NO Z", 1stvar, secondvar);
-    a+b+1stvar+secondvar;
+    printf("please enter two numbers in the form: X IS 4 Y IS 5 THERE IS NO Z: ");
+    scanf("X IS %d Y IS %d THERE IS NO Z: ", &firstVar, &secondVar);
 }
