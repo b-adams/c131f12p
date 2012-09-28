@@ -1,3 +1,12 @@
+/**
+ *@file cs131_test_1_problem1_lforce.c
+ *@author Larry Force
+ *@date 9/28/2012
+ *@brief converts temperatures from celsius to farenheit
+ */
+
+
+
 #include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8 ;
