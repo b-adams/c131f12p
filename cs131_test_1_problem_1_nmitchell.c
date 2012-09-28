@@ -9,7 +9,7 @@ int getBoundedNumber(int minsize, int maxsize);
 int main(int argc, char* argv[])
 {
         int tempToConvert;
-    //todo 3
+    tempToConvert = -40;
     //todo 7
     //todo 5
     //todo 7 (again)
