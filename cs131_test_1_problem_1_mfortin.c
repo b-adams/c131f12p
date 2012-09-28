@@ -8,9 +8,8 @@ int getBoundedNumber(int minsize, int maxsize);
 
 int main(int argc, char* argv[])
 {
-    int tempToConvert = -40;
     //Todo 7
-    //Todo 5
+    int tempToConvert = getBoundedNumber(-40, 50);
     //Todo 7
     return 0;
 }
