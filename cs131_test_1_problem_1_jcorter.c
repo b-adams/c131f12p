@@ -1,3 +1,10 @@
+/**
+ *@file cs131_test_1_problem_1_jcorter.c
+ *@author Jessica Corter
+ *@date 9/28/2012
+ *@status Working
+
+
 #include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8;
