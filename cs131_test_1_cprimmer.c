@@ -10,9 +10,9 @@
  {
      int tempToConvert;
      printf (%d temptoConvert, -40);
-     //todo7
+     displayCelsiusInFahrenheit (int tempToConvert);
      printf getBoundedNumber (int -40,int 50);
-     //todo7
+     displayCelsiusInFahrenheit (int tempToConvert);
      return 0;
  }
  
