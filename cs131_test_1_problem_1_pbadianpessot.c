@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 
 void displayCelciusInFahrenheit(int tempInC)
 {
-   
+   int tempInF; 
 }
 
 int getBoundedNumber(int minsize, int maxsize)
