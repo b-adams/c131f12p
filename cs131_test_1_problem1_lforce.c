@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
         int tempToConvert ;
     tempToConvert = = -40
     //To do 7
-    //To do 5
+    tempToConvert = getBoundedNumber(-40 , 50 )
     //To do 7 (again)
     return 0 ;
 }
