@@ -1,7 +1,16 @@
+/**
+ *@file cs131_test_1_problem_1_eyonce.c
+ *@author Emily Yonce
+ *@date 09/28/2012
+ *@brief Converts celsius to Fahrenheit
+ *@sideeffect Prompts user to enter a number
+ *@return The converted number
+ */
+
 #include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8;
-cont int C_T_F_SHIFT = 32;
+const int C_TO_F_SHIFT = 32;
  
  void displayCelsiusInFahrenheit(int tempInC);
  int getBoundedNumber (int minsize, int maxsize);
@@ -11,7 +20,7 @@ cont int C_T_F_SHIFT = 32;
         int tempToConvert;
 tempToConvert = -40;
     displayCelsiusInFahrenheit(tempToConvert);
-tempToConvert = getBoundedNumber(-40,50)
+tempToConvert = getBoundedNumber(-40,50);
     displayCelsiusInFahrenheit(tempToConvert);
     return 0;
  }
@@ -19,8 +28,8 @@ tempToConvert = getBoundedNumber(-40,50)
  void displayCelsiusInFahrenheit (int tempInC)
  {
 int tempInF;
-tempInF = tempInC*C_TO_F_MULTIPLE+C_TO_SHIFT
-printf("X Celsius would be Y Fahrenheit.", tempInC, tempInF);
+tempInF = tempInC*C_TO_F_MULTIPLE+C_TO_F_SHIFT;
+printf("X Celsius would be Y Fahrenheit.\n", tempInC, tempInF);
  }
  
  int getBoundedNumber (int minsize, int maxsize)
@@ -30,7 +39,7 @@ printf("X Celsius would be Y Fahrenheit.", tempInC, tempInF);
       printf("Please enter a number between %d and %d\n",
              minsize, maxsize);
       scanf ("%d", &userInput);
-    } while (userInput < insize || userInput > maxsize);
+    } while (userInput < minsize || userInput > maxsize);
     
     return userInput;
  }
