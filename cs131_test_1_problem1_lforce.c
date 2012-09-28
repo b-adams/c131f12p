@@ -1,5 +1,6 @@
 #iclude <stdio.h>
 
+const int C_TO_F_SHIFT = 32 ;
 const float C_TO_F_MULTIPLE = 1.8 ;
 //To do 1
 
