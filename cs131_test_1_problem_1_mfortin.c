@@ -8,9 +8,9 @@ int getBoundedNumber(int minsize, int maxsize);
 
 int main(int argc, char* argv[])
 {
-    //Todo 7
+    void displayCelciusInFahrenheit(int tempToConvert);
     int tempToConvert = getBoundedNumber(-40, 50);
-    //Todo 7
+    void displayCelciusInFahrenheit(int tempToConvert);
     return 0;
 }
 
