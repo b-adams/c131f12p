@@ -20,7 +20,7 @@
  {
     @param int tempInF
     @printf ((tempInC*C_TO_F_MULTIPLE)+C_TO_F_SHIFT);
-    //todo6
+    return (X Celsius would be Y in Fahrenheit)
  }
  
  int getBoundedNumber(int minsize, int maxsize)
