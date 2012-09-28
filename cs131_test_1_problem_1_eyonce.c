@@ -10,9 +10,9 @@ cont int C_T_F_SHIFT = 32;
  {
         int tempToConvert;
 tempToConvert = -40;
-    //Todo 7
+    displayCelsiusInFahrenheit(tempToConvert);
 tempToConvert = getBoundedNumber(-40,50)
-    //Todo 7 (again)
+    displayCelsiusInFahrenheit(tempToConvert);
     return 0;
  }
  
