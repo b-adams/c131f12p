@@ -19,7 +19,7 @@ tempToConvert = -40;
  void displayCelsiusInFahrenheit (int tempInC)
  {
 int tempInF;
-    //Todo4
+tempInF = tempInC*C_TO_F_MULTIPLE+C_TO_SHIFT
     //Todo6
  }
  
