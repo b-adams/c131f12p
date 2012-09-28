@@ -9,7 +9,7 @@ void displayCelsiusInFahrenheit(int tempInC);
 int main(int argc, char* argv[])
 {
     int tempToConvert;
-
+    tempToConvert=-40;
     return 0;
 }
 
