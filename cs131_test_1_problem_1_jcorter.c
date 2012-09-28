@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8;
-//Todo 1
+//todo1
 
 void displayCelsiusInFahrenheit (int tempInC);
 int getBoundedNumber (int minsize, int maxsize);
@@ -29,7 +29,7 @@ int getBoundedNumber (int minsize, int maxsize)
     do {
         printf ("please enter a number between %d and %d/n", minsize, maxsize);
         scanf ("%d", &userInput);
-    }   while (userInput < minsize II userInput > maxsize);    
+    }   while (userInput < minsize || userInput > maxsize);    
 
     return userInput;
 }
