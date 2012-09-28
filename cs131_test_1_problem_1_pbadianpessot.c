@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
 {
     int tempToConvert;
     tempToConvert=-40;
+    tempToConvert=getBoundedNumber(-40,50);
     return 0;
 }
 
