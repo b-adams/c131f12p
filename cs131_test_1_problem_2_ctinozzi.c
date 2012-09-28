@@ -22,7 +22,7 @@ int getTwoAndAddTwo(int a, int b);
 int main(int argc, char* argv[])
 {
     int tomorrow;
-    tomorrow=getTwoAndAddTwo(4,SOME_NUMBER);
+    tomorrow=getTwoAndAddTwo(4, SOME_NUMBER);
     printf("Please ask about it on Nov %dth/n", tomorrow);
     return 0;
 }
@@ -35,10 +35,10 @@ int main(int argc, char* argv[])
 */
 int getTwoAndAddTwo(int a, int b)
 {
-    int firtstvar;
-    printf("Please enter two numbers, in the/n");
-    printf(" form X IS 4 Y IS 5 THERE IS NO Z/n");
+    int firstvar;
+    printf("Please enter two numbers, in the\n");
+    printf(" form X IS 4 Y IS 5 THERE IS NO Z\n");
     int secondvar;
-    scanf("X IS %d Y IS %d THERE IS NO Z", 4, 5);
+    scanf("X IS %d Y IS %d THERE IS NO Z\n", 4, 5);
     return a+b+firstvar+secondvar;
 }
