@@ -1,3 +1,11 @@
+/**@file cs131_test_1_program_1_dcrabtree.c
+@author Danielle Crabtree/ Prf. Adams
+@date September 28, 2012
+@brief Celcius to Fahrenheit
+@status Working!
+*/
+
+
 #include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8;
@@ -11,7 +19,7 @@ int main(int argc, char* argv [])
     int tempToConvert;
     tempToConvert = -40;
     void displayCelciusInFahrenheit(int tempToConvert);
-    tempToConvert = getBoundedNumber (-40, 50);
+    tempToConvert = getBoundedNumber(-40, 50);
     void displayCelciusInFahrenheit(int tempToConvert);
     return 0;
 }
