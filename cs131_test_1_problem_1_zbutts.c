@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 const float C_TO_MULTIPLY = 1.8;
-//Todo 1
+const C_TO_F_SHIFT = 32;
 
 void displayCelsiusInFahrenheit(int tempInC)
 int getBoundedNumber(int minsize, int maxsize); //Definition not shown
