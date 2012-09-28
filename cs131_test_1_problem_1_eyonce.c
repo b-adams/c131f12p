@@ -20,7 +20,7 @@ tempToConvert = getBoundedNumber(-40,50)
  {
 int tempInF;
 tempInF = tempInC*C_TO_F_MULTIPLE+C_TO_SHIFT
-    //Todo6
+printf("X Celsius would be Y Fahrenheit.", tempInC, tempInF);
  }
  
  int getBoundedNumber (int minsize, int maxsize)
