@@ -17,8 +17,7 @@ int main(int argc, char* argv[])
 
 void displayCelciusInFahrenheit(int tempInC)
 {
-    int tempInF();
-    //Todo 4
+    int tempInF = (tempInC*C_TO_F_MULTIPLE+C_TO_F_SHIFT);
     //Todo 6
 }
 
