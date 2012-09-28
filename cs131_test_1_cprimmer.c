@@ -9,7 +9,7 @@
  int main(int argc, char* argv[])
  {
      int tempToConvert;
-     //todo3
+     printf (%d temptoConvert, -40);
      //todo7
      //todo5
      //todo7
