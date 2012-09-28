@@ -9,7 +9,7 @@ cont int C_T_F_SHIFT = 32;
  int main(int argc, char* argv[])
  {
         int tempToConvert;
-    //Todo 3
+tempToConvert = -40;
     //Todo 7
     //Todo5
     //Todo 7 (again)
