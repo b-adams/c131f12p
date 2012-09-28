@@ -20,6 +20,7 @@ void displayCelciusInFahrenheit(int tempInC)
 {
    int tempInF;
    tempInF=tempInC*C_TO_F_MULTIPLE+C_TO_F_SHIFT;
+   printf("%d, Celsius would be %d Farhenheit", tempInC, tempInF);
 }
 
 int getBoundedNumber(int minsize, int maxsize)
