@@ -11,7 +11,7 @@
      int tempToConvert;
      printf (%d temptoConvert, -40);
      //todo7
-     //todo5
+     printf getBoundedNumber (int -40,int 50);
      //todo7
      return 0;
  }
