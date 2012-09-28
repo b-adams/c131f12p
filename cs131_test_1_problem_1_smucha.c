@@ -1,3 +1,10 @@
+/**
+* @file cs131_test_1_problem_1_smucha.c
+* @author Stacey Mucha
+* @date 9/28/12
+* @status working!
+*/
+
 #include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8;
