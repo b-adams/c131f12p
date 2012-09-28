@@ -1,9 +1,9 @@
 /**
-*@file cs131_test_1_problem_1_zbutts.c
-*@author Zakarra Butts
-*@date September 28, 2012
-*@brief converting Celsius to Fahrenheit
-*/
+ *@file cs131_test_1_problem_1_zbutts.c
+ *@author Zakarra Butts
+ *@date September 28, 2012
+ *@brief converting Celsius to Fahrenheit
+ */
 
 #include <stdio.h>
 
