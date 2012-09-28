@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
         int tempToConvert;
     tempToCOnvert = -40;
     //Todo 7
-    //Todo 5
+    tempToConvert = (-40, 50);
     //Todo 7 (again)
     return 0;
 }
