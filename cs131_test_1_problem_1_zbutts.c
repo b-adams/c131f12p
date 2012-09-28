@@ -10,9 +10,9 @@ int main(int argc, char* argv[])
 {
         int tempToConvert;
     tempToCOnvert = -40;
-    //Todo 7
+    displayCelsiusInFahrenheit=tempToConvert
     tempToConvert = (-40, 50);
-    //Todo 7 (again)
+    displayCelsiusInFahrenheit=tempToConvert
     return 0;
 }
 
