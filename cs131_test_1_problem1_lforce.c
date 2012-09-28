@@ -1,15 +1,15 @@
-#iclude <stdio.h>
+#include <stdio.h>
 
 const float C_TO_F_MULTIPLE = 1.8 ;
 const int C_TO_F_SHIFT = 32 ;
 
-void displayCelsiusInFarenheit(int tempInC) ;
+void displayCelsiusInFahrenheit(int tempInC) ;
 int getBoundedNumber(int minsize, int maxsize) ;
 
 int main(int argc, char* argv[])
 {
         int tempToConvert ;
-    tempToConvert = = -40 ;
+    tempToConvert = -40 ;
     displayCelsiusInFahrenheit(tempToConvert) ;
     tempToConvert = getBoundedNumber(-40 , 50 ) ;
     displayCelsiusInFahrenheit(tempToConvert) ;
@@ -20,7 +20,7 @@ void displayCelsiusInFahrenheit(int tempInC)
 {
     int tempInF ;
     tempInF = ((tempInC * C_TO_F_MULTIPLE) + C_TO_F_SHIFT) ;
-    printf("%d Celsius would be %d Fahrenheit." , tempInC , tempInF ) ;
+    printf("%d Celsius would be %d Fahrenheit.\n" , tempInC , tempInF ) ;
 }
 
 int getBoundedNumber(int minsize , int maxsize)
