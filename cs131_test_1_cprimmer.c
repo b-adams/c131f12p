@@ -1,4 +1,12 @@
- #include <stdio.h>
+ 
+ @prog csc131_test_1_cprimmer.c
+ @author cody primmer
+ @date september 28 2012
+ @status working
+ 
+ 
+ 
+  #include <stdio.h>
  
  const float C_TO_F_MULTIPLE = 1.8;
  const float C_TO_F_SHIFT = 32
