@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+const float C_TO_F_MULTIPLE = 1.8;
+//Todo 1
+
+void displayCelsiusInFahrenheit(int tempInC)
+int getBoundedNumber9int minsize, int maxsize0;
+
+int main(int argc, char* argv[]);
+{
+        int tempToConvert;
+    //Todo 3
+    //Todo 7
+    //Todo 5
+    //Todo 7 (again)
+    return 0;
+}
+
+void displayCelsiusInFahrenheit(int tempInC);
+{
+    //Todo 2
+    //Todo 4
+    //Todo 6
+}
+
+int getBoundedNumber(int minsize, int maxsize);
+{
+    int userInput;
+    do {
+        printf("Please enter a number between %d and %d\n', minsize, maxsize");
+        scanf("%d", &userInput);
+    } while userInput < minsize || userInput > maxsize);
+    
+    return userInput;
+}
