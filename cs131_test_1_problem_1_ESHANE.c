@@ -19,7 +19,9 @@ int main(int argc, char* argv[])
 
 void displayCelsiusInFahrenheit(int tempInC);
 {
-    
+    int tempInF;
+    tempInF = (tempInC * C_TO_F_MULTIPLE) + C_TO_F_SHIFT;
+    printf ("%d celsius would be %d fahrenheit./n", tempInC, tempInF);
 }
 
 int getBoundNumber(int minsize, int maxsize)
