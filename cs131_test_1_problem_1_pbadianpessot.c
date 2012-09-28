@@ -10,7 +10,9 @@ int main(int argc, char* argv[])
 {
     int tempToConvert;
     tempToConvert=-40;
+    displayCelsiusInFahrenheit(tempToConvert);
     tempToConvert=getBoundedNumber(-40,50);
+    displayCelsiusInFahrenheit(tempToConvert);
     return 0;
 }
 
