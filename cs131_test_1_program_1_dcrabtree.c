@@ -21,7 +21,7 @@ void displayCelciusInFahrenheit (int tempInC)
 {
     int tempInF;
     tempInF = (tempInC * C_TO_F_MULTIPLE)+ C_TO_F_SHIFT;
-    //Todo 6
+    printf("%d Celcius would be %d Fahrenheit.\n", tempInC, tempInF);
 }
 
 int get BoundedNumber (int minsize, int maxsize)
