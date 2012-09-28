@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
 voit displayCelsiusInFahrenheit(int tempInC)
 {
-    //Todo 2
+    int tempInF;
     //Todo 4
     //Todo 6
 }
