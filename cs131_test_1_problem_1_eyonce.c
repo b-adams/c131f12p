@@ -18,7 +18,7 @@ cont int C_T_F_SHIFT = 32;
  
  void displayCelsiusInFahrenheit (int tempInC)
  {
-    //Todo 2
+int tempInF;
     //Todo4
     //Todo6
  }
