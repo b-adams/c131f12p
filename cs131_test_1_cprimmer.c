@@ -19,7 +19,7 @@
  void displayCelsiusInFahrenheit (int tempInc)
  {
     @param int tempInF
-    //todo4
+    @printf ((tempInC*C_TO_F_MULTIPLE)+C_TO_F_SHIFT);
     //todo6
  }
  
