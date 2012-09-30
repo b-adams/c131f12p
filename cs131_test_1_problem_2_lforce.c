@@ -1,5 +1,5 @@
 /**
-@file test1.list2.c
+@file cs131_test1_problem_2_lforce.c
 @author Prof Adams
 @date 9/28/2012
 */
