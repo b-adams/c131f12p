@@ -7,10 +7,10 @@
 
 int main(int argc, char* argv[])
 {
- return 0
+ return 0;
     }
     
-int the_answer_every_time
+int the_answer_every_time;
 /**
  @brief the answer that the trick always comes up with is 2
  */
@@ -31,11 +31,11 @@ int twoToThe(int exponent)
 {
     int theResult;
     
-    printf("-> Calling twoToThe(%d)\n",exponent);
+    printf("Calling twoToThe(%d)\n",exponent);
     
 	if(exponent<0) theResult=1/twoToThe(-exponent);
 	else if(exponent==0) theResult=1;
-	else theResult=twice(twoToThe(exponent-1));
+	else theResult==twice(twoToThe(exponent-1));
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
@@ -71,4 +71,4 @@ int twoToThe(int exponent)
  which will scan for the next letter in the stream. If the user presses
  enter, a newline will be the next character, getchar will finish, and
  the rest of the program will continue.
- */
+ */p
