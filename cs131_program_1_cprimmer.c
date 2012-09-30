@@ -43,7 +43,7 @@
 *
 */
 
-int nextfibonacci(previous, preprevious);
+int nextfibonacci(int previous, int preprevious);
 
 
 /**
@@ -128,7 +128,7 @@ int scratchpad2;
    
     printf("Averages...\n");
 
- int main()
+ int main();
  {
     averageofthree(1,2,3);
     averageofthree(10,10,10);
@@ -139,7 +139,7 @@ int scratchpad2;
  }
 
 printf("Fibonacci numbers...\n");
-shaggy_dog=nextFibonacci(1,1);
+shaggy_dog==nextFibonacci(int 1,int 1);
 scratchpad2=nextFibonacci(shaggy_dog,1);
    
 shaggy_dog=nextFibonacci(shaggy_dog, scratchpad2);
@@ -184,7 +184,7 @@ return (previous%2)?(previous/2):(3*previous+1);
 int nextInteger(int previous)
 {
     printf ("1+%d is %d\n", previous, previous+1);
-    return previous+1
+    return previous+1;
 }
 int averageOfThree(int first, int second, int third)
 {
