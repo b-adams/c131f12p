@@ -76,17 +76,6 @@ void pause();
 void trickInstructions();
 
 /**
- @brief Gets the user to pick a number
- @sideeffect Prompts the user to enter a number
- @returns The number the user entered
- 
- This function scans the user's input into a local variable,
- and then returns the value stored in that variable to the calling code.
- */
-
-int getNumberFromUser();
-
-/**
  * @brief Main procedure.
 
  * @param argv the command line (typed arguments)
@@ -96,15 +85,16 @@ int getNumberFromUser();
  
 */
 
-int main(int argc, char* argv[]);
-
 int main(int argc, char* argv[])
 
 {
     printf ("This is the main function.\n");
     trickInstructions();
-    getNumberFromUser();
-    trickCheckArithmetic (int theUsersNumber);    
+    int theUsersNumber;
+    printf ("Please enter your number and press enter: \n");
+    scanf ("%d", &theUsersNumber);
+    trickCheckArithmetic (0);
+    trickCheckArithmetic(100);
     printf ("This is the main function and it returns the integer two.\n");
     return THE_ANSWER_EVERY_TIME;
     
@@ -130,14 +120,15 @@ int twice (int n)
 {
     printf ("This is the twice (int n) function.\n");
     printf ("This is the twice (int n) function and it returns twice the integer n.\n");
-    return 2*n;   
+    return n+n;   
 }
 
 int trickCheckArithmetic(int theUsersNumber)
 
 {
     int result;
-       
+    printf("***We are now going to try the trick with %d***\n", theUsersNumber);
+        
     printf ("This is the trickCheckArithmetic function.\n");
     result = theUsersNumber - twoToThe (0);
     printf ("Subtract 2^0 from your number: %d\n", result);
@@ -152,7 +143,7 @@ int trickCheckArithmetic(int theUsersNumber)
     printf ("Divide the result by 2^1: %d\n", result);
     
     result = result - twice (theUsersNumber);
-    printf ("Take the result and subtract two times your original number: %d.\n, result");
+    printf ("Take the result and subtract two times your original number: %d.\n", result);
     
     printf ("Lemme guess...your answer was %d\n", result);
     printf ("This is the trickCheckArithmetic function and it returns the integer two.\n");
@@ -188,17 +179,5 @@ void trickInstructions()
     printf("This is the trickInstructions function and it returns nothing.\n");
     return;
       
-}
-
-int getNumberFromUser()
-
-{
-    int theUsersNumber;
-    printf ("This is the getNumberFromUser function.\n");
-    printf ("Please enter your number and press enter: \n");
-    scanf ("% d", theUsersNumber);
-    printf ("This is the getNumberFromUser function and it returns the integer the user entered.\n");
-    return theUsersNumber;   
-    
 }
 
