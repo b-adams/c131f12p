@@ -19,14 +19,14 @@
 int main(void)
 {
   int moneyfordinner;
-     printf("How much money do you have for dinner?.\n");
+     printf("How much money do you have for dinner?\n");
      scanf("%d", &moneyfordinner); 
      if(moneyfordinner > 50) 
-          printf("You should go to the Fargo!.\n"); 
+          printf("You should go to the Fargo!\n"); 
      else 
         if(moneyfordinner > 20) 
-          printf("You should got to the Backstage Grill!.\n"); 
+          printf("You should got to the Backstage Grill!\n"); 
         else 
-          printf("You should just stick to the Dining Hall.\n"); 
+          printf("You should just stick to the Dining Hall\n"); 
 return 0;
 }
