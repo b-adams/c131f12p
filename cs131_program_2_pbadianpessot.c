@@ -67,6 +67,7 @@ void trickInstructions();
 
 int main(int argc, char* argv[])
 {
+   printf("This function is trickInstructions");
     trickCheckArithmetic;
     printf("Now lets walkt through it");
     trickCheckArithmetic;
@@ -75,6 +76,7 @@ int main(int argc, char* argv[])
 
 int twoToThe(int exponent)
 {
+    printf("this function is twoToThe, which has argument exponent");
     int theResult;
     
     printf("-> Calling twoToThe(%d)\n",exponent);
@@ -90,6 +92,7 @@ int twoToThe(int exponent)
 
 int twice(int n)
 {
+    printf("this function is twice, which has arguement n");
     int theDouble;
     
     printf("-> Calling twice(%d)\n", n);
@@ -103,6 +106,7 @@ int twice(int n)
 
 int trickCheckArithmetic (int theUsersNumber);
 (
+    printf("this argument is trickCheckArithmetic, which has arguement theUsersNumber");
     int theUsersNumber;	
     int stepOne;
     int stepTwo;
@@ -125,6 +129,7 @@ int trickCheckArithmetic (int theUsersNumber);
 
 void trickInstructions()
 {
+    printf("this function is trickInstructions");
     printf("Think of a number and press a key");
     scanf("%c", &char);
     printf("Subtract a 1 from your number and press a key");
