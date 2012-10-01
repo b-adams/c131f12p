@@ -32,16 +32,6 @@ const int THE_ANSWER_EVERY_TIME=2;
 
 int toToThe(int exponent);
 
-/**
- @brief Double a number
- @param n The number to double
- @sideeffect None
- @returns Twice n
- 
- Very simple function, should just return 2*n or n+n
- */
-
-int twice(int n);
 
 /**
  @brief Walk the user through the arithmetic in the trick
@@ -65,7 +55,7 @@ int trickCheckArithmetic(int theUsersNumber);
  Very simple function, should just return 2*n or n+n
  */
 
-int twice(n);
+int twice(int n);
 
 /**
  @brief Lead through the arithmetic without a number
@@ -77,10 +67,10 @@ void trickInstructions();
 
 int main(int argc, char* argv[])
 {
- trickCheckArithmetic;
- printf("Now lets walkt through it");
- trickCheckArithmetic;
- return 0;
+    trickCheckArithmetic;
+    printf("Now lets walkt through it");
+    trickCheckArithmetic;
+    return 0;
 }
 
 int twoToThe(int exponent)
@@ -104,29 +94,32 @@ int twice(int n)
     
     printf("-> Calling twice(%d)\n", n);
 	
-	the Result=2n;   
+	theDouble=2*n;   
 
-    print("<- twice(%d) returns %d\n, n, theDouble);
+    printf("<- twice(%d) returns %d\n", n, theDouble);
    
-    return theResult;
+    return theDouble;
 }
 
-int trickCheckArithmetic
-{
-    int number;	
+int trickCheckArithmetic (int theUsersNumber);
+(
+    int theUsersNumber;	
     int stepOne;
     int stepTwo;
     int stepThree;
     int stepFour;
-
     printf("Input a number");
-    scanf("%d", &number);
-    printf("*You entered %d*", number);
-    printf("Your number minus one is %d", number- twoToThe(0)=stepOne);
-    printf("Your number squared is %d", stepOne*twoToThe(2)=stepTwo);
-    printf("Your number plus eightis %d", stepTwo+twoToThe(3)=stepThree);
-    printf("Your number divided by %d", stepThree/twoToThe(1)=stepFour);
-    printf("Your number subtracted from your original number is %d", stepFour-number);
+    scanf("%d", &theUsersNumber);
+    printf("*You entered %d*", theUsersNumber);
+	stepOne=number-twoToThe(0);
+    printf("Your number minus one is %d",stepOne);
+    	stepTwo=stepOne*twoToThe(2);
+    printf("Your number squared is %d",stepTwo);
+	stepThree=stepTwp+twoToThe(3);
+    printf("Your number plus eightis %d",stepThree);
+	stepFour=stepThree/twoToThe(1);
+    printf("Your number divided by %d",stepFour);
+    printf("Your number subtracted from your original number is %d", stepFour-theUsersNumber);
     printf("Your answer is %d",THE_ANSWER_ALL_THE_TIME);
 } 
 
