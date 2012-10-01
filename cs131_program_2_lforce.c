@@ -89,8 +89,15 @@ int trickCheckArithmetic(int theUsersNumber) ;
 void trickInstructions() ;
 
 
-//main function
+/**
+ *@brief gets user input
+ *@sideeffect assigns a value for the trick to use
+ *return nothing
+ */
 
+void getUserInput(int number) ;
+
+//main function
 
 
 
@@ -106,9 +113,11 @@ void trickInstructions() ;
  
  int main (int argc, char* argv[])
  {
+   int a ;
    
    trickInstructions() ;
-   trickCheckArithmetic(0) ;
+   getUserInput ( a ) ;
+   trickCheckArithmetic( a ) ;
    printf("You should have gotten %d \n" , THE_ANSWER_EVERY_TIME) ;
     return 0 ;
  }
@@ -118,43 +127,64 @@ void trickInstructions() ;
  
  //definitions
  
+ void getUserInput(int number)
+ {
+ printf("-> Calling getUserInput(%d)\n", number);
+ 
+   printf("\n\nWhat is your number? \n") ;
+   scanf("%d", &number) ;
+   
+printf("<- trickCheckArithmetic(%d) returns nothing\n" , number);
+ }
+ 
+ 
+ 
  
  int trickCheckArithmetic(int theUsersNumber)
  {
     
-    int x ;
-    int y ;
-    int z ;
-    int w ;
-    int v ;
-    
-    printf("-> Calling trickCheckArithmetic(%d)\n",theUsersNumber);
-printf("\n\nWhat is your number? \n") ;
-scanf("%d", &theUsersNumber) ;
 
-printf("First, subtract 2^0 \n") ;
-x=theUsersNumber-twoToThe(0) ;
+// These will be used to store values.
+int x ;
+int y ;
+int z ;
+int w ;
+int v ;
+    
+printf("-> Calling trickCheckArithmetic(%d)\n",theUsersNumber);
+
+printf("First, 2^0 is subtracted from your number. \n") ;
+   x=theUsersNumber-twoToThe(0) ;
+
 printf("The result is %d. \n" , x) ;
-pause() ;
-printf("Next, multiply by 2^2 \n") ;
-y=x*twoToThe(2) ;
+   pause() ;
+
+printf("Next, the result is multiplied by 2^2. \n") ;
+   y=x*twoToThe(2) ;
+
 printf("The result is %d. \n\n" , y) ;
-pause() ;
-printf("Now, add 2^3\n") ;
-z=y+twoToThe(3) ;
+   pause() ;
+   
+printf("Now, we add 2^3 to that.\n") ;
+   z=y+twoToThe(3) ;
+
 printf("The result is %d. \n" , x) ;
-pause () ;
-printf("And divide by 2^1 \n") ;
-w=z/twoToThe(1) ;
+   pause () ;
+
+printf("And then we divide the result by 2^1 \n") ;
+   w=z/twoToThe(1) ;
+
 printf("The result is %d. \n" , y) ;
-pause() ;
-printf("Finally, subtract twice your original number. \n") ;
-v=w-twice(theUsersNumber) ;
+   pause() ;
+
+printf("Finally, subtract twice your original number from all of that. \n") ;
+   v=w-twice(theUsersNumber) ;
 
 printf("The final result is %d \n\n" , v) ;
 
 
-    printf("<- trickCheckArithmetic(%d) returns %d\n",theUsersNumber, THE_ANSWER_EVERY_TIME);
+printf("<- trickCheckArithmetic(%d) returns %d\n",theUsersNumber, THE_ANSWER_EVERY_TIME);
+
 
  return THE_ANSWER_EVERY_TIME ;
  }
@@ -163,7 +193,9 @@ printf("The final result is %d \n\n" , v) ;
  int twice (int n)
  {
    printf("-> Calling twice(%d)\n",n);
-       printf("<- twice(%d) returns %d\n",n, n+n);
+   
+   printf("<- twice(%d) returns %d\n",n, n+n);
+   
     return (n+n) ;
  }
  
@@ -188,27 +220,36 @@ printf("The final result is %d \n\n" , v) ;
 
 void pause ()
 {
-   printf(" \n -> Calling pause() \n ");
    char RandomInput ;
+ 
+   printf(" \n -> Calling pause() \n ");
    
    printf("\n\n\n Press ENTER to continue. \n");
+   
    scanf("%c" , &RandomInput) ;
-      printf("<- pause() returns nothing\n");
+   
+   printf("<- pause() returns nothing\n");
 }
 
 
 void trickInstructions()
 {
    printf("-> Calling trickInstructions()\n");
-   printf("\n First, subtract 2^0") ;
-   pause() ;
-   printf("\n Next, multiply by 2^2") ;
-   pause();
-   printf("\n Now, add 2^3") ;
-   pause() ;
-   printf("\n And divide by 2^1") ;
-   pause() ;
-   printf("\n Finally, subtract twice your original number.") ;
-   pause() ;
+   
+   printf("\n First, we subtract 2^0 from a number.") ;
+      pause() ;
+   
+   printf("\n Next, we multiply that result by 2^2.") ;
+      pause();
+   
+   printf("\n Now, we add 2^3 to that.") ;
+      pause() ;
+   
+   printf("\n And then we divide it all by 2^1.") ;
+      pause() ;
+   
+   printf("\n Finally, we subtract twice the original number, and we should get 2.") ;
+      pause() ;
+   
     printf("<- trickinstructions() returns nothing\n");
 }
