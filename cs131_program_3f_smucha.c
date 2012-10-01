@@ -17,23 +17,22 @@
 int main(int argc, char* argv[])
 {
   int timesSeenLordOfTheRings;
-  int answer;
   
-  printf("How many times have you seen 'Lord of the Rings'?/n");
-  scanf(" %d", &answer);
+  printf("How many times have you seen 'Lord of the Rings'?\n");
+  scanf(" %d", &timesSeenLordOfTheRings);
   if(timesSeenLordOfTheRings > 5)
   {
-    printf("Maybe watch it again, for good measure!/n")
+    printf("Maybe watch it again, for good measure!\n");
   } else {
     if(timesSeenLordOfTheRings > 0)
     {
-      printf("You definitely need to see it again!/n")
+      printf("You definitely need to see it again!\n");
     } else {
-      printf("You need to see it!/n")
+      printf("You need to see it!\n");
     }
   }
 
-  printf("Remember the popcorn!");
+  printf("Remember the popcorn!\n");
 
   return 0;
 }
