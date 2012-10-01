@@ -67,10 +67,11 @@ void trickInstructions();
 
 int main(int argc, char* argv[])
 {
-   printf("This function is trickInstructions");
+     printf("This function is the main fuction");
     trickCheckArithmetic;
     printf("Now lets walkt through it");
     trickCheckArithmetic;
+    printf("main returning 0");
     return 0;
 }
 
@@ -86,6 +87,7 @@ int twoToThe(int exponent)
 	else theResult=twice(twoToThe(exponent-1));
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
+    printf("twoToThe return %d", theResult);
     
     return theResult;
 }
@@ -100,6 +102,7 @@ int twice(int n)
 	theDouble=2*n;   
 
     printf("<- twice(%d) returns %d\n", n, theDouble);
+    printf("twice return %d", theDouble);
    
     return theDouble;
 }
@@ -125,6 +128,8 @@ int trickCheckArithmetic (int theUsersNumber);
     printf("Your number divided by %d",stepFour);
     printf("Your number subtracted from your original number is %d", stepFour-theUsersNumber);
     printf("Your answer is %d",THE_ANSWER_ALL_THE_TIME);
+    printf("trickCheckArithmetic, return %d",THE_ANSWER_ALL_THE_TIME);
+    return(THE_ANSWER_ALL_THE_TIME);
 } 
 
 void trickInstructions()
@@ -142,5 +147,7 @@ void trickInstructions()
     scanf("%c", &char);
     printf("Now subtract your original number and press a key");
     scanf("%c". &char);
-    printf("Did you get Two?"); 
+    printf("Did you get Two?");
+    printf("trickInstructions, return %d", THE_ANSWER_ALL_THE_TIME);
+    return(THE_ANSWER_ALL_THE_TIME);
 }
