@@ -3,7 +3,7 @@
 @brief Determining if steak is raw, undercooked, or just right
 @author Stacey Mucha
 @date October 1, 2012
-@status Working
+@status Working!
 */
 
 #include <stdio.h>
