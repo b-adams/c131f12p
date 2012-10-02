@@ -19,41 +19,39 @@ int main(int argc, char* argv[])
   int userAge;
   int tempOutside;
   
-  printf("How old are you?\n");
+  printf("I am the bouncer at this club. What is your age?\n");
   scanf(" %d", &userAge);
-  printf("Also, what is the temperature outside?\n");
-  scanf(" %d", &temptOutside)
   
-  if(userAge >= 21)
+  printf("Also, what is the temperature outside?\n");
+  scanf(" %d", &tempOutside);
+  
+  
+  if(userAge >= 21) 
   {
     printf("Welcome to the club!\n");
   } else {
-    printf("Sorry friend. You are too young for this club.\n");
-    }
-    if(tempOutside > 70)
+    if(tempOutside < 70)
     {
-      printf("Just get dancing.\n");
+      printf("Can I take your coat?\n");
     } else {
-      printf("Can I take your coat for you?\n");
+      printf("Just get dancing.\n");
     }
   }
   
   if(userAge < 21)
   {
-    printf("Sorry friend. You are too young for this club.\n");
-  }
-  
-  if(tempOutside > 70)
-  {
-    printf("Time for you to go.\n");
+    printf("Sorry friend. You're too young for this club.\n");
   } else {
-    printf("Better keep on that coat.\n");
+    if(tempOutside < 70)
+    {
+      printf("Better keep on that coat.\n");
+    } else {
+      printf("Time for you to go.\n");
+    }
   }
-  
+
   printf("Have a great evening!\n");
   
   return 0;
 }
-  
-
  
