@@ -3,7 +3,7 @@
 @brief Determining where a person should eat based on amount of money they have.
 @author Stacey Mucha
 @date October 1, 2012
-@status Working!
+@status Working
 */
 
 #include <stdio.h>
@@ -16,17 +16,23 @@
 @returns 0 if works right
 */
 
-int main(void)
+int main(int argc, char* argv[])
 {
   int moneyfordinner;
-     printf("How much money do you have for dinner?\n");
-     scanf("%d", &moneyfordinner); 
-     if(moneyfordinner > 50) 
-          printf("You should go to the Fargo!\n"); 
-     else 
-        if(moneyfordinner > 20) 
-          printf("You should got to the Backstage Grill!\n"); 
-        else 
-          printf("You should just stick to the Dining Hall\n"); 
+  
+  printf("How much money do you have for dinner?\n");
+  scanf("%d", &moneyfordinner); 
+     
+  if(moneyfordinner >= 50) 
+  {
+    printf("You should go to the Fargo!\n"); 
+  } else {
+    if(moneyfordinner >= 20) 
+    {
+      printf("You should got to the Backstage Grill!\n"); 
+    } else {
+      printf("You should just stick to the Dining Hall\n"); 
+    }
+  }
 return 0;
 }
