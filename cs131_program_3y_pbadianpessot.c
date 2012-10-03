@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
     int price;
     int numberProduced;
     int massive;
+    int collectible;
     
     printf("How big is your car?");
     scanf("%d", &size);
@@ -44,7 +45,7 @@ int main(int argc, char* argv[])
                         collectible=price*numberProduced;
                         printf("You're In! \n");
                     }  else {
-                        printf("No Admission");
+                        printf("No Admission \n");
             }
         }
     }
