@@ -18,13 +18,15 @@
 
 int main(int argc, char* argv[])
 {
+    int userInput;
+    
     printf("Please input how much you are having for dinner:");
     scanf("%d", &userInput);
-    if(userInput => 50)
+    if(userInput>=50)
     {
         printf("Go to the Fargo");
     }   else    {
-        if(userInput=>20)
+        if(userInput>=20)
         {
             printf("Go to the Backstage Grill");
         } else  {
