@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 {
     int userInput;
     
-    printf("Please input the internal temperature of your steak");
+    printf("Please input the internal temperature of your steak:");
     scanf("%d", &userInput);
     if(userInput<=70)
     {
