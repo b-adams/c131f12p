@@ -2,6 +2,7 @@
  *@file cs131_program_3f_dcrabtree.c
  *@author Danielle Crabtree
  *@date October 3, 2012
+ *@brief Lord of the Rings Program
  *@status Working!
  */
 
@@ -27,18 +28,24 @@ char whatchLords (int numSeenLords);
 int main (void)
 {
     int numSeenLords;
-    char lords;
+    
     
     printf("Please enter how many times you have seen the movie Lord of the Rings: ");
     scanf("%d", &numSeenLords);
   
     if(numSeenLords >= 5)
+    {
         printf("Maybe watch it again, for good measure.\n");
+    }
     else if (numSeenLords > 0)
+    {
         printf("You definitely need to see it again\n");
+    }
     else if(numSeenLords == 0)
+    {
         printf("You need to see it!\n");
-        
+    }
+    
     printf("Remember the popcorn!\n");
     
     return 0;
