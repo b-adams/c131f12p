@@ -24,13 +24,13 @@ int main(int argc, char* argv[])
     scanf("%d", &userInput);
     if(userInput>=50)
     {
-        printf("Go to the Fargo /n");
+        printf("Go to the Fargo \n");
     }   else    {
         if(userInput>=20)
         {
-            printf("Go to the Backstage Grill /n");
+            printf("Go to the Backstage Grill \n");
         } else  {
-            printf("Go to the Dining Hall /n");
+            printf("Go to the Dining Hall \n");
         }
         
     }
