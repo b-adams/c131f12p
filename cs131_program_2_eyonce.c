@@ -61,6 +61,12 @@ int trickCheckArithmetic (theUsersNumber);
  */
  pause();
  
+  /**
+ @brief Shows all the instructions one at a time with pauses in between
+ @sideeffect Prints instructions
+ */
+ void trickInstructions();
+ 
 {
 int main (argc, char* argv[])
 return 0;
@@ -100,4 +106,33 @@ return n;
  pause()
  {
  return 0;
+ }
+ 
+ void trickInstructions()
+ {
+    printf("First, subtract 2^0")
+     pause()
+ {
+ return 0;
+ }
+    printf("Next, multiply by 2^2")
+    pause()
+ {
+ return 0;
+ }
+    printf("Now, add 2^3")
+     pause()
+ {
+ return 0;
+ }
+    printf("And divide by 2^1")
+     pause()
+ {
+ return 0;
+ }
+    printf("Finally, subtract twice your original number.")
+     pause()
+ {
+ return 0;
+ }
  }
