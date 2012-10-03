@@ -1,7 +1,8 @@
 /**
  *@file cs131_program_3g_dcrabtree.c
  *@author Danielle Crabtree
- *@date October 1, 2012
+ *@date October 3, 2012
+ *@brief The Clubbing Program
  *@status Working!
  */
 
@@ -38,14 +39,22 @@ int main (void)
     scanf("%d", &temp);
   
     if(age >= 21 && temp < 70)
+    {
         printf("Welcome to the club! Can I take your coat for you?\n");
+    }
     else if (age >= 21 && temp >= 70)
+    {
         printf("Welcome to the club! Just get dancing!\n");
+    }
     else if(age < 21 && temp < 70)
+    {
         printf("Better keep on that coat.\n");
+    }
     else if (age < 21 && temp >= 70)
+    {
         printf("Time for you to go!\n");
-        
+    }   
+    
     printf("Have a great evening!\n");
     return 0;
 }// main
