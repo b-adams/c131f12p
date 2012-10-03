@@ -13,7 +13,7 @@
  *@brief Connects where to eat with the amount of money the user has
  *@param money The amount of money the user will input into the program
  *@sideeffect None
- *returns Where user should eat
+ *@returns Where user should eat
  */
 
 char whereToEat (int money);
