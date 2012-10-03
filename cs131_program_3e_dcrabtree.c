@@ -2,6 +2,7 @@
  *@file cs131_program_3e_dcrabtree.c
  *@author Danielle Crabtree
  *@date October 3, 2012
+ *@brief The Ideal Steak Program
  *@status Working!
  */
 
@@ -27,17 +28,22 @@ char howBeefIsCooked (int beefTemp);
 int main (void)
 {
     int beefTemp;
-    char cooked;
     
     printf("Please enter the temperature of you steak: ");
     scanf("%d", &beefTemp);
   
     if(beefTemp >= 145)
+    {
         printf("Your steak is just right to eat!\n");
+    }
     else if (beefTemp>=98)
+    {
         printf("Your steak is a bit undercooked\n");
+    }
     else if(beefTemp < 70)
+    {
         printf("I think the cow is still mooing because your steak is raw!\n");
+    }
     
     return 0;
 }// main
