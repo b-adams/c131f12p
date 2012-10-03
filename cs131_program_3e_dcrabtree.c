@@ -2,7 +2,7 @@
  *@file cs131_program_3e_dcrabtree.c
  *@author Danielle Crabtree
  *@date October 3, 2012
- *@status In Progress
+ *@status Working!
  */
 
 #include <stdio.h>
