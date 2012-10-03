@@ -50,6 +50,17 @@ int twoToThe(int exponent);
  */
 int trickCheckArithmetic (theUsersNumber);
 
+/**
+ @brief Pause until the user is ready to continue
+ @sideeffect Prompts the user to press enter
+ 
+ After printing a prompt, this function calls the getchar function
+ which will scan for the next letter in the stream. If the user presses
+ enter, a newline will be the next character, getchar will finish, and
+ the rest of the program will continue.
+ */
+ pause();
+ 
 {
 int main (argc, char* argv[])
 return 0;
@@ -85,3 +96,8 @@ printf("Finally, subtract twice your original number.")
 
 return n;
 }
+
+ pause()
+ {
+ return 0;
+ }
