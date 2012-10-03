@@ -15,18 +15,17 @@ int main(int argc, char* argv[])
     
     if(usersMoney == 'Y')
     {
-        printf("Go to the Fargo!");
+        printf("Go to the Fargo!\n");
     } else {
         printf("Do you have more than 20 dollars but less than 50 dollars? Y or N (please use caps)");
         scanf(" %c", &usersMoney);
         if(usersMoney == 'Y')
         {
-            printf("Go to the Backstage Grille");
+            printf("Go to the Backstage Grille!\n");
         } else
         {
-            printf("Go to the Dinning Hall");
+            printf("Go to the Dinning Hall.\n");
         }
     }
     return 0;
-}
-    
+}  
