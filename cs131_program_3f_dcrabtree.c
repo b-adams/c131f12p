@@ -13,7 +13,7 @@
  *@brief Asks how many times the user has seen Lord of the Rings and gives advice about if they should watch it again
  *@param numSeenLords The amount of times the user has seen Lords of the rings (which is inputed into the program)
  *@sideeffect None
- *returns If the user should watch Lord of the rings
+ *@returns If the user should watch Lord of the rings
  */
 
 char whatchLords (int numSeenLords);
