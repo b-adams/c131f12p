@@ -13,7 +13,7 @@
  *@brief Connects how cooked your beef is compared to the internal temperature of the beef the user inputs into the program
  *@param beefTemp The temperature of the beef the user inputs into the program
  *@sideeffect None
- *returns How cooked the user's steak is
+ *@returns How cooked the user's steak is
  */
 
 char howBeefIsCooked (int beefTemp);
