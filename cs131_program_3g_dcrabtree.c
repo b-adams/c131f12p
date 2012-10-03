@@ -1,5 +1,5 @@
 /**
- *@file cs131_program_3f_dcrabtree.c
+ *@file cs131_program_3g_dcrabtree.c
  *@author Danielle Crabtree
  *@date October 1, 2012
  *@status Working!
