@@ -10,14 +10,22 @@
 
 /**
  *@author Danielle Crabtree
- *@brief Determines if the user can get into the club by asking for their age and determines what should happen to their coat depending on the temperature outside.
+ *@brief Determines if the user can get into the club by asking for their age 
  *@param age The age the user inputs
- *@param temp The temperature outside the uder inputs
  *@sideeffect None
- *returns If the user can get into the club and what should happen with their coat depending on the temperature outside
+ *@returns If the user can get into the club
  */
 
 char canYouClub (int age);
+
+/**
+ *@author Danielle Crabtree
+ *@brief and determines what should happen to their coat depending on the temperature outside
+ *@param temp The temperature outside the uder inputs
+ *@sideeffect None
+ *@returns What should happen with their coat depending on the temperature outside
+ */
+
 char needCoat (int temp);
 
 /**
