@@ -3,7 +3,7 @@
 @brief Determining tax rate based on age and time in military
 @author Stacey Mucha
 @date October 3, 2012
-@status Writing program
+@status Working
 */
 
 #include <stdio.h>
@@ -33,19 +33,19 @@ int main(int argc, char* argv[])
   } else {
     if(userAge <= 65 & serviceTime < 5) 
     {
-      printf("You have a tax rate of 50%\n"); 
+      printf("You have a tax rate of 50 percent.\n"); 
     } else {
-      if(userAge <= 65 & serviceTime > 5)
+      if(userAge <= 65 & serviceTime >= 5)
       {
-        printf("You have a tax rate of 20%\n");
+        printf("You have a tax rate of 20 percent.\n");
       } else {
         if(userAge > 65 & serviceTime < 5)
         {
-          printf("You have a tax rate of 20%\n");
+          printf("You have a tax rate of 20 percent.\n");
         } else {
-          if(userAge > 65 & serviceTime > 5)
+          if(userAge > 65 & serviceTime >= 5)
           {
-            printf("You have a tax rate of 10%\n");
+            printf("You have a tax rate of 10 percent.\n");
           }
         }
       }
