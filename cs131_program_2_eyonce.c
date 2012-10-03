@@ -67,6 +67,16 @@ int trickCheckArithmetic (theUsersNumber);
  */
  void trickInstructions();
  
+ /**
+ @brief Gets the user to pick a number
+ @sideeffect Prompts the user to enter a number
+ @returns The number the user entered
+ 
+ This function scans the user's input into a local variable,
+ and then returns the value stored in that variable to the calling code.
+ */
+ int getNumberFromUser();
+ 
 {
 int main (argc, char* argv[])
 return 0;
