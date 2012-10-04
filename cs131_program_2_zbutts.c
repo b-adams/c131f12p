@@ -78,3 +78,8 @@ void pause();
 
 void trickInstuctions();
 
+/**
+ *@brief pritns instructions one at a time
+ *@sideeffect none
+ */
+
