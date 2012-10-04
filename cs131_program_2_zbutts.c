@@ -122,3 +122,35 @@ int twice(int n)
     
     return n + n;
 }
+
+int trickCheckArithmetic(int theUsersNumber)
+{
+    
+    int originalNumber = 0;
+    
+    printf("Please enter the number you were thinking, we are going to walk through the process.\n");
+    scanf("%d", &theUsersNumber);
+    originalNumber = theUsersNumber;
+    printf("\n You entered %d as your number.\n", theUsersNumber);
+    pause();
+    printf("\n Now im going to subtract 2^0 from your number.\n");
+    theUsersNumber = (theUsersNumber - twoToThe(0));
+    printf("\n your number is now %d.\n", theUsersNumber);
+    pause();
+    printf("\n now im going to multiply your number by 2^2.\n");
+    theUsersNumber = (theUsersNumber * twoToThe(2));
+    printf("\n your number is now %d.\n", theUsersNumber);
+    pause();
+    printf("\n now im going to add 2^3 to your number.\n");
+    theUsersNumber = (theUsersNumber + twoToThe(3));
+    printf("\n your number is now %d.\n", theUsersNumber);
+    pause();
+    printf("\n now im going to divide your number by 2^1.\n");
+    theUsersNumber = (theUsersNumber / twoToThe(1));
+    printf("\n your number is now %d.\n", theUsersNumber);
+    pause();
+    printf("\n now im going to subtract twice your original number.\n");
+    theUsersNumber = theUsersNumber - twice(originalNumber);
+    printf(" your number and final answer is now %d.\n", THE_ANSWER_EVERYTIME);
+    return theUsersNumber;
+}
