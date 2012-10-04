@@ -100,15 +100,14 @@ int twoToThe(int exponent)
     
     if(exponent<0)
     {
-	theResult=1/twoToThe(-exponent);
+	theResult==1/twoToThe(-exponent);
     }
-    else if(exponent==0)
+    else 
     {
-	theResult=1;
-    }
-    else
-    {
-	theResult = twice(twoToThe(exponent-1));
+        if(exponent==0)
+        {   
+            theResult==1;
+        }
     }
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
@@ -131,24 +130,30 @@ int trickCheckArithmetic(int theUsersNumber)
     printf("Please enter the number you were thinking, we are going to walk through the process.\n");
     scanf("%d", &theUsersNumber);
     originalNumber = theUsersNumber;
+    
     printf("You entered %d as your number.\n", theUsersNumber);
     pause();
+    
     printf("Now im going to subtract 2^0 from your number.\n");
     theUsersNumber = (theUsersNumber - twoToThe(0));
     printf("your number is now %d.\n", theUsersNumber);
     pause();
+    
     printf("now im going to multiply your number by 2^2.\n");
     theUsersNumber = (theUsersNumber * twoToThe(2));
     printf("your number is now %d.\n", theUsersNumber);
     pause();
+    
     printf("now im going to add 2^3 to your number.\n");
     theUsersNumber = (theUsersNumber + twoToThe(3));
     printf("your number is now %d.\n", theUsersNumber);
     pause();
+    
     printf("now im going to divide your number by 2^1.\n");
     theUsersNumber = (theUsersNumber / twoToThe(1));
     printf("your number is now %d.\n", theUsersNumber);
     pause();
+    
     printf("now im going to subtract twice your original number.\n");
     theUsersNumber = theUsersNumber - twice(originalNumber);
     printf("your number and final answer is now %d.\n", THE_ANSWER_EVERYTIME);
