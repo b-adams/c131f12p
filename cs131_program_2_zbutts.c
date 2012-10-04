@@ -154,3 +154,9 @@ int trickCheckArithmetic(int theUsersNumber)
     printf(" your number and final answer is now %d.\n", THE_ANSWER_EVERYTIME);
     return theUsersNumber;
 }
+void pause()
+{
+    char var2;
+    printf("PAUSE, press any key then enter to continue");
+    scanf(" %c", &var2);
+}
