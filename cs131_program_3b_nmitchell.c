@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 {
     int usersMoney = 0;
     
-    printf("\n Lets figure out where you should go for dinner");
+    printf("\n Lets figure out where you should go for dinner.\n\n");
     printf("How much money do you have? \n\n");
     scanf("%d", &usersMoney);
     
