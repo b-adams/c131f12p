@@ -10,6 +10,11 @@
 
 int steakTemp;
 
+/*
+ *@brief Makes sure the user eats a juicy, delicious steak that won't give them food poisoning.
+ *@param steakTemp The temperature of the User's steak
+ */
+
 int main(int argc, char* argv[])
 {
     int steakTemp;
