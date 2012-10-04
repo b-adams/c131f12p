@@ -91,3 +91,34 @@ int main(int argc, char* argv[])
     trickCheckArithmetic(theUsersNumber);
     return 0;
 }
+
+int twoToThe(int exponent)
+{
+    int theResult = 0;
+    
+    printf("-> Calling twoToThe(%d)\n",exponent);
+    
+    if(exponent<0)
+    {
+	theResult=1/twoToThe(-exponent);
+    }
+    else if(exponent==0)
+    {
+	theResult=1;
+    }
+    else
+    {
+	theResult = twice(twoToThe(exponent-1));
+    }
+    
+    printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
+    
+    return theResult;
+}
+
+int twice(int n)
+{
+    n = n + n;
+    
+    return n + n;
+}
