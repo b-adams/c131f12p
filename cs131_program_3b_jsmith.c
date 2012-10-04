@@ -18,9 +18,9 @@
 /**
 * @brief find where they should go to dinner
 * @param how much money they have
-* @returns the place
+* @sideeffect the place
 */
-char whichRest(int money);
+void whichRest(int money);
 
 /**
 * @brief Main
@@ -33,27 +33,29 @@ char whichRest(int money);
 int main( int argc, char * argv[] )
 {
   int money;  
-  printf("Prompt, how much do you have for dinner?");
-  scanf("d", &money);
+  printf("Prompt, how much do you have for dinner?\n");
+  scanf("%d", &money);
   whichRest(money);
+  
+  
   return 0;
 }
 
-int whichRest(int money)
+void whichRest(int money)
 {
-  if money > 50;
+  if (money >= 50)
   {
-    return "Fargo";
+    printf("Fargo\n");
   }
-  if money < 50;
+  if (money < 50)
   {
-    if money > 20;
+    if (money > 20)
     {
-        return "Backstage Grill";
+        printf("Backstage Grill\n");
     }
-    if money < 20;
+    if (money < 20)
     {
-        return "Dinning Hall";
+        printf("Dinning Hall\n");
     }
   }
 }
