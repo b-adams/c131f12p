@@ -83,3 +83,11 @@ void trickInstuctions();
  *@sideeffect none
  */
 
+int main(int argc, char* argv[])
+{
+    int theUsersNumber;
+    trickInstuctions();
+    //get & store input
+    trickCheckArithmetic(theUsersNumber);
+    return 0;
+}
