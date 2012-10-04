@@ -3,22 +3,11 @@
 * @author Cody Primmer
 * @author Prof. Adams
 * @date September 7 2012
+* @status working
 */
 
-// INSTRUCTIONS:
-// TASK 0/5: LOG IN TO ECLIPSE AND TYPE THE FOLLOWING IN PuTTY:
-// cd ~/cs131
-// touch cs131_program_1_FLAST.c
-// git add cs131_program_1_FLAST.c
-// git commit -m "Initial creation of Program 1 source code file"
-//
-// TASK 1/5: ADD INITIAL CONTENT:
-// Open cs131_program_1_FLAST.c for editing (in Komodo or Pico)
-// Paste the contents of this file into cs131_program_1_FLAST.c
-// Modify the documentation at the very top to fix the FLAST, YOUR NAME HERE, and THE CURRENT DATE
-// Save a snapshot with commit message "Starting content added to file"
-// (Save your changes, 'git add' again, and 'git commit' with the requested message)
-//
+
+
 // There are four more tasks.
 // Each task has a line that starts with "// TASK"
 // You may do the rest of the tasks in any order
@@ -53,8 +42,8 @@
 * The forumla for the next number N in the Fibonacci sequence, based on the two previous numbers A,B, is N=A+B.
 *
 */
-//TASK 2: int nextnumberinsequence (int a, int b);
 
+int nextfibonacci(int previous, int preprevious);
 
 
 /**
@@ -99,13 +88,13 @@ int nextInteger(int previous);
 int averageOfThree(int first, int second, int third);
 
 
-//TASK 3: PUT DOCUMENTATION BLOCK FOR squareOf HERE
-int squareOf(int thingToSquare);
-{printf("square of 4,2squared);
-        printf (square of 9, 3squared);
-        printf (square of 16, 4 squared);
-        return thesquareofnumber
-        }
+
+/**
+@brief finding the square of a number
+@param argc multiply the number by itself
+@return the square of the number
+*/
+
 /**
 * @brief Where your program starts running.
 * @param argc How many 'tokens' were typed when you ran the program
@@ -138,21 +127,19 @@ int scratchpad2;
     printf("\n\n");
    
     printf("Averages...\n");
-//TASK 4: PUT averageOfThree FUNCTION CALLS HERE
-    printf("\n\n");
-    the square root of ("4", 2)
-   
-    printf("Squares...\n");
-    shaggy_dog=0;
-    squareOf( shaggy_dog=nextInteger(shaggy_dog) );
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    squareOf(shaggy_dog=nextInteger(shaggy_dog));
-    printf("\n\n");
+
+ int main();
+ {
+    averageofthree(1,2,3);
+    averageofthree(10,10,10);
+    averageofthree(11,10,10);
+    averageofthree(10,12,10);
+    averageofthree(10,10,13);
+    return averageofthreenumbers;
+ }
 
 printf("Fibonacci numbers...\n");
-shaggy_dog=nextFibonacci(1,1);
+shaggy_dog==nextFibonacci(int 1,int 1);
 scratchpad2=nextFibonacci(shaggy_dog,1);
    
 shaggy_dog=nextFibonacci(shaggy_dog, scratchpad2);
@@ -193,8 +180,12 @@ printf("\tThe Ulam number after %d is %d\n",
 return (previous%2)?(previous/2):(3*previous+1);
 }
 
-//TASK 5: PUT nextInteger FUNCTION DEFINITION HERE
 
+int nextInteger(int previous)
+{
+    printf ("1+%d is %d\n", previous, previous+1);
+    return previous+1;
+}
 int averageOfThree(int first, int second, int third)
 {
 printf("\tThe average of %d, %d, %d is %d\n",
@@ -207,3 +198,4 @@ int squareOf(int thingToSquare)
 printf("\tThe square of %d is %d\n", thingToSquare, thingToSquare*thingToSquare);
 return thingToSquare*thingToSquare;
 }
+
