@@ -9,18 +9,35 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// program int main(int argc, char* argv[]);
-#include <stdio.h>
+/**
+* @brief Allows person to exit menu by hitting a
+*/
+const char MENU_OPT_EXIT = a;
+
+/**
+* @brief Runs Program B by typing *
+*/
+const char MENU_OPT_PROG_B = *;
+
+/**
+* @brief Runs Program E by typing 2
+*/
+const int MENU_OPT_PROG_E = 2;
+
+/**
+* @brief Runs Program F by typing ?
+*/
+const char MENU_OPT_PROG_F = ?;
+
+/**
+* @brief Runs Program Z by typing W
+*/
+const char MENU_OPT_PROG_Z = W;
+
+
 
 int main(void)
 {
-	// declare your variables here
-	
-	// For any input using the 'scanf function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
-	
-	// For any output using the 'printf' function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
 	
 	
 	char selection;
@@ -37,15 +54,6 @@ int main(void)
 
 int char getChoice()
 {
-	// declare your variables here
-	
-	// For any input using the 'scanf function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
-	
-	// For any output using the 'printf' function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
-	
-	
 	char userChoice;
 	printf("Main menu:\n");
 	printf("\t[%c] Run program X\n", MENU_OPT_PROG_X);
@@ -57,19 +65,9 @@ int char getChoice()
 	return userChoice;
 }
 
-// function bool runProgram(char whichProg);
-#include <stdio.h>
 
 int bool runProgram(char whichProg)
 {
-	// declare your variables here
-	
-	// For any input using the 'scanf function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
-	
-	// For any output using the 'printf' function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
-	
 	
 	switch (whichProg) 
 	{
