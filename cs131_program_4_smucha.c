@@ -34,18 +34,48 @@ const char MENU_OPT_PROG_F = ?;
 */
 const char MENU_OPT_PROG_Z = W;
 
+/**
+* @brief Prompts user to pick which program to run
+* @returns what user enters
+*/
 int char getChoice();
 
+/**
+* @brief Runs the menu
+* @param whichProg Which program to run
+* @returns true
+*/
 int bool runProgram(char whichProg);
 
+/**
+* @brief Runs program 3B
+* @returns nothing
+*/
 void do_prog_3B();
 
+/**
+* @brief Runs program 3E
+* @returns nothing
+*/
 void do_prog_3E();
 
+/**
+* @brief Runs program 3F
+* @returns nothing
+*/
 void do_prog_3F();
 
+/**
+* @brief Runs program 3Z
+* @returns nothing
+*/
 void do_prog_3Z();
 
+/**
+* @brief Main procedure
+* @return nothing
+* @author Stacey Mucha
+*/
 int main(void)
 {
 	
