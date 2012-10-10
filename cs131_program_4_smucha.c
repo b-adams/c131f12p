@@ -159,3 +159,22 @@ void do_prog_3B()
 return 0;
 }
 
+void do_prog_3E()
+{
+    int tempOfSteak;
+  printf("What is the temperature of your steak?\n");
+  scanf("%d", &tempOfSteak);
+    
+  if(tempOfSteak >= 145)
+  {
+    printf("Your steak is just right to eat.\n");
+  } else {
+    if(tempOfSteak > 70)
+    {
+      printf("Your steak is undercooked.\n");
+    } else {
+      printf("Your steak is raw.\n");
+    }
+  }
+return 0;
+}
