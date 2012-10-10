@@ -3,39 +3,101 @@
  *@author Danielle Crabtree
  *@date October 10, 2012
  *@brief Pick a Program!
- *@status In Progress
+ *@status Working!
  */
 
 #include <stdio.h>
 #include <stdbool.h>
 
+/**
+ *@author Danielle Crabtree
+ *@brief The input to exit the program
+ */
 const char MENU_OPT_EXIT = '*';
+
+/**
+ *@author Danielle Crabtree
+ *@brief The input to initiate Program B
+ */
 const int MENU_OPT_PROG_B = 2;
+
+/**
+ *@author Danielle Crabtree
+ *@brief The input to initiate Program E
+ */
 const char MENU_OPT_PROG_E = 'a';
+
+/**
+ *@author Danielle Crabtree
+ *@brief The input to initiate Program F
+ */
 const char MENU_OPT_PROG_F = 'W';
+
+/**
+ *@author Danielle Crabtree
+ *@brief The input to initiate Program G
+ */
 const char MENU_OPT_PROG_G = '?';
 
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Chooses the program that is going to run or if it is going to exit
+ @param whichProgram The program that the user chooses
+ @sideeffect Runs the program the user chose
+ @returns The user chosen program  
+ */
+
 bool runProgram (char whichProgram);
+
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Chooses the program that is going to run or if it is going to exit
+ @sideeffect Chooses the program the user inputed
+ @returns The user's chosen program 
+ */
 char getChoice ();
+
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Calls Program B
+ @sideeffect Displays Program B
+ @returns Program B
+ */
 void do_prog_3B ();
+
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Calls Program E
+ @sideeffect Displays Program E
+ @returns Program E
+ */
 void do_prog_3E ();
+
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Calls Program F
+ @sideeffect Displays Program F
+ @returns Program F
+ */
 void do_prog_3F ();
+
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Calls Program G
+ @sideeffect Displays Program G
+ @returns Program G
+ */
 void do_prog_3G ();
 
-
-
+/**
+ @author Danielle Crabtree/ Professor Adams
+ @brief Initializes the program
+ @returns The program if successful!
+ */
 int main(void)
 {
-	// declare your variables here
-	
-	// For any input using the 'scanf function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
-	
-	// For any output using the 'printf' function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
-	
-	
 	char selection;
+        
 	selection = getChoice();
 	while(selection != MENU_OPT_EXIT) 
 	{
@@ -50,13 +112,6 @@ int main(void)
 
 bool runProgram(char whichProg)
 {
-	// declare your variables here
-	
-	// For any input using the 'scanf function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
-	
-	// For any output using the 'printf' function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
 	
 	
 	switch (whichProg) 
@@ -91,16 +146,8 @@ bool runProgram(char whichProg)
 
 char getChoice()
 {
-	// declare your variables here
-	
-	// For any input using the 'scanf function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
-	
-	// For any output using the 'printf' function you need to fill the first parameter.
-	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
-	
-	
-	char userChoice;
+        char userChoice;
+        
 	printf("Main menu:\n");
 	printf("\t[%c] Run program B\n", MENU_OPT_PROG_B);
 	printf("\t[%c] Run program E\n", MENU_OPT_PROG_E);
