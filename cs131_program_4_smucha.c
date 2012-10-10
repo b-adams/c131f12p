@@ -34,7 +34,17 @@ const char MENU_OPT_PROG_F = ?;
 */
 const char MENU_OPT_PROG_Z = W;
 
+int char getChoice();
 
+int bool runProgram(char whichProg);
+
+void do_prog_3B();
+
+void do_prog_3E();
+
+void do_prog_3F();
+
+void do_prog_3Z();
 
 int main(void)
 {
