@@ -12,64 +12,64 @@
 /**
 * @brief Allows person to exit menu by hitting a
 */
-const char MENU_OPT_EXIT = a;
+const char MENU_OPT_EXIT = 'a';
 
 /**
 * @brief Runs Program B by typing *
 */
-const char MENU_OPT_PROG_B = *;
+const char MENU_OPT_PROG_B = '*';
 
 /**
 * @brief Runs Program E by typing 2
 */
-const int MENU_OPT_PROG_E = 2;
+const char MENU_OPT_PROG_E = '2';
 
 /**
 * @brief Runs Program F by typing ?
 */
-const char MENU_OPT_PROG_F = ?;
+const char MENU_OPT_PROG_F = '?';
 
 /**
 * @brief Runs Program Z by typing W
 */
-const char MENU_OPT_PROG_Z = W;
+const char MENU_OPT_PROG_Z = 'W';
 
 /**
 * @brief Prompts user to pick which program to run
 * @returns what user enters
 */
-int char getChoice();
+char getChoice();
 
 /**
 * @brief Runs the menu
 * @param whichProg Which program to run
 * @returns true
 */
-int bool runProgram(char whichProg);
+bool runProgram(char whichProg);
 
 /**
 * @brief Runs program 3B
 * @returns nothing
 */
-void do_prog_3B();
+void doProg3B();
 
 /**
 * @brief Runs program 3E
 * @returns nothing
 */
-void do_prog_3E();
+void doProg3E();
 
 /**
 * @brief Runs program 3F
 * @returns nothing
 */
-void do_prog_3F();
+void doProg3F();
 
 /**
 * @brief Runs program 3Z
 * @returns nothing
 */
-void do_prog_3Z();
+void doProg3Z();
 
 /**
 * @brief Main procedure
@@ -82,7 +82,7 @@ int main(void)
 	
 	char selection;
 	selection = getChoice();
-	while (while(selection !== MENU_OPT_EXIT)) 
+	while ((selection != MENU_OPT_EXIT))
 	{
 		runProgram(selection);
 		selection = getChoice();
@@ -92,7 +92,7 @@ int main(void)
 	return 0;
 }
 
-int char getChoice()
+char getChoice()
 {
 	char userChoice;
 	printf("Main menu:\n");
@@ -106,29 +106,29 @@ int char getChoice()
 }
 
 
-int bool runProgram(char whichProg)
+bool runProgram(char whichProg)
 {
 	
 	switch (whichProg) 
 	{
 		case MENU_OPT_PROG_B:
 				printf("Running Program B\n");
-				do_prog_B();
+				doProg3B();
 				printf("Program B Done\n\n");
 			break;
 		case MENU_OPT_PROG_E:
 				printf("Running Program E\n");
-				do_prog_E();
+				doProg3E();
 				printf("Program E Done\n\n");
 			break;
-		case MENU_OPT_PROG_C:
+		case MENU_OPT_PROG_F:
 				printf("Running Program F\n");
-				do_prog_F();
+				doProg3F();
 				printf("Program F Done\n\n");
 			break;
-		case MENU_OPT_PROG_D:
+		case MENU_OPT_PROG_Z:
 				printf("Running Program Z\n");
-				do_prog_Z();
+				doProg3Z();
 				printf("Program Z Done\n\n");
 			break;
 		default:
@@ -138,7 +138,7 @@ int bool runProgram(char whichProg)
 	return true;
 }
 
-void do_prog_3B()
+void doProg3B()
 {
     int moneyfordinner;
   
@@ -156,10 +156,9 @@ void do_prog_3B()
       printf("You should just stick to the Dining Hall\n"); 
     }
   }
-return 0;
 }
 
-void do_prog_3E()
+void doProg3E()
 {
     int tempOfSteak;
   printf("What is the temperature of your steak?\n");
@@ -176,10 +175,9 @@ void do_prog_3E()
       printf("Your steak is raw.\n");
     }
   }
-return 0;
 }
 
-void do_prog_3F()
+void doProg3F()
 {
     int timesSeenLordOfTheRings;
   
@@ -198,11 +196,9 @@ void do_prog_3F()
   }
 
   printf("Remember the popcorn!\n");
-
-  return 0;
 }
 
-void do_prog_3Z()
+void doProg3Z()
 {
     int userAge;
   int serviceTime;
@@ -237,5 +233,4 @@ void do_prog_3Z()
       }
     }
   }
-return 0;
 }
