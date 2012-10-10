@@ -201,3 +201,41 @@ void do_prog_3F()
 
   return 0;
 }
+
+void do_prog_3Z()
+{
+    int userAge;
+  int serviceTime;
+  
+  printf("How old are you?\n");
+  scanf("%d", &userAge); 
+
+  printf("How many years have you served in the military?\n");
+  scanf("%d", &serviceTime);
+  
+  if(userAge < 18) 
+  {
+    printf("You don't have to pay any taxes.\n"); 
+  } else {
+    if(userAge <= 65 & serviceTime < 5) 
+    {
+      printf("You have a tax rate of 50 percent.\n"); 
+    } else {
+      if(userAge <= 65 & serviceTime >= 5)
+      {
+        printf("You have a tax rate of 20 percent.\n");
+      } else {
+        if(userAge > 65 & serviceTime < 5)
+        {
+          printf("You have a tax rate of 20 percent.\n");
+        } else {
+          if(userAge > 65 & serviceTime >= 5)
+          {
+            printf("You have a tax rate of 10 percent.\n");
+          }
+        }
+      }
+    }
+  }
+return 0;
+}
