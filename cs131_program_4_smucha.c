@@ -96,10 +96,10 @@ int char getChoice()
 {
 	char userChoice;
 	printf("Main menu:\n");
-	printf("\t[%c] Run program X\n", MENU_OPT_PROG_X);
-	printf("\t[%c] Run program K\n", MENU_OPT_PROG_K);
-	printf("\t[%c] Run program C\n", MENU_OPT_PROG_C);
-	printf("\t[%c] Run program D\n", MENU_OPT_PROG_D);
+	printf("\t[%c] Run program B\n", MENU_OPT_PROG_B);
+	printf("\t[%c] Run program E\n", MENU_OPT_PROG_E);
+	printf("\t[%c] Run program F\n", MENU_OPT_PROG_F);
+	printf("\t[%c] Run program Z\n", MENU_OPT_PROG_Z);
 	printf("Please enter your selection, or %c to quit: ", MENU_OPT_EXIT);
 	scanf(" %c", &userChoice);
 	return userChoice;
@@ -111,25 +111,25 @@ int bool runProgram(char whichProg)
 	
 	switch (whichProg) 
 	{
-		case MENU_OPT_PROG_X:
-				printf("Running Program X\n");
-				do_prog_X();
-				printf("Program X Done\n\n");
+		case MENU_OPT_PROG_B:
+				printf("Running Program B\n");
+				do_prog_B();
+				printf("Program B Done\n\n");
 			break;
-		case MENU_OPT_PROG_K:
-				printf("Running Program K\n");
-				do_prog_K();
-				printf("Program K Done\n\n");
+		case MENU_OPT_PROG_E:
+				printf("Running Program E\n");
+				do_prog_E();
+				printf("Program E Done\n\n");
 			break;
 		case MENU_OPT_PROG_C:
-				printf("Running Program C\n");
-				do_prog_C();
-				printf("Program C Done\n\n");
+				printf("Running Program F\n");
+				do_prog_F();
+				printf("Program F Done\n\n");
 			break;
 		case MENU_OPT_PROG_D:
-				printf("Running Program D\n");
-				do_prog_D();
-				printf("Program D Done\n\n");
+				printf("Running Program Z\n");
+				do_prog_Z();
+				printf("Program Z Done\n\n");
 			break;
 		default:
 			printf("Invalid selection: [%c]\n", whichProg);
@@ -137,3 +137,25 @@ int bool runProgram(char whichProg)
 	}
 	return true;
 }
+
+void do_prog_3B()
+{
+    int moneyfordinner;
+  
+  printf("How much money do you have for dinner?\n");
+  scanf("%d", &moneyfordinner); 
+     
+  if(moneyfordinner >= 50) 
+  {
+    printf("You should go to the Fargo!\n"); 
+  } else {
+    if(moneyfordinner >= 20) 
+    {
+      printf("You should got to the Backstage Grill!\n"); 
+    } else {
+      printf("You should just stick to the Dining Hall\n"); 
+    }
+  }
+return 0;
+}
+
