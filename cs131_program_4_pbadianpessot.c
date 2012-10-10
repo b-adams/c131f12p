@@ -78,16 +78,14 @@ char getChoice(void);
  * @returns userChoice
  */
 
-int bool runProgram(char whichProg);
+bool runProgram(char whichProg);
 
 /*
  * @brief main function
- * @param argc Number of command-line arguements
- * @param argv The comman-line tokens that were typed
- * @returns true
+ * @returns nothing
  */
 
-int main(int argc, char* argv[]);
+int main(void);
 
 
 int do_prog_3B(void)
@@ -193,7 +191,7 @@ int do_prog_3Y(void)
 }
 
 
-int char getChoice()
+char getChoice()
 {
 	// declare your variables here
 	
@@ -206,17 +204,17 @@ int char getChoice()
 	
 	char userChoice;
 	printf("Main menu:\n");
-	printf("\t[%c] Run program X\n", MENU_OPT_PROG_X);
-	printf("\t[%c] Run program K\n", MENU_OPT_PROG_K);
-	printf("\t[%c] Run program C\n", MENU_OPT_PROG_C);
-	printf("\t[%c] Run program D\n", MENU_OPT_PROG_D);
+	printf("\t[%c] Run program B\n", MENU_OPT_PROG_B);
+	printf("\t[%c] Run program E\n", MENU_OPT_PROG_E);
+	printf("\t[%c] Run program F\n", MENU_OPT_PROG_F);
+	printf("\t[%c] Run program Y\n", MENU_OPT_PROG_Y);
 	printf("Please enter your selection, or %c to quit: ", MENU_OPT_EXIT);
 	scanf(" %c", &userChoice);
 	return userChoice;
 }
 
 
-int bool runProgram(char whichProg)
+bool runProgram(char whichProg)
 {
 	// declare your variables here
 	
@@ -229,25 +227,25 @@ int bool runProgram(char whichProg)
 	
 	switch (whichProg) 
 	{
-		case MENU_OPT_PROG_X:
-				printf("Running Program X\n");
-				do_prog_X();
-				printf("Program X Done\n\n");
+		case MENU_OPT_PROG_B:
+				printf("Running Program B\n");
+				do_prog_3B();
+				printf("Program B Done\n\n");
 			break;
-		case MENU_OPT_PROG_K:
-				printf("Running Program K\n");
-				do_prog_K();
-				printf("Program K Done\n\n");
+		case MENU_OPT_PROG_E:
+				printf("Running Program E\n");
+				do_prog_3E();
+				printf("Program E Done\n\n");
 			break;
-		case MENU_OPT_PROG_C:
-				printf("Running Program C\n");
-				do_prog_C();
-				printf("Program C Done\n\n");
+		case MENU_OPT_PROG_F:
+				printf("Running Program F\n");
+				do_prog_3F();
+				printf("Program F Done\n\n");
 			break;
-		case MENU_OPT_PROG_D:
-				printf("Running Program D\n");
-				do_prog_D();
-				printf("Program D Done\n\n");
+		case MENU_OPT_PROG_Y:
+				printf("Running Program Y\n");
+				do_prog_3Y();
+				printf("Program Y Done\n\n");
 			break;
 		default:
 			printf("Invalid selection: [%c]\n", whichProg);
@@ -270,7 +268,7 @@ int main(void)
 	
 	char selection;
 	selection = getChoice();
-	while (while(selection !== MENU_OPT_EXIT)) 
+	while(selection != MENU_OPT_EXIT) 
 	{
 		runProgram(selection);
 		selection = getChoice();
