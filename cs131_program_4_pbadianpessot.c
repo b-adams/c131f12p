@@ -70,20 +70,21 @@ int do_prog_3Y(void);
  * @returns no return, void function
  */
 
-int getChoice(void);
+char getChoice(void);
 
 /*
- * @brief runs runProgram 
- * @returns no return, void function
+ * @brief runs runProgram
+ * @param whichProg determines which function is run
+ * @returns userChoice
  */
 
-int runProgram(void);
+int bool runProgram(char whichProg);
 
 /*
  * @brief main function
  * @param argc Number of command-line arguements
  * @param argv The comman-line tokens that were typed
- * @returns 0 if no news
+ * @returns true
  */
 
 int main(int argc, char* argv[]);
@@ -191,3 +192,90 @@ int do_prog_3Y(void)
     return 0;
 }
 
+
+int char getChoice()
+{
+	// declare your variables here
+	
+	// For any input using the 'scanf function you need to fill the first parameter.
+	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
+	
+	// For any output using the 'printf' function you need to fill the first parameter.
+	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
+	
+	
+	char userChoice;
+	printf("Main menu:\n");
+	printf("\t[%c] Run program X\n", MENU_OPT_PROG_X);
+	printf("\t[%c] Run program K\n", MENU_OPT_PROG_K);
+	printf("\t[%c] Run program C\n", MENU_OPT_PROG_C);
+	printf("\t[%c] Run program D\n", MENU_OPT_PROG_D);
+	printf("Please enter your selection, or %c to quit: ", MENU_OPT_EXIT);
+	scanf(" %c", &userChoice);
+	return userChoice;
+}
+
+
+int bool runProgram(char whichProg)
+{
+	// declare your variables here
+	
+	// For any input using the 'scanf function you need to fill the first parameter.
+	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
+	
+	// For any output using the 'printf' function you need to fill the first parameter.
+	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
+	
+	
+	switch (whichProg) 
+	{
+		case MENU_OPT_PROG_X:
+				printf("Running Program X\n");
+				do_prog_X();
+				printf("Program X Done\n\n");
+			break;
+		case MENU_OPT_PROG_K:
+				printf("Running Program K\n");
+				do_prog_K();
+				printf("Program K Done\n\n");
+			break;
+		case MENU_OPT_PROG_C:
+				printf("Running Program C\n");
+				do_prog_C();
+				printf("Program C Done\n\n");
+			break;
+		case MENU_OPT_PROG_D:
+				printf("Running Program D\n");
+				do_prog_D();
+				printf("Program D Done\n\n");
+			break;
+		default:
+			printf("Invalid selection: [%c]\n", whichProg);
+			return false;
+	}
+	return true;
+}
+
+
+int main(void)
+{
+	// declare your variables here
+	
+	// For any input using the 'scanf function you need to fill the first parameter.
+	// http://en.wikipedia.org/wiki/Scanf#Format_string_specifications
+	
+	// For any output using the 'printf' function you need to fill the first parameter.
+	// http://en.wikipedia.org/wiki/Printf#printf_format_placeholders
+	
+	
+	char selection;
+	selection = getChoice();
+	while (while(selection !== MENU_OPT_EXIT)) 
+	{
+		runProgram(selection);
+		selection = getChoice();
+	}
+	printf("Goodbye\n");
+	
+	return 0;
+}
