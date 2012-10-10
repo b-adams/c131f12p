@@ -9,3 +9,20 @@
 
 #include <stdbool.h>
 
+MENU_OPT_EXIT
+MENU_OPT_PROG_X
+MENU_OPT_PROG_K
+MENU_OPT_PROG_C
+MENU_OPT_PROG_D
+
+bool runProgram(char whichProg)
+char getChoice
+void do_prog_3X()
+void do_prog_3K()
+void do_prog_3C()
+void do_prog_3D()
+
+int main(void)
+{
+    
+}
