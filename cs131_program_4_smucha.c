@@ -3,7 +3,7 @@
 @brief Menu for program 3
 @author Stacey Mucha
 @date October 10, 2012
-@status Working
+@status Working and documented!
 */
 
 #include <stdio.h>
