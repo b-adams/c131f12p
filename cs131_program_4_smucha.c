@@ -178,3 +178,26 @@ void do_prog_3E()
   }
 return 0;
 }
+
+void do_prog_3F()
+{
+    int timesSeenLordOfTheRings;
+  
+  printf("How many times have you seen 'Lord of the Rings'?\n");
+  scanf(" %d", &timesSeenLordOfTheRings);
+  if(timesSeenLordOfTheRings > 5)
+  {
+    printf("Maybe watch it again, for good measure!\n");
+  } else {
+    if(timesSeenLordOfTheRings > 0)
+    {
+      printf("You definitely need to see it again!\n");
+    } else {
+      printf("You need to see it!\n");
+    }
+  }
+
+  printf("Remember the popcorn!\n");
+
+  return 0;
+}
