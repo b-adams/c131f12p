@@ -55,33 +55,44 @@ runProgram(x) ;
 
 bool runProgram(char whichProg)
 {
-while (whichProg != MENU_OPT_EXIT)
+
+int z=whichProg ;
+    
+while (z != MENU_OPT_EXIT)
     {
-    switch(whichProg) 
+    switch(z) 
     {
     case MENU_OPT_PROG_B:
     do_prog_3B() ;
     printf("\n Program B complete. \n") ;
     
+    break ;
+    
     case MENU_OPT_PROG_C:
     do_prog_3C() ;
     printf("\n Program C complete. \n") ;
+    
+    break ;
     
     case MENU_OPT_PROG_E:
     do_prog_3E() ;
     printf("\n Program E complete. \n") ;
     
+    break;
+    
     case MENU_OPT_PROG_F:
     do_prog_3F() ;
     printf("\n Program F complete. \n") ;
-
+    
+    break ;
+    
     default: 
     printf("ERROR \n \n") ;
     
     break ;
     }
     
-    getChoice() ;
+    z = getChoice() ;
 }
 
 printf(" \n \n Exit Menu \n \n") ;
