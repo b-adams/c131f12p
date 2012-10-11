@@ -152,3 +152,82 @@ char getChoice()
 
 }
 
+void do_prog_3B ()
+{
+    
+    int moolah;
+    char* place;
+    moolah = getPromptedNumber("How much ya got?");
+    if(moolah>50)
+    {
+                place = "Fargo";
+    } else if(moolah<20) {
+                place = "Dinning Hall";
+    } else {
+                place = "Backstage Grill";
+    }
+    
+    printf("Go to the... %s\n", place);
+    return 0;}
+}
+
+void do_prog_3C()
+{
+    int gradYear;
+    bool oddLine;
+    gradYear = getPromptedNumber("How much ya got?");
+    oddLine = (gradYear%2);
+    
+    printf("Dear ");
+    if(gradYear < 2005)
+    {
+        printf("alumnae, here is your ");
+        if(oddLine)
+        {
+            printf("Lavender and Marigold");
+        } else {
+            printf("Cerulean and Aquamarine");
+        }
+    } else {
+        printf("alumni, here is your ");
+        if(oddLine)
+        {
+            printf("Purple and Yellow");
+        } else {
+            printf("Blue and Green");
+        }
+    }
+    printf("shirt\n");
+    return 0;
+}
+
+void do_prog_3D()
+{
+    int horseWeight, grain;
+    horseWeight = getPromptedNumber("How heavy is the horse?");
+    if(955<=horseWeight && horseWeight<=1000)
+    {
+        grain=2;
+    } else if(1001<=horseWeight && horseWeight<=1100) {
+        grain=3;
+    } else if(1101<=horseWeight && horseWeight<=1150) {
+        grain=4;
+    } else {
+        grain=999; //Dunno, abnormal horse?
+    }
+    
+    printf("The %dlb horse needs %d lbs of grain and 8lbs of hay today.\n", horseWeight, grain);
+    return 0;
+}
+  
+void do_prog_3F()
+{
+    int views;
+    views = getPromptedNumber("How many times have you seen Lord of the Rings?");
+    if(views>5) printf("Maybe watch it again, for good measure");
+    else if(views>0) printf("You definitely need to see it again");
+    else if(views==0) printf("You need to see it!");
+    else printf("!?!?negative views!?!?!");
+    printf("Remember the popcorn");
+    return 0;
+}
