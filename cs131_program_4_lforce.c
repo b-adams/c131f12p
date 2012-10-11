@@ -17,6 +17,7 @@ const char MENU_OPT_PROG_E=a ;
 const char MENU_OPT_PROG_F=2 ;
 
 bool runProgram(char whichProg) ;
+
 char getChoice ;
 
 /**
@@ -49,7 +50,11 @@ bool runProgram(char whichProg)
 
 char getChoice
 {
-    
+char choice
+
+printf(" \n \n \n \n \n Which program do you want to run? \n MENU EXIT = ? \n PROGRAM B = * \n PROGRAM C = W \n PROGRAM E = a \n PROGRAM F = 2 \n")
+scanf("%c" choice)
+return choice
 }
 
 void do_prog_3B()
