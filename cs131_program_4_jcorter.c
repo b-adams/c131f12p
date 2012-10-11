@@ -11,25 +11,25 @@
 /**
  * @brief this will end the program
 */
-const char MENU_OPT_EXIT = 2
+const char MENU_OPT_EXIT = 2;
 
 /**
  * @brief this will run program 3B
 */
-const char MENU_OPT_PROG_B = a
+const char MENU_OPT_PROG_3B = a;
 
 /**
  * @brief this will run program 3C
 */
-const char MENU_OPT_PROG_C = W
+const char MENU_OPT_PROG_3C = W;
 /**
  * @brief this will run program 3D
 */
-const char MENU_OPT_PROG_D = *
+const char MENU_OPT_PROG_3D = *;
 /**
  * @brief this will run program 3F
 */
-const char MENU_OPT_PROG_F = ? 
+const char MENU_OPT_PROG_3F = ?; 
 
 /**
  * @brief
@@ -101,14 +101,12 @@ int main (void) //int main(int argc, char* argv[])
         selection = getChoice();
     }
     printf ("Goodbye/n");
-    return void;
+    return (void);
 }
 
 bool runProgram(char whichProg)
 {
     char whichProg;
-    Printf("Please enter your selection: \n");
-    scanf( " %c", &whichProg);
     switch(whichProg)
     {
         case MENU_OPT_PROG_3B;
