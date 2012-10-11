@@ -3,50 +3,102 @@
  *@author Larry Force
  *@date 10/9/12
  *@brief Menuizing programs of program 3
- *@status unfinished
+ *@status works
  */
 
 #include <stdio.h>
 
 #include <stdbool.h>
 
+/**
+ *@brief used as a value to exit program
+ */
 const char MENU_OPT_EXIT = '?';
+
+/**
+ *@brief the selection of program B
+ */
 const char MENU_OPT_PROG_B = '*';
+
+/**
+ *@brief the selection of program C
+ */
 const char MENU_OPT_PROG_C = 'W';
+
+/**
+ *@brief the selection of program E
+ */
 const char MENU_OPT_PROG_E = 'a';
+
+/**
+ *@brief the selection of program F
+ */
 const char MENU_OPT_PROG_F = '2';
 
+/**
+ *@brief runs whichever program is selected
+ *@param is the value of the user's selection
+ *@return returns true
+ */
 bool runProgram(char whichProg) ;
 
 char getChoice() ;
 
 /**
  *@author Larry Force
- *@date 10/10/12
- *@brief 
- *
+ *@brief runs program 3B
+ *@return returns nothing
  */
 
 void do_prog_3B() ;
 
+/**
+ *@author Larry Force
+ *@brief runs program 3C
+ *@return returns nothing
+ */
+
 void do_prog_3C() ;
+
+/**
+ *@author Larry Force
+ *@brief runs program 3E
+ *@return returns nothing
+ */
 
 void do_prog_3E() ;
 
+/**
+ *@author Larry Force
+ *@brief runs program 3F
+ *@return returns nothing
+ */
+
 void do_prog_3F() ;
+
+/**
+ *@author Larry Force
+ *@brief pauses program
+ *@return returns nothing
+ */
 
 void pause() ;
 
 
 
 
+/**
+ *@author Larry Force
+ *@brief main function
+ *@return returns nothing
+ */
 
 int main(void)
 {
 char x ;
 x = getChoice() ;
 runProgram(x) ;
-    
+return 0 ;
 }
 
 
