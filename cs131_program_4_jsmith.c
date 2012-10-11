@@ -13,6 +13,8 @@
 
 #include <stdio.h>
 
+
+
 /**
 * @brief give suggestion on how much to eat
 * @param the weight of the horse
@@ -51,10 +53,46 @@ void whichRest(int money);
 */
 int main( int argc, char * argv[] )
 {
-  int money;  
-  printf("Prompt, how much do you have for dinner?\n");
-  scanf("%d", &money);
-  whichRest(money);
+  int program;
+  printf("Choose a program:");
+  printf("1 for lotr");
+  printf("2 for whichRest");
+  printf("3 for feedYoHorse");
+  printf("4 for oldEnough");
+  scanf("%d", &program);
+  if (program == 1)
+  {
+    int usrinput;  
+    printf("how many times have you watched lotr?");
+    scanf("%d", &usrinput);
+    lotr(usrinput);
+  }
+  if (program == 2)
+  {
+    int usrinput;  
+    printf("how much money do you have for dinner?");
+    scanf("%d", &usrinput);
+    whichRest(usrinput);
+  }
+  
+    if (program == 3)
+  {
+    int usrinput;  
+    printf("how much does your horse weigh?");
+    scanf("%d", &usrinput);
+    feedYoHorse(usrinput);
+  }
+    if (program == 4)
+  {
+    int usrinput1;
+    int usrinput2;
+    printf("how old are you?");
+    scanf("%d", &usrinput1);
+    printf("what is the tempurature?");
+    scanf("%d", &usrinput2);
+    oldEnough(usrinput1, userinput2);
+  }
+  
   
   
   return 0;
@@ -116,7 +154,7 @@ void lotr(int x)
     }
     if (x == 0)
     {
-     printf("You have to see it")
+     printf("You have to see it");
     }
   }
 }
@@ -154,4 +192,5 @@ void oldEnough(int x, int y)
     
   }
 }
+
 
