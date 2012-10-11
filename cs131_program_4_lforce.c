@@ -61,6 +61,7 @@ if (whichProg != MENU_OPT_EXIT)
     if (whichProg == MENU_OPT_PROG_B)
     {
     do_prog_3B() ;
+    printf("\n Program B complete. \n") ;
     }
     
     else
@@ -68,6 +69,7 @@ if (whichProg != MENU_OPT_EXIT)
         if (whichProg == MENU_OPT_PROG_C)
         {
         do_prog_3C() ;
+        printf("\n Program C complete. \n") ;
         }
     
         else
@@ -75,6 +77,7 @@ if (whichProg != MENU_OPT_EXIT)
             if (whichProg==MENU_OPT_PROG_E)
             {
             do_prog_3E() ;
+            printf("\n Program E complete. \n") ;
             }
     
             else
@@ -82,14 +85,17 @@ if (whichProg != MENU_OPT_EXIT)
                 if (whichProg==MENU_OPT_PROG_F)
                 {
                 do_prog_3F() ;
+                printf("\n Program F complete. \n") ;
                 }
             
                     else
                 
                     printf("ERROR \n \n") ;
                     
-printf("\n \n Goodbye \n \n") ;
-}    
+}
+else
+printf(" \n \n Exit Menu \n \n") ;
+
 return (true) ;
 }
 
@@ -273,7 +279,45 @@ else
 
 void do_prog_3F()
 {
+        printf(" First you will be asked how many times you have seen Lord of the Rings.\n") ;
     
+    pause() ;
+    
+        printf("You will input an integer value for how many times you have seen Lord of the Rings. \n") ;
+    
+    pause() ;
+    
+        printf("Based on how many times you have seen the movie, you will recieve a recommendation on how to proceed. \n") ;
+    
+    pause() ;
+    
+        printf("Finally, you will be reminded to bring popcorn. \n") ;
+    
+    pause() ;
+    
+int lotr ;
+    
+printf("How many times have you seen Lord of the Rings? \n \n") ;
+scanf("%d" , &lotr) ;
+    
+if (lotr>5)
+{
+printf("Maybe watch it again, for good measure. \n") ;
+}
+else
+    if (lotr>0)
+    {
+    printf("You deffinitely need to see it again. \n") ;
+    }
+    else
+        if (lotr==0)
+        {
+        printf("you need to see it! \n") ;
+        }
+        else
+            printf("error \n") ;
+    
+printf("Remember the popcorn. \n") ;
 }
 
 void pause()
