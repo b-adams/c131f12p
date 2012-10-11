@@ -2,7 +2,7 @@
  * @file cs131_Program_4_jcorter.c
  * @author Jessica Corter
  * @date 10/10/12
- * @status getting started on program 4
+ * @status compiles and runs
 */
 
 #include <stdio.h>
@@ -11,80 +11,70 @@
 /**
  * @brief this will end the program
 */
-const char MENU_OPT_EXIT = 2;
+const char MENU_OPT_EXIT = '2';
 
 /**
  * @brief this will run program 3B
 */
-const char MENU_OPT_PROG_3B = a;
+const char MENU_OPT_PROG_3B = 'a';
 
 /**
  * @brief this will run program 3C
 */
-const char MENU_OPT_PROG_3C = W;
+const char MENU_OPT_PROG_3C = 'W';
 /**
  * @brief this will run program 3D
 */
-const char MENU_OPT_PROG_3D = *;
+const char MENU_OPT_PROG_3D = '*';
 /**
  * @brief this will run program 3F
 */
-const char MENU_OPT_PROG_3F = ?; 
+const char MENU_OPT_PROG_3F = '?'; 
 
 /**
- * @brief
- * @param
- * @param
- * @sideeffect
- * @returns
+ * @brief contains a switch that runs the program cjosen by the user
+ * @param whichProg is the program selected
+ * @returns true or false
 */
 bool runProgram (char whichProg);
 
 
 /**
- * @brief
- * @param
- * @param
- * @sideeffect
- * @returns
+ * @brief gets the program selection from the user
+ * @returns the selection chosen
 */
 char getChoice ();
 
 /**
- * @brief
- * @param
- * @param
- * @sideeffect
- * @returns
+ * @brief determines where the user should have lunch based on the money the user has to spend
+ * @returns the name of the restaurant where the user should have lunch
 */
 void do_prog_3B ();
 
 /**
- * @brief
- * @param
- * @param
- * @sideeffect
- * @returns
+ * @brief displays a specific message to the user based on their grad year
+ * @returns zero
 */
 void do_prog_3C ();
 
 /**
- * @brief
- * @param
- * @param
- * @sideeffect
- * @returns
+ * @brief displays the amount of grain and hay a horse should be fed based on their weight
+ * @returns zero
 */
 void do_prog_3D ();
 
 /**
- * @brief
- * @param
- * @param
- * @sideeffect
- * @returns
+ * @brief gives the user a message reagrding the number of times they have seen The Lord of the Rings
+ * @returns zero
 */
 void do_prog_3F ();
+
+/**
+ * @brief Prompts the user for an integer input
+ * @param thePrompt A string telling the user what to input
+ * @returns the users entry
+*/
+int getPromptedNumber(char* thePrompt);
 
 /**
  * @brief Main procedure
@@ -101,39 +91,38 @@ int main (void) //int main(int argc, char* argv[])
         selection = getChoice();
     }
     printf ("Goodbye/n");
-    return (void);
+    return selection;
 }
 
-bool runProgram(char whichProg)
+bool runProgram (char whichProg)
 {
-    char whichProg;
     switch(whichProg)
     {
-        case MENU_OPT_PROG_3B;
+        case 'a': 
             printf("Running Program 3B\n");
             do_prog_3B();
-            Printf("Program 3B Done\n\n");
+            printf("Program 3B Done\n\n");
         
-        case MENU_OPT_PROG_3C;
+        case 'W':
             printf("Running Program 3C\n");
             do_prog_3C();
-            Printf("Program 3C Done\n\n");
+            printf("Program 3C Done\n\n");
             
-        case MENU_OPT_PROG_3D;
+        case '*':
             printf("Running Program 3D\n");
             do_prog_3D();
-            Printf("Program 3D Done\n\n");
+            printf("Program 3D Done\n\n");
             
-        case MENU_OPT_PROG_3F;
+        case '?':
             printf("Running Program 3F\n");
             do_prog_3F();
-            Printf("Program 3F Done\n\n");
+            printf("Program 3F Done\n\n");
             
         default: printf("Invalid selection: [%c]\n", whichProg);
             
-        return False;      
+        return (false);      
     }
-    return True;    
+    return (true);    
 }
 
 char getChoice()
@@ -145,14 +134,13 @@ char getChoice()
     printf("\t[%c] Run program 3D\n", MENU_OPT_PROG_3D);
     printf("\t[%c] Run program 3F\n", MENU_OPT_PROG_3F);
     printf("Please enter your selection, or %c to quit: ", MENU_OPT_EXIT);
-    scanf(" %c", &userChoice);
-    return userChoice;
+    scanf(" %c", &getChoice);
+    return getChoice;
 
 }
 
 void do_prog_3B ()
 {
-    
     int moolah;
     char* place;
     moolah = getPromptedNumber("How much ya got?");
@@ -166,14 +154,14 @@ void do_prog_3B ()
     }
     
     printf("Go to the... %s\n", place);
-    return 0;}
+    return;
 }
 
 void do_prog_3C()
 {
     int gradYear;
     bool oddLine;
-    gradYear = getPromptedNumber("How much ya got?");
+    gradYear = getPromptedNumber("What is your grad year?");
     oddLine = (gradYear%2);
     
     printf("Dear ");
@@ -196,7 +184,7 @@ void do_prog_3C()
         }
     }
     printf("shirt\n");
-    return 0;
+    return;
 }
 
 void do_prog_3D()
@@ -215,7 +203,7 @@ void do_prog_3D()
     }
     
     printf("The %dlb horse needs %d lbs of grain and 8lbs of hay today.\n", horseWeight, grain);
-    return 0;
+    return;
 }
   
 void do_prog_3F()
@@ -227,5 +215,13 @@ void do_prog_3F()
     else if(views==0) printf("You need to see it!");
     else printf("!?!?negative views!?!?!");
     printf("Remember the popcorn");
-    return 0;
+    return;
+}
+
+int getPromptedNumber(char* thePrompt)
+{
+    int userEntry;
+    printf ("%s", thePrompt);
+    scanf("%d", &userEntry);
+    return userEntry;    
 }
