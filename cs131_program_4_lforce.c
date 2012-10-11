@@ -10,11 +10,11 @@
 
 #include <stdbool.h>
 
-const char MENU_OPT_EXIT=? ;
-const char MENU_OPT_PROG_B=* ;
-const char MENU_OPT_PROG_C=W ;
-const char MENU_OPT_PROG_E=a ;
-const char MENU_OPT_PROG_F=2 ;
+const char MENU_OPT_EXIT = '?';
+const char MENU_OPT_PROG_B = '*';
+const char MENU_OPT_PROG_C = 'W';
+const char MENU_OPT_PROG_E = 'a';
+const char MENU_OPT_PROG_F = '2';
 
 bool runProgram(char whichProg) ;
 
@@ -43,10 +43,10 @@ void pause() ;
 
 int main(void)
 {
-char x
+char x ;
 
 getChoice() ;
-x=getChoice() ;
+x = getChoice() ;
 runProgram(x) ;
     
 }
@@ -57,38 +57,50 @@ runProgram(x) ;
 
 bool runProgram(char whichProg)
 {
-while (whichProg=!?)
+if (whichProg != '?')
     {
     
-    while (whichProg=*)
+    if (whichProg == '*')
     {
-    do_prog_3b()
+    do_prog_3B() ;
     }
     
-        while (whichProg=W)
-    {
-    do_prog_3c()
-    }
+    else
     
-        while (whichProg=a)
-    {
-    do_prog_3e()
-    }
+        if (whichProg == 'W')
+        {
+        do_prog_3C() ;
+        }
     
-        while (whichProg=2)
-    {
-    do_prog_3f()
-    }
+        else
+    
+            if (whichProg=='a')
+            {
+            do_prog_3E() ;
+            }
+    
+            else
+    
+            if (whichProg=='2')
+            {
+            do_prog_3F() ;
+            }
+            
+                else
+                
+                printf("ERROR \n \n") ;
+                getChoice() ;
 }    
+return (whichProg != '?') ;
 }
 
 char getChoice()
 {
-char choice
+char choice ;
 
-printf(" \n \n \n \n \n Which program do you want to run? \n MENU EXIT = ? \n PROGRAM B = * \n PROGRAM C = W \n PROGRAM E = a \n PROGRAM F = 2 \n")
-scanf("%c" choice)
-return choice
+printf(" \n \n \n \n \n Which program do you want to run? \n MENU EXIT = ? \n PROGRAM B = * \n PROGRAM C = W \n PROGRAM E = a \n PROGRAM F = 2 \n \n \n") ;
+scanf(" %c" , &choice) ;
+return choice ;
 }
 
 void do_prog_3B()
@@ -150,7 +162,6 @@ void pause()
 {
     
     int meaningless ;
-    
     printf(" Please enter a value and press Enter to continue \n ") ;
     scanf("%d" , &meaningless) ;
     
