@@ -3,24 +3,39 @@
  *@author Larry Force
  *@date 10/9/12
  *@brief Menuizing programs of program 3
+ *@status unfinished
  */
 
 #include <stdio.h>
 
 #include <stdbool.h>
 
-char const MENU_OPT_EXIT=? ;
-char const MENU_OPT_PROG_X=* ;
-char const MENU_OPT_PROG_K=W ;
-char const MENU_OPT_PROG_C=a ;
-char const MENU_OPT_PROG_D=2 ;
+const char MENU_OPT_EXIT=? ;
+const char MENU_OPT_PROG_B=* ;
+const char MENU_OPT_PROG_C=W ;
+const char MENU_OPT_PROG_E=a ;
+const char MENU_OPT_PROG_F=2 ;
 
 bool runProgram(char whichProg) ;
 char getChoice ;
-void do_prog_3X() ;
-void do_prog_3K() ;
+
+/**
+ *@author Larry Force
+ *@date 10/10/12
+ *@brief 
+ *
+ */
+
+void do_prog_3B() ;
+
 void do_prog_3C() ;
-void do_prog_3D() ;
+
+void do_prog_3E() ;
+
+void do_prog_3F() ;
+
+void pause() ;
+
 
 int main(void)
 {
@@ -37,14 +52,44 @@ char getChoice
     
 }
 
-void do_prog_3X()
+void do_prog_3B()
 {
-    
-}
 
-void do_prog_3K()
-{
+int cash ;
+
+
+printf("First the program will ask you how much money you have.\n") ;
     
+pause() ;
+
+printf("Next you will enter how much money you have for spending.\n") ;
+    
+pause() ;
+
+printf("Finally, the program will recommend where to eat based on your money.\n") ;
+    
+pause() ;
+
+printf("How much cash do you have?\n") ;
+
+scanf("%d" , &cash) ;
+
+if (cash>50)
+{
+    printf("Go to the Fargo.\n") ;
+} else {
+        if (cash>20)
+        {
+            printf("Go to the backstage grill. \n") ;
+            } else {
+            if (cash>0)
+                {
+                printf("Stick to the dining hall.\n") ;
+                } else {
+                    printf("\n error \n") ;
+                    } 
+        }
+}
 }
 
 void do_prog_3C()
@@ -52,7 +97,22 @@ void do_prog_3C()
     
 }
 
-void do_prog_3D()
+void do_prog_3E()
 {
+    
+}
+
+void do_prog_3F()
+{
+    
+}
+
+void pause()
+{
+    
+    int meaningless ;
+    
+    printf(" Please enter a value and press Enter to continue \n ") ;
+    scanf("%d" , &meaningless) ;
     
 }
