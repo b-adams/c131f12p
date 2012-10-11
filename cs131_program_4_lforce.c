@@ -18,7 +18,7 @@ const char MENU_OPT_PROG_F=2 ;
 
 bool runProgram(char whichProg) ;
 
-char getChoice ;
+char getChoice() ;
 
 /**
  *@author Larry Force
@@ -38,17 +38,51 @@ void do_prog_3F() ;
 void pause() ;
 
 
+
+
+
 int main(void)
 {
+char x
+
+getChoice() ;
+x=getChoice() ;
+runProgram(x) ;
     
 }
+
+
+
+
 
 bool runProgram(char whichProg)
 {
+while (whichProg=!?)
+    {
     
+    while (whichProg=*)
+    {
+    do_prog_3b()
+    }
+    
+        while (whichProg=W)
+    {
+    do_prog_3c()
+    }
+    
+        while (whichProg=a)
+    {
+    do_prog_3e()
+    }
+    
+        while (whichProg=2)
+    {
+    do_prog_3f()
+    }
+}    
 }
 
-char getChoice
+char getChoice()
 {
 char choice
 
