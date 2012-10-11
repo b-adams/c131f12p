@@ -44,8 +44,6 @@ void pause() ;
 int main(void)
 {
 char x ;
-
-getChoice() ;
 x = getChoice() ;
 runProgram(x) ;
     
@@ -57,48 +55,48 @@ runProgram(x) ;
 
 bool runProgram(char whichProg)
 {
-if (whichProg != '?')
+if (whichProg != MENU_OPT_EXIT)
     {
     
-    if (whichProg == '*')
+    if (whichProg == MENU_OPT_PROG_B)
     {
     do_prog_3B() ;
     }
     
     else
     
-        if (whichProg == 'W')
+        if (whichProg == MENU_OPT_PROG_C)
         {
         do_prog_3C() ;
         }
     
         else
     
-            if (whichProg=='a')
+            if (whichProg==MENU_OPT_PROG_E)
             {
             do_prog_3E() ;
             }
     
             else
     
-            if (whichProg=='2')
-            {
-            do_prog_3F() ;
-            }
+                if (whichProg==MENU_OPT_PROG_F)
+                {
+                do_prog_3F() ;
+                }
             
-                else
+                    else
                 
-                printf("ERROR \n \n") ;
-                getChoice() ;
+                    printf("ERROR \n \n") ;
+                    getChoice() ;
 }    
-return (whichProg != '?') ;
+return (true) ;
 }
 
 char getChoice()
 {
 char choice ;
 
-printf(" \n \n \n \n \n Which program do you want to run? \n MENU EXIT = ? \n PROGRAM B = * \n PROGRAM C = W \n PROGRAM E = a \n PROGRAM F = 2 \n \n \n") ;
+printf(" \n \n Which program do you want to run? \n MENU EXIT = ? \n PROGRAM B = * \n PROGRAM C = W \n PROGRAM E = a \n PROGRAM F = 2 \n \n") ;
 scanf(" %c" , &choice) ;
 return choice ;
 }
@@ -146,6 +144,87 @@ if (cash>50)
 void do_prog_3C()
 {
     
+int year ;
+
+bool coEd ;
+
+bool oddeven ;
+
+printf("First the program will ask what year you graduated.\n") ;
+    
+pause() ;
+
+printf("Next the program will have you input the year you graduated.\n") ;
+    
+pause() ;
+
+printf("The program will then do math in the background to determine if you graduated in a co-ed class and if you were even or odd.\n") ;
+    
+pause() ;
+
+printf("Finally, the program will greet you and state what color shirt you are recieving.\n") ;
+    
+pause() ;
+
+printf("What year did you graduate? \n") ;
+scanf("%d" , &year) ;
+
+{
+    if (year%2 == 0)
+    {
+    oddeven = true ;
+    }
+        else
+        {
+        if (year%2 == 1)
+            {
+            oddeven = false ;
+            }
+                else{
+                printf("error") ;
+                }}}
+
+{
+        if (year>2005)
+    {
+    coEd = true ;
+    }
+        else
+        if (year<2005)
+            {
+            coEd = false ;
+            }
+                else
+                printf("error") ;
+                }
+
+if (coEd)
+    {
+    if (oddeven)
+    {
+     printf("\n Hello alumni, here is your blue and green shirt. \n") ;
+    }
+    else
+        if (!oddeven)
+        {
+        printf("\n Hello alumni, here is your purple and yellow shirt. \n") ;
+        }
+    }
+    else
+    
+    if (!coEd)
+    {
+        if (oddeven)
+        {
+        printf("\n Hello alumnae, here is your curulean and aquamarine shirt. \n") ;    
+        }
+        else
+            if (!oddeven)
+            {
+            printf("\n Hello alumnae, here is your lavender and marigold shirt. \n") ;
+            }
+    }
+
 }
 
 void do_prog_3E()
