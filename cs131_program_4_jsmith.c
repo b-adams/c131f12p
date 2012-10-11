@@ -20,28 +20,28 @@
 * @param the weight of the horse
 * @sideeffect 
 */
-void feedYoHorse(int x);
+void do_prog_3c(int x);
 
 /**
 * @brief give suggestion on whether to watch lotr
 * @param how many previous watchings
 * @sideeffect 
 */
-void lotr(int x);
+void do_prog_3a(int x);
 
 /**
 * @brief decide whether a patron is old enough to enter the bar
 * @param age and tempurature outside
 * @sideeffect 
 */
-void oldEnough(int x, int y);
+void do_prog_3d(int x, int y);
 
 /**
 * @brief find where they should go to dinner
 * @param how much money they have
 * @sideeffect 
 */
-void whichRest(int money);
+void do_prog_3b(int money);
 
 /**
 * @brief Main
@@ -57,10 +57,10 @@ int main( int argc, char * argv[] )
   {
   int program;
   printf("Choose a program:\n\n");
-  printf("1 for lotr\n");
-  printf("2 for whichRest\n");
-  printf("3 for feedYoHorse\n");
-  printf("4 for oldEnough\n\n");
+  printf("1 for do_prog_3a\n");
+  printf("2 for do_prog_3b\n");
+  printf("3 for do_prog_3c\n");
+  printf("4 for do_prog_3d\n\n");
   printf("0 to quit\n\n\n");
   scanf("%d", &program);
   
@@ -74,14 +74,14 @@ int main( int argc, char * argv[] )
     int usrinput;  
     printf("how many times have you watched lotr?\n");
     scanf("%d", &usrinput);
-    lotr(usrinput);
+    do_prog_3a(usrinput);
   }
   if (program == 2)
   {
     int usrinput;  
     printf("how much money do you have for dinner?\n");
     scanf("%d", &usrinput);
-    whichRest(usrinput);
+    do_prog_3b(usrinput);
   }
   
     if (program == 3)
@@ -89,7 +89,7 @@ int main( int argc, char * argv[] )
     int usrinput;  
     printf("how much does your horse weigh?\n");
     scanf("%d", &usrinput);
-    feedYoHorse(usrinput);
+    do_prog_3c(usrinput);
   }
     if (program == 4)
   {
@@ -99,7 +99,7 @@ int main( int argc, char * argv[] )
     scanf("%d", &usrinput1);
     printf("what is the tempurature?\n");
     scanf("%d", &usrinput2);
-    oldEnough(usrinput1, usrinput2);
+    do_prog_3d(usrinput1, usrinput2);
   }
   
   }
@@ -107,7 +107,7 @@ int main( int argc, char * argv[] )
  
 }
 
-void whichRest(int money)
+void do_prog_3b(int money)
 {
   if (money >= 50)
   {
@@ -126,7 +126,7 @@ void whichRest(int money)
   }
 }
 
-void feedYoHorse(int x)
+void do_prog_3c(int x)
 {
   if (x > 1101)
   {
@@ -149,7 +149,7 @@ void feedYoHorse(int x)
   }
 }
 
-void lotr(int x)
+void do_prog_3a(int x)
 {
   if (x > 5)
   {
@@ -168,7 +168,7 @@ void lotr(int x)
   }
 }
 
-void oldEnough(int x, int y)
+void do_prog_3d(int x, int y)
 {
   if (x > 21)
   {
