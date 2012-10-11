@@ -53,24 +53,33 @@ void whichRest(int money);
 */
 int main( int argc, char * argv[] )
 {
+  while (1)
+  {
   int program;
-  printf("Choose a program:");
-  printf("1 for lotr");
-  printf("2 for whichRest");
-  printf("3 for feedYoHorse");
-  printf("4 for oldEnough");
+  printf("Choose a program:\n\n");
+  printf("1 for lotr\n");
+  printf("2 for whichRest\n");
+  printf("3 for feedYoHorse\n");
+  printf("4 for oldEnough\n\n");
+  printf("0 to quit\n\n\n");
   scanf("%d", &program);
+  
+  if (program == 0)
+  {
+    return 0;
+  }
+  
   if (program == 1)
   {
     int usrinput;  
-    printf("how many times have you watched lotr?");
+    printf("how many times have you watched lotr?\n");
     scanf("%d", &usrinput);
     lotr(usrinput);
   }
   if (program == 2)
   {
     int usrinput;  
-    printf("how much money do you have for dinner?");
+    printf("how much money do you have for dinner?\n");
     scanf("%d", &usrinput);
     whichRest(usrinput);
   }
@@ -78,7 +87,7 @@ int main( int argc, char * argv[] )
     if (program == 3)
   {
     int usrinput;  
-    printf("how much does your horse weigh?");
+    printf("how much does your horse weigh?\n");
     scanf("%d", &usrinput);
     feedYoHorse(usrinput);
   }
@@ -86,16 +95,16 @@ int main( int argc, char * argv[] )
   {
     int usrinput1;
     int usrinput2;
-    printf("how old are you?");
+    printf("how old are you?\n");
     scanf("%d", &usrinput1);
-    printf("what is the tempurature?");
+    printf("what is the tempurature?\n");
     scanf("%d", &usrinput2);
-    oldEnough(usrinput1, userinput2);
+    oldEnough(usrinput1, usrinput2);
   }
   
+  }
   
-  
-  return 0;
+ 
 }
 
 void whichRest(int money)
@@ -134,8 +143,8 @@ void feedYoHorse(int x)
     }
     if (x < 1001)
     {
-     printf("You have a skinny horse, you should probably feed it more");
-     printf("If your horse is not malnurished, feed it 2 pounds of grain");
+     printf("You have a skinny horse, you should probably feed it more\n");
+     printf("If your horse is not malnurished, feed it 2 pounds of grain\n");
     }
   }
 }
@@ -154,7 +163,7 @@ void lotr(int x)
     }
     if (x == 0)
     {
-     printf("You have to see it");
+     printf("You have to see it\n");
     }
   }
 }
@@ -167,11 +176,11 @@ void oldEnough(int x, int y)
     
    if (y < 70)
     {
-     printf("I'll take your coat fine sir");
+     printf("I'll take your coat fine sir\n");
     }
    if (y > 70)
    {
-    printf("Go on inside sir");
+    printf("Go on inside sir\n");
    }
    
     
@@ -182,11 +191,11 @@ void oldEnough(int x, int y)
 
     if (y < 70)
     {
-        printf("keep yo coat");
+        printf("keep yo coat\n");
     }
     if (y > 70)
     {
-        printf("go away");
+        printf("go away\n");
     }
    
     
