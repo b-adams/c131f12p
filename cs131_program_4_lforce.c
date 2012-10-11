@@ -87,7 +87,8 @@ if (whichProg != MENU_OPT_EXIT)
                     else
                 
                     printf("ERROR \n \n") ;
-                    getChoice() ;
+                    
+printf("\n \n Goodbye \n \n") ;
 }    
 return (true) ;
 }
@@ -229,7 +230,45 @@ if (coEd)
 
 void do_prog_3E()
 {
+
+int temp ;
+
+printf("First you will be asked the temperature of your steak.\n") ;
     
+pause() ;
+
+printf("Next you will give the temperature of your steak to the nearest degree.\n") ;
+    
+pause() ;
+
+printf("Finally the program will tell you how done your steak is.\n") ;
+    
+pause() ;
+    
+printf("What is the temperature of your steak? \n") ;
+scanf("%d" , &temp) ;
+
+if (temp>145)
+{
+printf("Your steak is done. \n ") ;
+}
+else
+        if (temp==145)
+        {
+        printf("Your steak is just right. \n") ;
+        }
+        else
+            if (temp>70)
+            {
+            printf("your steak is undercooked. \n") ;
+            }
+            else
+                if (temp<70)
+                {
+                printf("Your steak is raw. \n") ;
+                }
+                else
+                    printf("Error. \n") ;
 }
 
 void do_prog_3F()
@@ -241,7 +280,7 @@ void pause()
 {
     
     int meaningless ;
-    printf(" Please enter a value and press Enter to continue \n ") ;
+    printf(" \n Please enter a value and press Enter to continue \n ") ;
     scanf("%d" , &meaningless) ;
     
 }
