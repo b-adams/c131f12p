@@ -9,16 +9,67 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-const int MENU_OPT_EXIT = (2);
-const int MENU_OPT_PROG_B = (a);
-const int MENU_OPT_PROG_D = (W);
-const int MENU_OPT_PROG_F = (*);
-const int MENU_OPT_PROG_H = (?);
+/**
+@brief Menu entry number for exiting program
+*/
+const char MENU_OPT_EXIT = '2';
+
+/**
+@brief Menu entry number for running program B
+
+*/
+const char MENU_OPT_PROG_B = 'a';
+
+/**
+@brief Menu entry number for running program D
+*/
+const char MENU_OPT_PROG_D = 'W';
+
+/**
+@brief Menu entry number for running program F
+*/
+const char MENU_OPT_PROG_F = '*';
+
+/**
+@brief Menu entry number for running program H
+*/
+const char MENU_OPT_PROG_H = '?';
+
+/**
+@brief Runs the program chosen
+@param char whichProg Chooses which program the user wants
+@returns true
+*/
 bool runProgram(char whichProg);
+
+/**
+@brief Chooses which program to loop
+@returns userChoice
+*/
 char getChoice();
-void do_prog_3B();  
-void do_prog_3D(); 
-void do_prog_3F();  
+
+/**
+@brief Program 3B
+@returns nothing
+*/
+void do_prog_3B();
+
+/**
+@brief Program 3D
+@returns nothing
+*/
+void do_prog_3D();
+
+/**
+@brief Program 3F
+@returns nothing
+*/
+void do_prog_3F();
+
+/**
+@brief Program 3H
+@returns nothing
+*/
 void do_prog_3H();
 
 /**
@@ -32,7 +83,7 @@ int main(void)
 	
 	char selection;
 	selection = getChoice();
-	while (selection == MENU_OPT_EXIT);
+	while (selection != MENU_OPT_EXIT)
 	{
 		runProgram(selection);
 		selection = getChoice();
@@ -42,10 +93,7 @@ int main(void)
 	return 0;
 }
 
-/**
-@brief Chooses which program to loop
-@returns userChoice
-*/
+
 
 char getChoice()
 {
@@ -63,11 +111,7 @@ char getChoice()
 }
 
 
-/**
-@brief Runs the program chosen
-@param char whichProg Chooses which program the user wants
-@returns true
-*/
+
 
 bool runProgram(char whichProg)
 {
@@ -75,24 +119,24 @@ bool runProgram(char whichProg)
 	
 	switch (whichProg) 
 	{
-		case 0: MENU_OPT_PROG_B:
+		case MENU_OPT_PROG_B:
 				printf("Running Program B\n");
-				do_prog_b();
+				do_prog_3B();
 				printf("Program B Done\n\n");
 			break;
-		case 1: MENU_OPT_PROG_D:
+		case MENU_OPT_PROG_D:
 				printf("Running Program D\n");
-				do_prog_D();
+				do_prog_3D();
 				printf("Program D Done\n\n");
 			break;
-		case 2: MENU_OPT_PROG_F:
+		case MENU_OPT_PROG_F:
 				printf("Running Program F\n");
-				do_prog_F();
+				do_prog_3F();
 				printf("Program F Done\n\n");
 			break;
-		case 3: MENU_OPT_PROG_H:
+		case MENU_OPT_PROG_H:
 				printf("Running Program H\n");
-				do_prog_H();
+				do_prog_3H();
 				printf("Program H Done\n\n");
 			break;
 		default:
@@ -102,10 +146,7 @@ bool runProgram(char whichProg)
 	return true;
 }
 
-/**
-@brief Program 3B
-@returns 0 if no news (good news)
-*/
+
 
 void do_prog_3B()
 {
@@ -116,53 +157,48 @@ void do_prog_3B()
     {
         printf ("Go to the Fargo\n");
     }
-    else
+    else //theUsersNumber<50
     {
         if (theUsersNumber >= 20 && theUsersNumber < 50)
         {
             printf ("Go to the Backstage Grille\n");
         }
-        else (theUsersNumber < 20);
+        else //theUsersNumber < 20
         {
             printf ("Stick to the Dining Hall\n");
         }
     }
-    return 0;
+    return;
 }
 
-/**
-@brief Program 3D
-@returns 0 if no news (good news)
-*/
+
 
 void do_prog_3D()
 {
     int theUsersNumber;
+    int grain;
     printf ("Input how much the horse weighs\n");
     scanf ("%d", &theUsersNumber);
     if (theUsersNumber >= 955 && theUsersNumber <= 1000)
     {
-        printf ("Give the horse 2lbs of grain\n");
+        grain = 2;
     }
-    else
+    else //theUsersNumber >= 1001 && theUsersNumber <= 1100
     {
         if (theUsersNumber >= 1001 && theUsersNumber <= 1100)
         {
-            printf ("Give the horse 3lbs of grain\n");
+            grain = 3;
         }
-        else (theUsersNumber >= 1101 && theUsersNumber <= 1150);
+        else //theUsersNumber >= 1101 && theUsersNumber <= 1150
         {
-            printf ("Give the horse 4lbs of grain\n");
+            grain = 4;
         }
     }
-    printf ("The %d horse needs 3 lbs of grain and 8 lbs of hay today\n", theUsersNumber);
-    return 0;
+    printf ("The %d horse needs %d lbs of grain and 8 lbs of hay today\n", theUsersNumber, grain);
+    return;
 }
 
-/**
-@brief Program 3F
-@returns 0 if no news (good news)
-*/
+
 
 void do_prog_3F()
 {
@@ -179,19 +215,16 @@ void do_prog_3F()
         {
             printf ("You definitely need to see it again\n");
         }
-        else (theUsersNumber == 0);
+        else //theUsersNumber == 0
         {
             printf ("You need to see it!\n");
         }
     }
     printf ("Remember the popcorn\n");
-    return 0;
+    return;
 }
 
-/**
-@brief Program 3H
-@returns 0 if no news (good news)
-*/
+
 
 void do_prog_3H()
 {
@@ -200,30 +233,31 @@ void do_prog_3H()
     scanf ("%d", &theUsersNumber);
     char timeOfDay;
     printf ("Input the time of day, either am or pm\n");
-    scanf ("%c", &timeOfDay);
-    if (timeOfDay = am)
+    scanf (" %c", &timeOfDay);
+    printf("You entered: (%c)\n", timeOfDay);
+    if (timeOfDay == 'a')
     {
         if (theUsersNumber > 1 && theUsersNumber < 9)
         {
             printf ("You should be sleeping\n");
         }
-        else (theUsersNumber < 1 && theUsersNumber > 9);
+        else //theUsersNumber < 1 && theUsersNumber > 9
         {
             printf ("You should be awake\n");
         }
     }
-    else (timeOfDay = pm);
+    else //timeOfDay == 'p'
     {
-        if theUsersNumber > 9 && theUsersNumber < 12
+        if (theUsersNumber > 9 && theUsersNumber < 12)
         {
             printf ("You should be sleeping\n");
         }
-        else theUsersNumber < 9 && theUsersNumber > 12;
+        else //theUsersNumber < 9 && theUsersNumber > 12
         {
             printf ("You should be awake\n");
         }
     }
-    return 0;
+    return;
 }
 
 
