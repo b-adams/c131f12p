@@ -2,12 +2,16 @@
 * @file cs131_program_3f_mfortin.c
 * @author MELISSA_FORTIN
 * @date OCTOBER_1
-* @brief Program 3: Picking four programs and implementing them 
+* @brief Program 3: Picking four programs and implementing them redo
 *
 */
 
 #include<stdio.h>
 
+/**
+@brief Entry point for program
+@returns 0 if no news (good news)
+*/
 int main (int argc, char* argv[])
 {
     int theUsersNumber;
@@ -23,7 +27,7 @@ int main (int argc, char* argv[])
         {
             printf ("You definitely need to see it again\n");
         }
-        else (theUsersNumber == 0);
+        else //theUsersNumber == 0
         {
             printf ("You need to see it!\n");
         }
