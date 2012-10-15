@@ -2,7 +2,7 @@
 * @file cs131_program_4_mfortin.c
 * @author MELISSA_FORTIN
 * @date OCTOBER_3
-* @brief Program 4: Menu-izing Program 3
+* @brief Program 4: Menu-izing Program 3 redo
 *
 */
 
@@ -37,7 +37,7 @@ const char MENU_OPT_PROG_H = '?';
 
 /**
 @brief Runs the program chosen
-@param char whichProg Chooses which program the user wants
+@param whichProg Chooses which program the user wants
 @returns true
 */
 bool runProgram(char whichProg);
@@ -76,7 +76,6 @@ void do_prog_3H();
 @brief Entry point for program
 @returns 0 if no news (good news)
 */
-
 int main(void)
 {
 	// declare your variables here
