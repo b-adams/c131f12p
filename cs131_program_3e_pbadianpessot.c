@@ -34,6 +34,6 @@ int main(int argc, char* argv[])
         }
         
     }
-    printf("Remeber the popcorn");
+    printf("Remeber the popcorn \n");
     return 0;
 }
