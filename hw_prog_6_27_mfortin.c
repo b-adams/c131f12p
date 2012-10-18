@@ -27,6 +27,7 @@ int main (int argc, char* argv[])
 
 void towers (int n, char source, char dest, char auxilary)
 {
+    printf ("BEGIN towers(n, source, dest, auxilary)\n");
     //Local destinations
     static int step = 0;
     //Statements
@@ -39,5 +40,6 @@ void towers (int n, char source, char dest, char auxilary)
             printf ("/t/t/t/tStep %3d: Move from %c to %c\n", ++step, source, dest);
             towers (n - 1, source, auxilary, dest);
         } // if...else
+    printf ("END towers(n, source, dest, auxilary)\n");
     return;
 } //towers
