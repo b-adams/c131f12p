@@ -7,31 +7,6 @@
 
 #include <stdio.h>
 
-/**
- @brief Main procedure.
-
- @param argv the command line (typed arguments)
- @param argc the number of options in the command line.
- @return zero if successful
- @author Nathan Mitchell
-*/
-
-int main(int argc, char* argv[])
-
-{
-    void trickInstuctions();
-    int trickCheckArithmetic(int theUsersNumber);
-    return 0;
-}
-
-/**
- @brief The answer that the trick always comes up with
- 
- For not-very-mysterious algebraic reasons, this trick will always come up
- with the same answer. Rather than have '2' randomly show up in our code as
- a 'magic number', we give it a name here.
- */
-
 const int THE_ANSWER_EVERYTIME = 2;
 
 /**
@@ -45,24 +20,17 @@ const int THE_ANSWER_EVERYTIME = 2;
  Otherwise, it returns twice the value of twoToThe(n-1)
  [We'll talk about this 'recursion' trick later in the class. It's very useful.]
  */
+
 int twoToThe(int exponent);
 
+/**
+ @brief Main procedure.
 
-
-int twoToThe(int exponent)
-{
-    int theResult;
-    
-    printf("-> Calling twoToThe(%d)\n",exponent);
-    
-	if(exponent<0) theResult=1/twoToThe(-exponent);
-	else if(exponent==0) theResult=1;
-	else theResult = twice(twoToThe(exponent-1));
-    
-    printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
-    
-    return theResult;
-}
+ @param argv the command line (typed arguments)
+ @param argc the number of options in the command line.
+ @return zero if successful
+ @author Nathan Mitchell
+*/
 
 /**
  @brief Double a number
@@ -74,14 +42,6 @@ int twoToThe(int exponent)
  */
 
 int twice(int n);
-
-int twice(int n)
-
-{
-    n = n + n;
-    
-    return n + n;
-}
 
 /**
  @brief Walk the user through the arithmetic in the trick
@@ -96,33 +56,6 @@ int twice(int n)
 
 int trickCheckArithmetic(int theUsersNumber);
 
-int trickCheckArithmetic(int theUsersNumber)
-
-{
-    
-    int originalNumber = 0;
-    
-    printf("please enter a number \n");
-    scanf("%d", &theUsersNumber);
-    originalNumber = theUsersNumber;
-    printf("you entered %d as your number \n", theUsersNumber);
-    printf("now im going to subtract 1 from your number \n");
-    theUsersNumber = theUsersNumber - twoToThe(0);
-    printf("your number is now %d \n", theUsersNumber);
-    printf("now im going to multiply you number by 4 \n");
-    theUsersNumber = theUsersNumber * twoToThe(2);
-    printf("your number is now %d \n", theUsersNumber);
-    printf("now im going to add 8 to your number \n");
-    theUsersNumber = theUsersNumber + twoToThe(3);
-    printf("your number is now %d \n", theUsersNumber);
-    printf("now im going to divide your number by 2 \n");
-    theUsersNumber = theUsersNumber / twoToThe(1);
-    printf("your number is now %d \n", theUsersNumber);
-    printf("now im going to subtract twice your original number \n");
-    theUsersNumber = theUsersNumber - twice(originalNumber);
-    printf("your number is now %d \n", theUsersNumber);
-}
-
 /**
  @brief Pause until the user is ready to continue
  @sideeffect Prompts the user to press enter
@@ -135,27 +68,118 @@ int trickCheckArithmetic(int theUsersNumber)
 
 void pause();
 
-void pause()
+/**
+ @brief The answer that the trick always comes up with
+ 
+ For not-very-mysterious algebraic reasons, this trick will always come up
+ with the same answer. Rather than have '2' randomly show up in our code as
+ a 'magic number', we give it a name here.
+ */
 
-{
-    printf("please press enter");
-}
+void trickInstuctions();
 
 /**
  *@brief pritns instructions one at a time
  *@sideeffect none
  */
 
-void trickInstuctions();
+int main(int argc, char* argv[])
+{
+    int theUsersNumber;
+    trickInstuctions();
+    //get & store input
+    trickCheckArithmetic(theUsersNumber);
+    return 0;
+}
+
+
+
+int twoToThe(int exponent)
+{
+    int theResult = 0;
+    
+    printf("-> Calling twoToThe(%d)\n",exponent);
+    
+    if(exponent<0)
+    {
+	theResult=1/twoToThe(-exponent);
+    }
+    else if(exponent==0)
+    {
+	theResult=1;
+    }
+    else
+    {
+	theResult = twice(twoToThe(exponent-1));
+    }
+    
+    printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
+    
+    return theResult;
+}
+
+
+int twice(int n)
+{
+    n = n + n;
+    
+    return n + n;
+}
+
+int trickCheckArithmetic(int theUsersNumber)
+{
+    
+    int originalNumber = 0;
+    
+    printf("\n please enter the number were thinking, we are going to walk through the process \n\n");
+    scanf("%d", &theUsersNumber);
+    originalNumber = theUsersNumber;
+    printf("\n you entered %d as your number \n \n", theUsersNumber);
+    pause();
+    printf("\n now im going to subtract 2^0 from your number \n \n");
+    theUsersNumber = (theUsersNumber - twoToThe(0));
+    printf("\n your number is now %d \n \n", theUsersNumber);
+    pause();
+    printf("\n now im going to multiply you number by 2^2 \n \n");
+    theUsersNumber = (theUsersNumber * twoToThe(2));
+    printf("\n your number is now %d \n \n", theUsersNumber);
+    pause();
+    printf("\n now im going to add 2^3 to your number \n \n");
+    theUsersNumber = (theUsersNumber + twoToThe(3));
+    printf("\n your number is now %d \n \n", theUsersNumber);
+    pause();
+    printf("\n now im going to divide your number by 2^1 \n \n");
+    theUsersNumber = (theUsersNumber / twoToThe(1));
+    printf("\n your number is now %d \n \n", theUsersNumber);
+    pause();
+    printf("\n now im going to subtract twice your original number \n \n");
+    theUsersNumber = theUsersNumber - twice(originalNumber);
+    printf(" your number and final answer is now %d \n \n", THE_ANSWER_EVERYTIME);
+    return theUsersNumber;
+}
+
+void pause()
+{
+    char var2;
+    printf("PAUSE, press any key then enter to continue");
+    scanf(" %c", &var2);
+}
+
 
 void trickInstuctions()
-
 {
-    printf("pick a number, any number\n");
-    printf("now subtract your number by 1 \n");
-    printf("now multiply by 4 \n");
-    printf("now add 8 \n");
-    printf("now divide 2 by \n");
-    printf("now subract twice your original number \n");
-    printf("you came out with the number 2 right? \n")
+    printf("\n pick a number, any number \n\n");
+    pause();
+    printf("\n now subtract your number by 2^0 \n\n");
+    pause();
+    printf("\n now multiply by 2^2 \n\n");
+    pause();
+    printf("\n now add 2^3 \n\n");
+    pause();
+    printf("\n now divide 2^1 by \n\n");
+    pause();
+    printf("\n now subract twice your original number \n\n");
+    pause();
+    printf("\n you came out with the number 2 right? \n\n");
+    pause();
 }
