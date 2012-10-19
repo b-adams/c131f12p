@@ -28,8 +28,6 @@
 int main(int argc, char* argv[])
 {
     int userInput;
-    int largeGroup;
-    int smallGroup;
     printf("Please input how much you are having for dinner:");
     scanf("%d", &userInput);
     if(userInput>=LARGE_GROUP)
