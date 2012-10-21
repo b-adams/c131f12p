@@ -35,7 +35,8 @@ int main(int argc, char* argv[])
     int size;
     int price;
     int numberProduced;
-    int collectible;
+    int totalSize;
+    int totalCollectible;
     
     printf("How big is your car?");
     scanf("%d", &size);
@@ -44,21 +45,24 @@ int main(int argc, char* argv[])
     printf("How many of you car were made?");
     scanf("%d", &numberProduced);
     
+    totalSize=size*price;
+    totalCollectible=price*numberProduced;
+    
     if(price>=EXPENSIVE)
     {
         printf("You're In! \n");
     }   else    {
-        if(size*price>=MASSIVE)
-        {
-            printf("You're In! \n");
-        } else  {
-                if(price*numberProduced>=COLLECTIBLE)
-                    {    
-                        printf("You're In! \n");
-                    }  else {
-                        printf("No Admission \n");
-            }
-        }
+    if(totalSize>=MASSIVE)
+    {
+        printf("You're In! \n");
+    } else  {
+    if(totalCollectible>=COLLECTIBLE)
+    {    
+        printf("You're In! \n");
+    }  else {
+    printf("No Admission \n");
+    }
+    }
     }
     return 0;
 }
