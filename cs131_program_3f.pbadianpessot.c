@@ -14,8 +14,16 @@
  * @returns 0 if no news
  */
 int main(int argc, char* argv[]);
- 
- 
+
+/**
+ * @brief if your steak is still raw
+ */
+const int RAW=70; 
+
+/**
+ *@brief temp when your steak is cooked
+ */
+const int COOKED=145;
 
 int main(int argc, char* argv[])
 {
@@ -23,11 +31,11 @@ int main(int argc, char* argv[])
     
     printf("Please input the internal temperature of your steak:");
     scanf("%d", &userInput);
-    if(userInput<=70)
+    if(userInput<=RAW)
     {
         printf("Your steak is raw! \n");
     }   else    {
-        if(userInput<=145)
+        if(userInput<=COOKED)
         {
             printf("Your Steak is undercooked \n");
         } else  {
