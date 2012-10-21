@@ -7,6 +7,7 @@
 
 /**
  *@brief gets dollar amount from user
+ *@param x holds the amount entered
  *@return amount entered by user
  */
 int getUserInput();
@@ -23,19 +24,19 @@ int main( int argc, char * argv[])
  int x;
   x = getUserInput();
 
-    if(x<21)
+  if(x<21)
+  {
+  printf("You should dine at the dinning hall.=) \n");
+  } else {
+    if ((x>20) || (x<50))
     {
-    printf("You should dine at the dinning hall.=) \n");
-    } else {
-      if ((x>20) || (x<50))
-      {
-      printf ("You should dine at the Backstage Grill. \n");
-      } else {  
-       if(x>50)
-       { 
-       printf ("You should dine at the Fargo. \n");
-       } else {
-      
+    printf ("You should dine at the Backstage Grill. \n");
+    } else {  
+      if(x>50)
+      { 
+      printf ("You should dine at the Fargo. \n");
+      } else {
+      // nothing
       } 
     }
   }
