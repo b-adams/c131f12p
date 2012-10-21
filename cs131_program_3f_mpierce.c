@@ -13,7 +13,7 @@
 * @brief Entry point for program
 * @param argc Number of command-line arguments
 * @param argv The command-line tokens that were typed
-* @returns 0 
+* @returns nothing
 */
 int main(int argc, char* argv[])
 {

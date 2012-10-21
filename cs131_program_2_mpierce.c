@@ -13,7 +13,7 @@
  with the same answer. Rather than have '2' randomly show up in our code as
  a 'magic number', we give it a name here.
  */
-const int THE_ANSWER_EVERY_TIME = 2;
+const int THE_ANSWER_EVERY_TIME = '2';
 
 /**
  @brief Compute a power of 2
@@ -37,6 +37,16 @@ int twoToThe(int exponent);
  Very simple function, should just return 2*n or n+n
  */
 int twice(int n);
+
+/**
+ @brief Gets the user to pick a number
+ @sideeffect Prompts the user to enter a number
+ @returns The number the user entered
+ 
+ This function scans the user's input into a local variable,
+ and then returns the value stored in that variable to the calling code.
+ */
+int getNumberFromUser();
 
 /**
  *@brief To prompt user for an input
@@ -63,13 +73,28 @@ int trickCheckArithmetic(int theUsersNumber);
 
 int main(int argc, char* argv[])
 {
-
+    int theUserNumber;
+    trickInstructions();
+    
+    trickCheckArithmetic(theUserNumber);
+    return 0;
 }
 
+int getNumberFromUser()
+{
+    int theUserNumber;
+    printf("Calling getNumberFromUser() \n");
+    printf("Please enter a Number for this arithmetic trick:\n");
+	   scanf("%d", &theUserNumber);
+    pause();
+    printf("getNumberFromUser() returns %d \n", theUserNumber);
+    return theUserNumber;
+}
 int twice(int n)
 {
-    n=n*2;
-    return n*2;
+    printf("calling twice(%d)", n);
+    printf("twice(%d) returns %d \n",n, n+n);
+    return n+n;
 }
 
 int twoToThe(int exponent)
@@ -89,18 +114,92 @@ int twoToThe(int exponent)
 
 int trickCheckArithmetic(int theUserNumber)
 {
-    printf
+    
+    int sumSoFar;
+    sumSoFar = 0;
+     theUserNumber = getNumberFromUser();
+     
+    printf("calling trickCheckArithmetic(%d) \n", theUserNumber);
+    
+    printf("First, take your Number and subtract %d. \n", twoToThe(0));
+    printf("%d\n", theUserNumber);
+    printf("%d - %d \n", theUserNumber, twoToThe(0));
+    sumSoFar = theUserNumber - twoToThe(0);
+    pause();
+    printf("Sum so far is equal to %d \n", sumSoFar);
+    pause();
+    
+    printf("Next, multiply that number by %d. \n", twoToThe(2));
+    printf("%d * %d \n", sumSoFar, twoToThe(2));
+    sumSoFar = sumSoFar * twoToThe(2);
+    pause();
+    printf("Sum so far is equal to %d \n", sumSoFar);
+    pause();
+    
+    printf("Now, add %d. \n", twoToThe(3));
+    printf("%d + %d \n", sumSoFar, twoToThe(3));
+    sumSoFar = sumSoFar + twoToThe(3);
+    pause();
+    printf("Sum so far is equal to %d \n", sumSoFar);
+    pause();
+    
+    printf("Now, you must divide by %d. \n", twoToThe(1));
+    printf("%d/%d \n", sumSoFar, twoToThe(1));
+    sumSoFar = sumSoFar / twoToThe(1);
+    pause();
+    printf("Sum so far is equal to %d \n", sumSoFar);
+    pause();
+    
+    printf("Finally, take that sum and subtract %d. \n", twice(theUserNumber));
+    printf("%d - %d \n", sumSoFar, twice(theUserNumber));
+    sumSoFar = sumSoFar - twice(theUserNumber);
+    pause();
+    printf("Your final answer is equal to %d \n", sumSoFar);
+    pause();
+    
+    printf("trickCheckArithmetic(int theUserNumber) returns %d \n\n", sumSoFar);
+    return sumSoFar;
 }
 
 void pause()
 {
+    printf("calling pause() \n\n");
     char var1;
-	printf("Press ENTER to continue");
+	printf("Press ENTER to continue \n");
         scanf("%c", &var1);
+    printf("pause() returns nothing \n\n");
 }
 
-void trickIntrustions()
+void trickInstructions()
 {
+    int twoToThe();
     
+    printf("Calling trickInstructions() \n");
+    
+    printf("Here is an arithmetic trick involving the powers of two.\n\n");
+    pause();
+    
+    printf("For this trick You will need to pick a number than follow the mathematical steps provided. \n\n");
+    pause();
+    
+    printf("Here are the neccessary steps: \n\n");
+    pause();
+    
+    printf("First, take your Number and subtract %d. \n\n", twoToThe(0));
+    pause();
+    
+    printf("Next, multiply that number by %d. \n\n", twoToThe(2));
+    pause();
+    
+    printf("Now, add %d. \n\n", twoToThe(3));
+    pause();
+    
+    printf("Now, you must divide by %d. \n\n", twoToThe(1));
+    pause();
+    
+    printf("Finally, take that sum and subtract twice your original number. \n\n");
+    pause();
+
+    printf("trickInstructions() returns nothing \n");
+    return;
 }
-/*

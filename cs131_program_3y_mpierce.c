@@ -8,10 +8,10 @@
 
 
 /**
- *@brief Main procedure.
+ * @brief Main procedure.
  * @param argv the command line (typed arguments)
  * @param argc the number of options in the command line.
- * @return zero if successful
+ * @return zero 
  */
 int main(int argc, char * argv[])
 {
