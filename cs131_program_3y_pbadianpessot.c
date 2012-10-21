@@ -15,14 +15,26 @@
  */
 int main(int argc, char* argv[]);
 
- 
+/**
+ *@brief a car is expensive if it costs over 10000000
+ */
+const int EXPENSIVE=10000000;
+
+/**
+ *@brief a car is massive if its over 2000000
+ */
+const int MASSIVE=2000000;
+
+/**
+ *@brief a car is a collectible if its over 50000
+ */
+const int COLLECTIBLE=50000;
 
 int main(int argc, char* argv[])
 {
     int size;
     int price;
     int numberProduced;
-    int massive;
     int collectible;
     
     printf("How big is your car?");
@@ -32,18 +44,16 @@ int main(int argc, char* argv[])
     printf("How many of you car were made?");
     scanf("%d", &numberProduced);
     
-    if(price>=10000000)
+    if(price>=EXPENSIVE)
     {
         printf("You're In! \n");
     }   else    {
-        if(massive>=2000000)
+        if(size*price>=MASSIVE)
         {
-            massive=price*size;
             printf("You're In! \n");
         } else  {
-                if(collectible>=50000)
+                if(price*numberProduced>=COLLECTIBLE)
                     {    
-                        collectible=price*numberProduced;
                         printf("You're In! \n");
                     }  else {
                         printf("No Admission \n");
