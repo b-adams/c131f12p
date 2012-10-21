@@ -13,7 +13,7 @@
  * @param argc the number of options in the command line.
  * @return zero 
  */
-int main(int argc, char * argv[])
+int main(int argc, char* argv[])
 {
     int p;
     int m;
