@@ -17,40 +17,40 @@ int do_prog_3f();
 int main(void)
 {
     char (x);
-    x = getChoice;
+    x = getChoice();
     runProgram(x);
     return 0;
 }
 
 bool runProgram(char whichProg)
 {
-int y = whichProg;
-
-while (whichProg != MENU_OPT_EXIT)
-    {
-    switch(y)
-    {
-        case MENU_OPT_PROG_B:
-            do_prog_3b();
-            printf("Program b\n");
+    int y=whichProg;
+    
+    while (y != MENU_OPT_EXIT)
+        {
+        switch(y) 
+        {
+            case MENU_OPT_PROG_B:
+                do_prog_3b();
+                printf("Program b\n");
     
     break;
 
-    case MENU_OPT_PROG_D:
-        do_prog_3C() ;
-        printf("\n Program d\n") ;
+            case MENU_OPT_PROG_D:
+                do_prog_3d();
+                printf("\n Program d\n") ;
 
     break ;
 
-    case MENU_OPT_PROG_E:
-        do_prog_3E() ;
-        printf("\n Program e\n") ;
+            case MENU_OPT_PROG_E:
+                do_prog_3e();
+                printf("\n Program e\n") ;
 
     break;
 
-    case MENU_OPT_PROG_F:
-        do_prog_3F() ;
-        printf("\n Program f\n") ;
+            case MENU_OPT_PROG_F:
+                do_prog_3f();
+                printf("\n Program f\n") ;
 
     break ;
 
@@ -59,6 +59,8 @@ while (whichProg != MENU_OPT_EXIT)
 
     break ;
     }
+    
+    y = getChoice();
     }
 return (true);
 }
@@ -66,9 +68,13 @@ return (true);
 char getChoice()
 {
     char choice;
-    printf("Choose what program you want to run.\n const char MENU_OPT_EXIT = 'a'\n const char MENU_OPT_PROG_B = '2'\n const char MENU_OPT_PROG_D = 'W'\n const char MENU_OPT_PROG_E = '*'\n const char MENU_OPT_PROG_F = '?'");
-    scanf("%c", &getChoice);
-    return 0;
+    printf("%c MENU_OPT_PROG_B = 2 \n", 2);
+    printf("%c MENU_OPT_PROG_D = W \n", 'W');
+    printf("%c MENU_OPT_PROG_E = * \n", '*');
+    printf("%c MENU_OPT_PROG_F = ? \n", '?');
+    printf("Please enter your selection, or %c to quit: ", MENU_OPT_EXIT);
+    scanf(" %c", &choice);
+    return choice;
 }
 
 int do_prog_3b()
