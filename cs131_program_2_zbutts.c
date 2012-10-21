@@ -25,7 +25,6 @@ int twoToThe(int exponent);
 
 /**
  @brief Main procedure.
-
  @param argv the command line (typed arguments)
  @param argc the number of options in the command line.
  @return zero if successful
@@ -100,26 +99,26 @@ int twoToThe(int exponent)
     
     if(exponent<0)
     {
-	theResult==1/twoToThe(-exponent);
+	theResult=1/twoToThe(-exponent);
     }
     else 
     {
         if(exponent==0)
         {   
-            theResult==1;
+            theResult=1;
         }
     }
     
     printf("<- twoToThe(%d) returns %d\n",exponent, theResult);
     
-    return theResult;
+    return (theResult);
 }
 
 int twice(int n)
 {
     n = n + n;
     
-    return n + n;
+    return (n + n);
 }
 
 int trickCheckArithmetic(int theUsersNumber)
