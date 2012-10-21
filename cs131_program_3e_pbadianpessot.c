@@ -15,20 +15,28 @@
  */
 int main(int argc, char* argv[]);
 
-
+/**
+ *@brief if you have see it many times
+ */
+const int MANY=5;
  
-
+ /**
+  *@brief if you haven't see lord of the rings
+  */
+ const int NONE=0;
+ 
+ 
 int main(int argc, char* argv[])
 {
     int userInput;
     
     printf("How many times have you seen Lord of the Rings? ");
     scanf("%d", &userInput);
-    if(userInput>=5)
+    if(userInput>=MANY)
     {
         printf("Maybe watch it again, for good measure \n");
     }   else    {
-        if(userInput==0)
+        if(userInput==NONE)
         {
             printf("You need to see it!! \n");
         } else  {
