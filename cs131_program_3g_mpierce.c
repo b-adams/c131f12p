@@ -1,5 +1,5 @@
 /**
-*@file cs_program_3g_mpierce.c
+*@file cs131_program_3g_mpierce.c
 *@date October 2, 2012
 *@author Michael Pierce
 **/
@@ -26,12 +26,12 @@ int main(int argc, char* argv[])
     if (age>20)
     {
         printf("Welcome to the Club! \n");
-         if (t>70)
-         {
-          printf("Just get dancing. \n");
-         } else{
-          printf("Can I take your coat for you? \n");
-         }
+        if (t>70)
+        {
+        printf("Just get dancing. \n");
+        } else{
+        printf("Can I take your coat for you? \n");
+        }
         
     } else {
         
@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
         {
         printf("Better keep on that coat. \n");
         } else{
-       printf("Time for you to go. \n");
+        printf("Time for you to go. \n");
         }
         
     }
